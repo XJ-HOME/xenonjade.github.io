@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta name="google-site-verification" content="JIEx32t_X8COKaYZ2nkXEy0kLaYSucmHelY4MgY0YKg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Gift Ideas for 2025: Top Trends & Picks</title>
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Base styles and dark mode variables  yu */
+        :root {
+            --background-light: #ffffff;
+            --text-light: #1f2937; /* gray-800 */
+            --muted-light: #6b7280; /* gray-500 */
+            --card-bg-light: #f9fafb; /* gray-50 */
+            --border-light: #e5e7eb; /* gray-200 */
+            --accent-light: #3b82f6; /* blue-500 */
+
+            --background-dark: #111827; /* gray-900 */
+            --text-dark: #f3f4f6; /* gray-100 */
+            --muted-dark: #9ca3af; /* gray-400 */
+            --card-bg-dark: #1f2937; /* gray-800 */
+            --border-dark: #374151; /* gray-700 */
+            --accent-dark: #60a5fa; /* blue-400 */
+        }
+
+        html {
+             /* Offset needed if you have a fixed header */
+             /* scroll-padding-top: 4rem; */
+         }
+
+        body {
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dark body {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        /* Custom components */
+        .card {
+            background-color: var(--card-bg-light);
+            border: 1px solid var(--border-light);
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+        }
+        .dark .card {
+            background-color: var(--card-bg-dark);
+            border-color: var(--border-dark);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: var(--accent-light);
+        }
+        .dark .card:hover {
+            border-color: var(--accent-dark);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for internal jump links */
+        .link-styling {
+            color: var(--accent-light);
+             text-decoration: none;
+            border-bottom: 1px dotted;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .dark .link-styling {
+             color: var(--accent-dark);
+            border-bottom-color: rgba(96, 165, 250, 0.5); /* Use accent color for dotted line in dark mode */
+        }
+        .link-styling:hover {
+             text-decoration: none;
+             border-bottom-style: solid;
+             border-bottom-width: 1px;
+        }
+         /* Style for external links (Works Cited) */
+        .link-external {
+             color: var(--accent-light);
+            text-decoration: none;
+             position: relative;
+            transition: color 0.2s ease;
+        }
+        .dark .link-external {
+            color: var(--accent-dark);
+         }
+         .link-external:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+         }
+         .link-external::after { /* Arrow icon for external links */
+             content: '↗';
+            display: inline-block;
+            font-size: 0.7em;
+            margin-left: 2px;
+             vertical-align: super;
+             opacity: 0.6;
+            transition: opacity 0.2s ease;
+        }
+         .link-external:hover::after {
+            opacity: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        section {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+         /* Subtle scrollbar for dark mode - Webkit only */
+        .dark ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: var(--background-dark);
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: var(--border-dark);
+            border-radius: 20px;
+            border: 2px solid var(--background-dark);
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+             background-color: var(--muted-dark);
+        }
+
+    </style>
+</head>
+<body class="antialiased text-base font-normal leading-relaxed">
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" aria-label="Toggle dark mode" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200">
+        <i class="fas fa-sun" id="theme-toggle-light-icon"></i>
+        <i class="fas fa-moon" id="theme-toggle-dark-icon"></i>
+    </button>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 md:mb-16 fade-in" style="animation-delay: 0s;">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">Best Gift Ideas for 2025</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Top Trends and Curated Presents for Everyone on Your List</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <!-- Introduction Section -->
+            <section id="intro" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.1s;">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Shifting Landscape of Gifting</h2>
+                <p>The landscape of gift-giving is in constant motion. As we look ahead to 2025, it's clear we're moving beyond simple material exchanges towards a more considered, imaginative approach resonating with individual values and passions. Several prominent themes are emerging: personalized presents, experiential gifts, sustainability, the influence of technology, and a focus on well-being. This report explores these trends and offers a curated selection of the top 20 gift ideas for 2025.</p>
+            </section>
+
+            <!-- Key Trends Section -->
+            <section id="trends" style="animation-delay: 0.2s;">
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-10 text-gray-900 dark:text-white">Key Gifting Trends for 2025</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Trend Card: Personalization (ADDED ID) -->
+                    <div id="trend-personalization" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-sliders-h text-2xl mr-3 text-blue-500 dark:text-blue-400"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Deep Personalization</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Moving beyond monograms to sophisticated customization powered by AI (e.g., <a href="#gift-idea-1" class="link-styling" title="Jump to AI Book">custom books</a>, jewelry, skincare) and curated themed boxes. Classic personalization like <a href="#gift-idea-12" class="link-styling" title="Jump to Family Portrait">portraits</a> or <a href="#gift-idea-5" class="link-styling" title="Jump to Recipe Book">recipe books</a> still holds value. Reflects a desire for deeper connections [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-2" class="link-external" title="Source 2">2</a>]. See examples: <a href="#gift-idea-1" class="link-styling">1</a>, <a href="#gift-idea-5" class="link-styling">5</a>, <a href="#gift-idea-7" class="link-styling">7</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-12" class="link-styling">12</a>, <a href="#gift-idea-19" class="link-styling">19</a>.</p>
+                    </div>
+
+                    <!-- Trend Card: Experiences Over Things (ADDED ID) -->
+                     <div id="trend-experiences" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-map-marked-alt text-2xl mr-3 text-green-500 dark:text-green-400"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Experiences Over Things</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Valuing lasting memories over fleeting possessions. Includes <a href="#gift-idea-2" class="link-styling" title="Jump to VR Experience">VR experiences</a>, local activities like <a href="#gift-idea-6" class="link-styling" title="Jump to Crafting Class">craft classes</a>, and hyper-personalized <a href="#gift-idea-7" class="link-styling" title="Jump to Subscription Box">subscription boxes</a> [<a href="#ref-1" class="link-external" title="Source 1">1</a>]. Consider learning platforms like <a href="#gift-idea-19" class="link-styling" title="Jump to Learning Platform">#19</a> or DIY kits like <a href="#gift-idea-18" class="link-styling" title="Jump to DIY Kit">#18</a>. See examples: <a href="#gift-idea-2" class="link-styling">2</a>, <a href="#gift-idea-6" class="link-styling">6</a>, <a href="#gift-idea-7" class="link-styling">7</a>, <a href="#gift-idea-18" class="link-styling">18</a>, <a href="#gift-idea-19" class="link-styling">19</a>.</p>
+                    </div>
+
+                    <!-- Trend Card: Sustainability & Ethics (ADDED ID) -->
+                    <div id="trend-sustainability" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                           <i class="fas fa-leaf text-2xl mr-3 text-emerald-500 dark:text-emerald-400"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Sustainability & Ethics</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Growing demand for eco-friendly materials (<a href="#gift-idea-3" class="link-styling" title="Jump to Cork Yoga Mat">cork</a>, recycled fibers for a <a href="#gift-idea-16" class="link-styling" title="Jump to Cozy Throw">cozy throw</a>), sustainable packaging, and zero-waste gifts (<a href="#gift-idea-8" class="link-styling" title="Jump to Water Bottle">reusable bottles</a>). Support ethical brands & consider longevity [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-3" class="link-external" title="Source 3">3</a>]. Check out: <a href="#gift-idea-3" class="link-styling">3</a>, <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-16" class="link-styling">16</a>, <a href="#gift-idea-18" class="link-styling">18</a>.</p>
+                    </div>
+
+                    <!-- Trend Card: Technology Integration (ADDED ID) -->
+                    <div id="trend-technology" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-microchip text-2xl mr-3 text-purple-500 dark:text-purple-400"></i>
+                             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Technology Integration</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Smart gadgets like <a href="#gift-idea-13" class="link-styling" title="Jump to Smart Speaker">speakers</a>, <a href="#gift-idea-17" class="link-styling" title="Jump to Fitness Tracker">fitness trackers</a>, or <a href="#gift-idea-4" class="link-styling" title="Jump to Smart Garden">indoor gardens</a>. AR/VR enhance experiences (<a href="#gift-idea-2" class="link-styling" title="Jump to VR Experience">VR gift card</a>). Don't forget practical tech like <a href="#gift-idea-10" class="link-styling" title="Jump to Headphones">headphones</a> or fun gadgets like <a href="#gift-idea-15" class="link-styling" title="Jump to Instant Camera">instant cameras</a> [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-10" class="link-external" title="Source 10">10</a>]. Explore: <a href="#gift-idea-2" class="link-styling">2</a>, <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-9" class="link-styling">9</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-13" class="link-styling">13</a>, <a href="#gift-idea-15" class="link-styling">15</a>, <a href="#gift-idea-17" class="link-styling">17</a>.</p>
+                    </div>
+
+                    <!-- Trend Card: Wellness & Self-Care (ADDED ID) -->
+                     <div id="trend-wellness" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-heartbeat text-2xl mr-3 text-red-500 dark:text-red-400"></i>
+                             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Wellness & Self-Care</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Focus on mental and physical health. Gifts include items promoting relaxation like a <a href="#gift-idea-11" class="link-styling" title="Jump to Weighted Eye Mask">weighted eye mask</a> or promoting health like a <a href="#gift-idea-3" class="link-styling" title="Jump to Yoga Mat">yoga mat</a> or <a href="#gift-idea-17" class="link-styling" title="Jump to Fitness Tracker">fitness tracker</a>. Also consider <a href="#gift-idea-10" class="link-styling" title="Jump to Headphones">noise-canceling headphones</a> for focus [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-2" class="link-external" title="Source 2">2</a>, <a href="#ref-15" class="link-external" title="Source 15">15</a>]. Gift ideas: <a href="#gift-idea-3" class="link-styling">3</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-11" class="link-styling">11</a>, <a href="#gift-idea-17" class="link-styling">17</a>.</p>
+                    </div>
+
+                     <!-- Trend Card: Nostalgia & Updated Classics (ADDED ID) -->
+                     <div id="trend-nostalgia" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                             <i class="fas fa-history text-2xl mr-3 text-yellow-500 dark:text-yellow-400"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Nostalgia & Updated Classics</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Resurgence of retro gifts like updated <a href="#gift-idea-9" class="link-styling" title="Jump to Gaming Console">gaming consoles</a> or the tangible joy of <a href="#gift-idea-15" class="link-styling" title="Jump to Instant Camera">instant print cameras</a>. Offers comfort and connection to positive memories [<a href="#ref-2" class="link-external" title="Source 2">2</a>]. See: <a href="#gift-idea-9" class="link-styling">9</a>, <a href="#gift-idea-15" class="link-styling">15</a>.</p>
+                    </div>
+
+                     <!-- Trend Card: Practicality & Quality (ADDED ID) -->
+                     <div id="trend-practicality" class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-2xl mr-3 text-indigo-500 dark:text-indigo-400"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Practicality & Quality</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Appreciation for useful, durable gifts. Think <a href="#gift-idea-8" class="link-styling" title="Jump to Water Bottle">reusable water bottles</a>, <a href="#gift-idea-16" class="link-styling" title="Jump to Cozy Throw">cozy throws</a>, quality tech like <a href="#gift-idea-13" class="link-styling" title="Jump to Smart Speaker">smart speakers</a>, or niche useful items like a <a href="#gift-idea-20" class="link-styling" title="Jump to Coffee Maker">portable coffee maker</a> or <a href="#gift-idea-14" class="link-styling" title="Jump to Food Basket">gourmet food baskets</a> [<a href="#ref-2" class="link-external" title="Source 2">2</a>, <a href="#ref-5" class="link-external" title="Source 5">5</a>]. Find ideas: <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-5" class="link-styling">5</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-13" class="link-styling">13</a>, <a href="#gift-idea-14" class="link-styling">14</a>, <a href="#gift-idea-16" class="link-styling">16</a>, <a href="#gift-idea-20" class="link-styling">20</a>.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Top 20 Gift Ideas Section -->
+            <section id="top-gifts" style="animation-delay: 0.3s;">
+                 <h2 class="text-3xl font-bold tracking-tight text-center mb-10 text-gray-900 dark:text-white">Top 20 Gift Ideas for 2025</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                    <!-- Gift Idea Card 1 (ADDED Links back to trends) -->
+                    <div id="gift-idea-1" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">1. AI-Powered Personalized Book</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Unique book created via AI based on recipient's interests or shared memories.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Book lovers, family, friends.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                        </div>
+                    </div>
+
+                    <!-- Gift Idea Card 2 (ADDED Links back to trends) -->
+                    <div id="gift-idea-2" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">2. VR Experience Gift Card</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Voucher for immersive VR adventure (historical tour, nature exploration).</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Tech enthusiasts, adventurers.</p>
+                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
+                            </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
+                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                        </div>
+                    </div>
+
+                    <!-- Gift Idea Card 3 (ADDED Links back to trends) -->
+                    <div id="gift-idea-3" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">3. Sustainable Cork Yoga Mat</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Eco-friendly mat with excellent grip and durability.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Yoga practitioners, eco-conscious.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
+                             </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
+                             <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
+                        </div>
+                    </div>
+
+                    <!-- Gift Idea Card 4 (ADDED Links back to trends) -->
+                     <div id="gift-idea-4" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">4. Smart Indoor Garden</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Self-watering/lighting garden for year-round herbs and veggies.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Home cooks, plant lovers, sustainable living fans.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                        </div>
+                    </div>
+
+                     <!-- ... Repeat this pattern for all 20 gift cards ... -->
+
+                    <!-- Example for Gift Idea 5 -->
+                    <div id="gift-idea-5" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">5. Personalized Recipe Book</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Custom book with family recipes or blank pages to fill.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Foodies, family members, cooks.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                            </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                        </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 6 -->
+                     <div id="gift-idea-6" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">6. Local Crafting Class Voucher</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Gift certificate for a hands-on workshop (pottery, painting).</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Creative individuals, hobby seekers.</p>
+                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
+                        </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 7 -->
+                     <div id="gift-idea-7" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">7. Curated Subscription Box</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tailored box for coffee, wine, or beauty enthusiasts based on preferences.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Coffee/wine/beauty fans.</p>
+                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
+                            </p>
+                         </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
+                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                        </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 8 -->
+                    <div id="gift-idea-8" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">8. Custom Stainless Steel Water Bottle</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Durable, stylish bottle personalized with name or design.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Anyone, active or eco-conscious.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                            </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
+                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                        </div>
+                    </div>
+
+                    <!-- Example for Gift Idea 9 -->
+                    <div id="gift-idea-9" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">9. Retro Gaming Console (Modern Updates)</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Classic console look with updated features and game library.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Gamers, nostalgic individuals.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-nostalgia" class="link-styling" title="Jump to Nostalgia Trend">Nostalgia</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
+                             </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded-full">Nostalgia</span>
+                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                         </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 10 -->
+                     <div id="gift-idea-10" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">10. High-Quality Noise-Canceling Headphones</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Premium headphones ideal for focus, travel, or relaxation.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Commuters, students, music lovers.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
+                            </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                            <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
+                        </div>
+                     </div>
+
+                    <!-- Example for Gift Idea 11 -->
+                     <div id="gift-idea-11" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">11. Weighted Eye Mask with Aromatherapy</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Comfortable mask with gentle weight and soothing scent for better sleep.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Those struggling with sleep, seeking relaxation.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
+                             </p>
+                         </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
+                        </div>
+                    </div>
+
+                    <!-- Example for Gift Idea 12 -->
+                     <div id="gift-idea-12" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">12. Personalized Family Portrait Illustration</h4>
+                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Custom-drawn illustration based on a family photo.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Family members, sentimental gift lovers.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
+                            </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                         </div>
+                     </div>
+
+                    <!-- Example for Gift Idea 13 -->
+                     <div id="gift-idea-13" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">13. Smart Speaker with Voice Assistant</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Voice-controlled speaker for music, reminders, smart home control.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Tech enthusiasts, anyone seeking convenience.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                            </p>
+                         </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                        </div>
+                    </div>
+
+                    <!-- Example for Gift Idea 14 -->
+                    <div id="gift-idea-14" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">14. Gourmet Food Basket (Local Artisanal)</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Selection of high-quality, locally sourced items (cheeses, jams).</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Foodies, supporters of local products.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                             </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                         </div>
+                     </div>
+
+                    <!-- Example for Gift Idea 15 -->
+                    <div id="gift-idea-15" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">15. Instant Print Camera & Accessories Kit</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Fun, easy-to-use camera with film and creative accessories.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Teens, young adults, memory keepers.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-nostalgia" class="link-styling" title="Jump to Nostalgia Trend">Nostalgia</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
+                             </p>
+                        </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded-full">Nostalgia</span>
+                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                         </div>
+                    </div>
+
+                    <!-- Example for Gift Idea 16 -->
+                     <div id="gift-idea-16" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">16. Cozy Knit Throw (Recycled Materials)</h4>
+                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Soft, warm blanket crafted from recycled fibers.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Anyone who enjoys comfort, eco-conscious.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                             </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
+                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                        </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 17 -->
+                    <div id="gift-idea-17" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">17. Fitness Tracker with Sleep Monitoring</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Wearable tracking activity, heart rate, and sleep patterns.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Fitness enthusiasts, health-conscious.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
+                             </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
+                             <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
+                         </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 18 -->
+                     <div id="gift-idea-18" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">18. DIY Craft Kit (Sustainable Materials)</h4>
+                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Kit with all materials/instructions for an eco-friendly craft project.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Creative individuals, sustainable hobbyists.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>
+                             </p>
+                         </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
+                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
+                         </div>
+                    </div>
+
+                    <!-- Example for Gift Idea 19 -->
+                    <div id="gift-idea-19" class="card p-5 rounded-lg flex flex-col">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">19. Subscription to Personalized Learning Platform</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Access to online courses/workshops tailored to interests/goals.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Lifelong learners, professional developers.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
+                             </p>
+                         </div>
+                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
+                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
+                        </div>
+                    </div>
+
+                     <!-- Example for Gift Idea 20 -->
+                    <div id="gift-idea-20" class="card p-5 rounded-lg flex flex-col">
+                         <div>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">20. High-End Portable Coffee Maker</h4>
+                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Compact, easy-to-use maker for quality coffee on the go.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Coffee lovers, travelers, outdoor enthusiasts.</p>
+                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
+                                <strong>Trend:</strong> <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
+                             </p>
+                         </div>
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
+                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
+                         </div>
+                     </div>
+
+                </div> <!-- End Grid -->
+            </section>
+
+            <!-- Corporate Gifting Section -->
+            <section id="corporate-gifting" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.4s;">
+                 <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Corporate Gifting Trends in 2025</h2>
+                 <p>Corporate gifting is also evolving beyond generic branded items towards more meaningful gestures. Similar to personal gifting, personalization (custom boxes) and experiences (unique events) are key [<a href="#ref-3" class="link-external" title="Source 3">3</a>]. Sustainability and eco-conscious choices (packaging, materials) are increasingly important. For remote teams, gifts supporting productivity and connection (welcome kits, tech) are relevant [<a href="#ref-5" class="link-external" title="Source 5">5</a>]. Tech-forward, genuinely useful items are highly valued. There's also a growing focus on diversity and inclusion, supporting minority-owned businesses and celebrating diverse cultures [<a href="#ref-3" class="link-external" title="Source 3">3</a>, <a href="#ref-5" class="link-external" title="Source 5">5</a>]. Practicality remains crucial, favouring items recipients will actually use. Choice, offered via gifting platforms or swag stores, is also a growing trend [<a href="#ref-3" class="link-external" title="Source 3">3</a>, <a href="#ref-9" class="link-external" title="Source 9">9</a>]. These shifts reflect an understanding that thoughtful gifts enhance morale, client relationships, and brand image.</p>
+            </section>
+
+             <!-- Conclusion Section -->
+            <section id="conclusion" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.5s;">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Future of Gifting: Conscious & Connected</h2>
+                 <p>In conclusion, 2025 gift trends point towards a more conscious, creative, and deeply connected approach [<a href="#ref-1" class="link-external" title="Source 1">1</a>]. Whether using AI for personalization, choosing sustainable products, or gifting memorable experiences, the focus is on intentionality and genuine meaning. Understanding these trends and individual preferences ensures gifts are impactful and special. The most meaningful gifts demonstrate care, create resonant moments, and foster stronger connections, moving beyond obligation to authentic value alignment [<a href="#ref-1" class="link-external" title="Source 1">1</a>].</p>
+             </section>
+
+             <!-- Works Cited Section -->
+             <section id="works-cited" style="animation-delay: 0.6s;">
+                 <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Works Cited</h2>
+                <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 list-none pl-0">
+                     <li id="ref-1"><strong>1.</strong> LEFT-HANDESIGN®. (n.d.). <a href="https://left-handesign.com/blogs/news/2025-gifting-trends-comprehensive-guide" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 Gifting Trends: Your Complete Guide">2025 Gifting Trends: Your Complete Guide to Modern Gift Ideas</a>. Accessed April 26, 2025.</li>
+                     <li id="ref-2"><strong>2.</strong> ASD Market Week. (n.d.). <a href="https://asdonline.com/blog/about-asd/whats-trending-in-gifts-in-2025-that-youll-find-at-asd/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 Gift Trends">2025 Gift and Gift Giving Trends</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-3"><strong>3.</strong> Signature Group Events. (n.d.). <a href="https://signaturegroupevents.com/2025-corporate-gifting-trends/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Corporate Gifting Trends">2025 Corporate Gifting Trends</a>. Accessed April 26, 2025.</li>
+                     <li id="ref-4"><strong>4.</strong> La Camisa. (n.d.). <a href="https://lacamisa.my/ultimate-gift-guide-for-every-occasion/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Ultimate Gift Guide 2025">The Ultimate Gift Guide: Best Gifts in 2025 for Every Occasion</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-5"><strong>5.</strong> Clove & Twine. (n.d.). <a href="https://www.cloveandtwine.com/blogs/blog/top-corporate-gifting-trends-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Corporate Gifting Trends 2025">The Top 8 Corporate Gifting Trends You Need to Know in 2025</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-6"><strong>6.</strong> Good Housekeeping. (n.d.). <a href="https://www.goodhousekeeping.com/holidays/gift-ideas/g63362525/most-popular-gifts-2025/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Most Popular Gifts 2025">These Are the Most Popular Gifts of 2025 (So Far)</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-7"><strong>7.</strong> WishMerge. (n.d.). <a href="https://wishmerge.com/blog/top-110-christmas-gift-ideas-every-age-group-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top 110 Christmas Gifts 2025">Top 110 Christmas Gift Ideas for Every Age Group for 2025</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-8"><strong>8.</strong> Teak & Twine. (n.d.). <a href="https://www.teakandtwine.com/blog/gifting-trends" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Popular Gifting Trends 2025">Popular Gifting Trends For 2025</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-9"><strong>9.</strong> Corporate Specialties. (n.d.). <a href="https://www.corporatespecialties.com/blog/top-company-swag" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Ultimate 2025 Company Swag Guide">The Ultimate 2025 Company Swag Guide: 51 Trending Products For Any Occasion</a>. Accessed April 26, 2025.</li>
+                     <li id="ref-10"><strong>10.</strong> Best Buy. (n.d.). <a href="https://www.bestbuy.com/site/gift-ideas/top-tech-gifts/pcmcat1496256957402.c?id=pcmcat1496256957402" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Tech Gifts 2025">Top Tech Gifts 2025</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-11"><strong>11.</strong> YouTube. (n.d.). <a href="https://www.youtube.com/watch?v=RlyyEyVGFeY" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 24 New Gadgets (2025)">24 New Gadgets And Inventions (2025) You Can Buy Now</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-12"><strong>12.</strong> Elfster. (n.d.). <a href="https://www.elfster.com/shop/gift-guides/359/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Best Tech Gadgets 2025">Best Tech Gadgets In 2025 - Affordable Electronic Gifts</a>. Accessed April 26, 2025.</li>
+                    {/* NOTE: Link 13 removed as requested in previous step */}
+                     <li id="ref-14"><strong>14.</strong> Elfster. (n.d.). <a href="https://www.elfster.com/shop/gift-guides/217/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Trending Gifts 2025">Top Trending Gift Ideas for 2025 - Best Gifts This Year</a>. Accessed April 26, 2025.</li>
+                     <li id="ref-15"><strong>15.</strong> YouTube. (n.d.). <a href="https://www.youtube.com/watch?v=JnIsGYUcEjl" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Trending Wellness Gifts 2025">Ultimate Guide to Trending Wellness Gifts in 2025 | Top 12 Must-Have Products for Women</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-16"><strong>16.</strong> Best Buy. (n.d.). <a href="https://www.bestbuy.com/site/electronics/gift-ideas/abcat0010000.c?id=abcat0010000" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Gift Ideas 2025">Gift Ideas 2025: Best Gifts to Give This Year</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-17"><strong>17.</strong> Reddit r/AskMen. (n.d.). <a href="https://www.reddit.com/r/AskMen/comments/1hszbmn/what_are_some_unique_cool_techgadgets_in_2025/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Reddit AskMen Tech Gadgets 2025">What are some unique, cool tech/gadgets in 2025?</a> Accessed April 26, 2025.</li>
+                    <li id="ref-18"><strong>18.</strong> UGREEN EU. (n.d.). <a href="https://eu.ugreen.com/blogs/holiday/new-year-tech-gift-ideas-for-every-budget" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 New Year Tech Gifts">2025 New Year Tech Gifts: Stunning Ideas for Every Budget €50 to €500</a>. Accessed April 26, 2025.</li>
+                    <li id="ref-19"><strong>19.</strong> Merchloop. (n.d.). <a href="https://merchloop.com/blogs/news/company-gift-ideas-that-actually-work-in-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Company Gifts That Work 2025">Company Gift Ideas That Actually Work in 2025</a>. Accessed April 26, 2025.</li>
+                </ul>
+             </section>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-500 dark:text-gray-400 text-sm fade-in" style="animation-delay: 0.8s;">
+             <div class="mb-4">
+                 <p>Created by: <a href="https://wowshoplist.com/" target="_blank" rel="noopener noreferrer" class="font-medium link-external">wow shop list</a></p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+                     <i class="fab fa-github fa-lg"></i>
+                 </a>
+                 <a href="https://twitter.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="Twitter X" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+                    <i class="fab fa-twitter fa-lg"></i> <!-- Or fa-x-twitter -->
+                 </a>
+                 <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+                 <!-- Add other social media links as needed -->
+            </div>
+            <p>© <span id="current-year"></span> wow shop list. All rights reserved.</p>
+        </footer>
+
+    </div> <!-- End container -->
+
+    <script>
+        // Dark/Light Mode Toggle Script
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const currentYearSpan = document.getElementById('current-year');
+
+        // Function to set theme
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                lightIcon.style.display = 'none';
+                darkIcon.style.display = 'block';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                 lightIcon.style.display = 'block';
+                 darkIcon.style.display = 'none';
+                 localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Check initial theme preference
+        const userPref = localStorage.getItem('theme');
+         const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+         if (userPref === 'dark' || (!userPref && systemPref)) {
+             setTheme(true);
+         } else {
+            setTheme(false);
+         }
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            setTheme(!isDarkMode);
+         });
+
+         // Set current year in footer
+        currentYearSpan.textContent = new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>

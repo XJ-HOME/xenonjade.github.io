@@ -1,0 +1,15 @@
+# _config.yml
+
+# 网站标题和描述 (这些通常会显示在浏览器标签页和搜索引擎结果中)
+title: WowShopList | Best Product Rankings & Reviews – 60% for Good
+description: Best Product Rankings & Reviews – 60% for Good
+url: "https://blog.wowshoplist.com"
+
+# 你正在使用的主题
+theme: jekyll-theme-minimal
+
+# 插件列表
+plugins:
+  - jekyll-sitemap    # 用于生成 sitemap.xml
+  - jekyll-seo-tag    # 用于生成 SEO 相关的元标签 (强烈推荐)
+# - jekyll-feed       # 如果你想生成 RSS feed，可以取消注释这一行
