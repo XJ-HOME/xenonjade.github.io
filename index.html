@@ -1,671 +1,495 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta name="google-site-verification" content="JIEx32t_X8COKaYZ2nkXEy0kLaYSucmHelY4MgY0YKg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Gift Ideas for 2025: Top Trends & Picks</title>
-    <!-- Tailwind CSS v3 CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>XJ-HOME | Finding Your Sonic Truth: Speakers for Your Record Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Base styles and dark mode variables  yu */
-        :root {
-            --background-light: #ffffff;
-            --text-light: #1f2937; /* gray-800 */
-            --muted-light: #6b7280; /* gray-500 */
-            --card-bg-light: #f9fafb; /* gray-50 */
-            --border-light: #e5e7eb; /* gray-200 */
-            --accent-light: #3b82f6; /* blue-500 */
-
-            --background-dark: #111827; /* gray-900 */
-            --text-dark: #f3f4f6; /* gray-100 */
-            --muted-dark: #9ca3af; /* gray-400 */
-            --card-bg-dark: #1f2937; /* gray-800 */
-            --border-dark: #374151; /* gray-700 */
-            --accent-dark: #60a5fa; /* blue-400 */
-        }
-
-        html {
-             /* Offset needed if you have a fixed header */
-             /* scroll-padding-top: 4rem; */
-         }
-
-        body {
-            background-color: var(--background-light);
-            color: var(--text-light);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .dark body {
-            background-color: var(--background-dark);
-            color: var(--text-dark);
-        }
-
-        /* Custom components */
-        .card {
-            background-color: var(--card-bg-light);
-            border: 1px solid var(--border-light);
-            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
-        }
-        .dark .card {
-            background-color: var(--card-bg-dark);
-            border-color: var(--border-dark);
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-color: var(--accent-light);
-        }
-        .dark .card:hover {
-            border-color: var(--accent-dark);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Style for internal jump links */
-        .link-styling {
-            color: var(--accent-light);
-             text-decoration: none;
-            border-bottom: 1px dotted;
-            transition: color 0.2s ease, border-color 0.2s ease;
-        }
-        .dark .link-styling {
-             color: var(--accent-dark);
-            border-bottom-color: rgba(96, 165, 250, 0.5); /* Use accent color for dotted line in dark mode */
-        }
-        .link-styling:hover {
-             text-decoration: none;
-             border-bottom-style: solid;
-             border-bottom-width: 1px;
-        }
-         /* Style for external links (Works Cited) */
-        .link-external {
-             color: var(--accent-light);
-            text-decoration: none;
-             position: relative;
-            transition: color 0.2s ease;
-        }
-        .dark .link-external {
-            color: var(--accent-dark);
-         }
-         .link-external:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
-         }
-         .link-external::after { /* Arrow icon for external links */
-             content: '↗';
-            display: inline-block;
-            font-size: 0.7em;
-            margin-left: 2px;
-             vertical-align: super;
-             opacity: 0.6;
-            transition: opacity 0.2s ease;
-        }
-         .link-external:hover::after {
-            opacity: 1;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        section {
-            animation: fadeIn 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-         /* Subtle scrollbar for dark mode - Webkit only */
-        .dark ::-webkit-scrollbar {
+        /* Custom scrollbar for a more modern look (optional) */
+        ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track-bg, #f1f1f1); /* Light mode default */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb-bg, #888); /* Light mode default */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover-bg, #555); /* Light mode default */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Dark mode specific scrollbar colors */
         .dark ::-webkit-scrollbar-track {
-            background: var(--background-dark);
+            background: #2d3748; /* Dark gray */
         }
         .dark ::-webkit-scrollbar-thumb {
-            background-color: var(--border-dark);
-            border-radius: 20px;
-            border: 2px solid var(--background-dark);
+            background: #718096; /* Lighter gray */
         }
         .dark ::-webkit-scrollbar-thumb:hover {
-             background-color: var(--muted-dark);
+            background: #a0aec0; /* Even lighter gray */
         }
 
+        /* Base transition for theme changes */
+        body, header, footer, section, div, nav, button, a, p, h1, h2, h3, h4, h5, h6 {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        /* Card hover effect */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+        
+        /* Button hover effect */
+        .interactive-button {
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-button:hover {
+            transform: scale(1.05);
+        }
+         .interactive-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--focus-ring-color, rgba(96, 165, 250, 0.5)); /* Default focus ring for light mode */
+        }
+        .dark .interactive-button:focus {
+             box-shadow: 0 0 0 3px var(--focus-ring-color-dark, rgba(59, 130, 246, 0.7)); /* Focus ring for dark mode */
+        }
+
+
+        /* Section fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom focus ring variables for theme consistency */
+        :root {
+            --focus-ring-color: rgba(96, 165, 250, 0.5); /* Tailwind blue-400 with opacity */
+            --focus-ring-color-dark: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with opacity for dark */
+        }
     </style>
+    <script>
+        // Tailwind config for dark mode and custom theme
+        tailwind.config = {
+            darkMode: 'class', // or 'media' if you prefer OS-level control only
+            theme: {
+                extend: {
+                    colors: {
+                        // Light Theme (inspired by Linear)
+                        'primary-light': '#ffffff',      // Background
+                        'secondary-light': '#f7f7f7',    // Slightly off-white for cards/sections
+                        'accent-light': '#007aff',       // Primary interactive color (e.g., Apple Blue)
+                        'text-primary-light': '#1c1c1e', // Main text
+                        'text-secondary-light': '#6b7280',// Muted text
+                        'border-light': '#e5e7eb',       // Borders
+
+                        // Dark Theme (inspired by Linear)
+                        'primary-dark': '#0d1117', // '#111111', // Very dark gray, almost black
+                        'secondary-dark': '#1f2328',//'#1c1c1e', // Dark gray for cards/sections
+                        'accent-dark': '#0a84ff',        // Primary interactive color (brighter blue for dark)
+                        'text-primary-dark': '#e5e7eb',  // Main text (light gray)
+                        'text-secondary-dark': '#9ca3af',// Muted text (gray)
+                        'border-dark': '#374151',        // Borders
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="antialiased text-base font-normal leading-relaxed">
+<body class="bg-primary-light dark:bg-primary-dark text-text-primary-light dark:text-text-primary-dark antialiased">
 
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle" aria-label="Toggle dark mode" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200">
-        <i class="fas fa-sun" id="theme-toggle-light-icon"></i>
-        <i class="fas fa-moon" id="theme-toggle-dark-icon"></i>
-    </button>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-
-        <!-- Header Section -->
-        <header class="text-center mb-12 md:mb-16 fade-in" style="animation-delay: 0s;">
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">Best Gift Ideas for 2025</h1>
-            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Top Trends and Curated Presents for Everyone on Your List</p>
-        </header>
-
-        <main class="space-y-16">
-
-            <!-- Introduction Section -->
-            <section id="intro" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.1s;">
-                <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Shifting Landscape of Gifting</h2>
-                <p>The landscape of gift-giving is in constant motion. As we look ahead to 2025, it's clear we're moving beyond simple material exchanges towards a more considered, imaginative approach resonating with individual values and passions. Several prominent themes are emerging: personalized presents, experiential gifts, sustainability, the influence of technology, and a focus on well-being. This report explores these trends and offers a curated selection of the top 20 gift ideas for 2025.</p>
-            </section>
-
-            <!-- Key Trends Section -->
-            <section id="trends" style="animation-delay: 0.2s;">
-                <h2 class="text-3xl font-bold tracking-tight text-center mb-10 text-gray-900 dark:text-white">Key Gifting Trends for 2025</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Trend Card: Personalization (ADDED ID) -->
-                    <div id="trend-personalization" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-sliders-h text-2xl mr-3 text-blue-500 dark:text-blue-400"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Deep Personalization</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Moving beyond monograms to sophisticated customization powered by AI (e.g., <a href="#gift-idea-1" class="link-styling" title="Jump to AI Book">custom books</a>, jewelry, skincare) and curated themed boxes. Classic personalization like <a href="#gift-idea-12" class="link-styling" title="Jump to Family Portrait">portraits</a> or <a href="#gift-idea-5" class="link-styling" title="Jump to Recipe Book">recipe books</a> still holds value. Reflects a desire for deeper connections [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-2" class="link-external" title="Source 2">2</a>]. See examples: <a href="#gift-idea-1" class="link-styling">1</a>, <a href="#gift-idea-5" class="link-styling">5</a>, <a href="#gift-idea-7" class="link-styling">7</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-12" class="link-styling">12</a>, <a href="#gift-idea-19" class="link-styling">19</a>.</p>
-                    </div>
-
-                    <!-- Trend Card: Experiences Over Things (ADDED ID) -->
-                     <div id="trend-experiences" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-map-marked-alt text-2xl mr-3 text-green-500 dark:text-green-400"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Experiences Over Things</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Valuing lasting memories over fleeting possessions. Includes <a href="#gift-idea-2" class="link-styling" title="Jump to VR Experience">VR experiences</a>, local activities like <a href="#gift-idea-6" class="link-styling" title="Jump to Crafting Class">craft classes</a>, and hyper-personalized <a href="#gift-idea-7" class="link-styling" title="Jump to Subscription Box">subscription boxes</a> [<a href="#ref-1" class="link-external" title="Source 1">1</a>]. Consider learning platforms like <a href="#gift-idea-19" class="link-styling" title="Jump to Learning Platform">#19</a> or DIY kits like <a href="#gift-idea-18" class="link-styling" title="Jump to DIY Kit">#18</a>. See examples: <a href="#gift-idea-2" class="link-styling">2</a>, <a href="#gift-idea-6" class="link-styling">6</a>, <a href="#gift-idea-7" class="link-styling">7</a>, <a href="#gift-idea-18" class="link-styling">18</a>, <a href="#gift-idea-19" class="link-styling">19</a>.</p>
-                    </div>
-
-                    <!-- Trend Card: Sustainability & Ethics (ADDED ID) -->
-                    <div id="trend-sustainability" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                           <i class="fas fa-leaf text-2xl mr-3 text-emerald-500 dark:text-emerald-400"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Sustainability & Ethics</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Growing demand for eco-friendly materials (<a href="#gift-idea-3" class="link-styling" title="Jump to Cork Yoga Mat">cork</a>, recycled fibers for a <a href="#gift-idea-16" class="link-styling" title="Jump to Cozy Throw">cozy throw</a>), sustainable packaging, and zero-waste gifts (<a href="#gift-idea-8" class="link-styling" title="Jump to Water Bottle">reusable bottles</a>). Support ethical brands & consider longevity [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-3" class="link-external" title="Source 3">3</a>]. Check out: <a href="#gift-idea-3" class="link-styling">3</a>, <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-16" class="link-styling">16</a>, <a href="#gift-idea-18" class="link-styling">18</a>.</p>
-                    </div>
-
-                    <!-- Trend Card: Technology Integration (ADDED ID) -->
-                    <div id="trend-technology" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-microchip text-2xl mr-3 text-purple-500 dark:text-purple-400"></i>
-                             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Technology Integration</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Smart gadgets like <a href="#gift-idea-13" class="link-styling" title="Jump to Smart Speaker">speakers</a>, <a href="#gift-idea-17" class="link-styling" title="Jump to Fitness Tracker">fitness trackers</a>, or <a href="#gift-idea-4" class="link-styling" title="Jump to Smart Garden">indoor gardens</a>. AR/VR enhance experiences (<a href="#gift-idea-2" class="link-styling" title="Jump to VR Experience">VR gift card</a>). Don't forget practical tech like <a href="#gift-idea-10" class="link-styling" title="Jump to Headphones">headphones</a> or fun gadgets like <a href="#gift-idea-15" class="link-styling" title="Jump to Instant Camera">instant cameras</a> [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-10" class="link-external" title="Source 10">10</a>]. Explore: <a href="#gift-idea-2" class="link-styling">2</a>, <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-9" class="link-styling">9</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-13" class="link-styling">13</a>, <a href="#gift-idea-15" class="link-styling">15</a>, <a href="#gift-idea-17" class="link-styling">17</a>.</p>
-                    </div>
-
-                    <!-- Trend Card: Wellness & Self-Care (ADDED ID) -->
-                     <div id="trend-wellness" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-heartbeat text-2xl mr-3 text-red-500 dark:text-red-400"></i>
-                             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Wellness & Self-Care</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Focus on mental and physical health. Gifts include items promoting relaxation like a <a href="#gift-idea-11" class="link-styling" title="Jump to Weighted Eye Mask">weighted eye mask</a> or promoting health like a <a href="#gift-idea-3" class="link-styling" title="Jump to Yoga Mat">yoga mat</a> or <a href="#gift-idea-17" class="link-styling" title="Jump to Fitness Tracker">fitness tracker</a>. Also consider <a href="#gift-idea-10" class="link-styling" title="Jump to Headphones">noise-canceling headphones</a> for focus [<a href="#ref-1" class="link-external" title="Source 1">1</a>, <a href="#ref-2" class="link-external" title="Source 2">2</a>, <a href="#ref-15" class="link-external" title="Source 15">15</a>]. Gift ideas: <a href="#gift-idea-3" class="link-styling">3</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-11" class="link-styling">11</a>, <a href="#gift-idea-17" class="link-styling">17</a>.</p>
-                    </div>
-
-                     <!-- Trend Card: Nostalgia & Updated Classics (ADDED ID) -->
-                     <div id="trend-nostalgia" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                             <i class="fas fa-history text-2xl mr-3 text-yellow-500 dark:text-yellow-400"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Nostalgia & Updated Classics</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Resurgence of retro gifts like updated <a href="#gift-idea-9" class="link-styling" title="Jump to Gaming Console">gaming consoles</a> or the tangible joy of <a href="#gift-idea-15" class="link-styling" title="Jump to Instant Camera">instant print cameras</a>. Offers comfort and connection to positive memories [<a href="#ref-2" class="link-external" title="Source 2">2</a>]. See: <a href="#gift-idea-9" class="link-styling">9</a>, <a href="#gift-idea-15" class="link-styling">15</a>.</p>
-                    </div>
-
-                     <!-- Trend Card: Practicality & Quality (ADDED ID) -->
-                     <div id="trend-practicality" class="card p-6 rounded-lg">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-check-circle text-2xl mr-3 text-indigo-500 dark:text-indigo-400"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Practicality & Quality</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400">Appreciation for useful, durable gifts. Think <a href="#gift-idea-8" class="link-styling" title="Jump to Water Bottle">reusable water bottles</a>, <a href="#gift-idea-16" class="link-styling" title="Jump to Cozy Throw">cozy throws</a>, quality tech like <a href="#gift-idea-13" class="link-styling" title="Jump to Smart Speaker">smart speakers</a>, or niche useful items like a <a href="#gift-idea-20" class="link-styling" title="Jump to Coffee Maker">portable coffee maker</a> or <a href="#gift-idea-14" class="link-styling" title="Jump to Food Basket">gourmet food baskets</a> [<a href="#ref-2" class="link-external" title="Source 2">2</a>, <a href="#ref-5" class="link-external" title="Source 5">5</a>]. Find ideas: <a href="#gift-idea-4" class="link-styling">4</a>, <a href="#gift-idea-5" class="link-styling">5</a>, <a href="#gift-idea-8" class="link-styling">8</a>, <a href="#gift-idea-10" class="link-styling">10</a>, <a href="#gift-idea-13" class="link-styling">13</a>, <a href="#gift-idea-14" class="link-styling">14</a>, <a href="#gift-idea-16" class="link-styling">16</a>, <a href="#gift-idea-20" class="link-styling">20</a>.</p>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Top 20 Gift Ideas Section -->
-            <section id="top-gifts" style="animation-delay: 0.3s;">
-                 <h2 class="text-3xl font-bold tracking-tight text-center mb-10 text-gray-900 dark:text-white">Top 20 Gift Ideas for 2025</h2>
-                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-                    <!-- Gift Idea Card 1 (ADDED Links back to trends) -->
-                    <div id="gift-idea-1" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">1. AI-Powered Personalized Book</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Unique book created via AI based on recipient's interests or shared memories.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Book lovers, family, friends.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
-                            </p>
-                        </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                        </div>
-                    </div>
-
-                    <!-- Gift Idea Card 2 (ADDED Links back to trends) -->
-                    <div id="gift-idea-2" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">2. VR Experience Gift Card</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Voucher for immersive VR adventure (historical tour, nature exploration).</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Tech enthusiasts, adventurers.</p>
-                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
-                            </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
-                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                        </div>
-                    </div>
-
-                    <!-- Gift Idea Card 3 (ADDED Links back to trends) -->
-                    <div id="gift-idea-3" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">3. Sustainable Cork Yoga Mat</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Eco-friendly mat with excellent grip and durability.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Yoga practitioners, eco-conscious.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
-                             </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
-                             <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
-                        </div>
-                    </div>
-
-                    <!-- Gift Idea Card 4 (ADDED Links back to trends) -->
-                     <div id="gift-idea-4" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">4. Smart Indoor Garden</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Self-watering/lighting garden for year-round herbs and veggies.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Home cooks, plant lovers, sustainable living fans.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                            </p>
-                        </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                        </div>
-                    </div>
-
-                     <!-- ... Repeat this pattern for all 20 gift cards ... -->
-
-                    <!-- Example for Gift Idea 5 -->
-                    <div id="gift-idea-5" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">5. Personalized Recipe Book</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Custom book with family recipes or blank pages to fill.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Foodies, family members, cooks.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                            </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                        </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 6 -->
-                     <div id="gift-idea-6" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">6. Local Crafting Class Voucher</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Gift certificate for a hands-on workshop (pottery, painting).</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Creative individuals, hobby seekers.</p>
-                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>
-                            </p>
-                        </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
-                        </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 7 -->
-                     <div id="gift-idea-7" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">7. Curated Subscription Box</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tailored box for coffee, wine, or beauty enthusiasts based on preferences.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Coffee/wine/beauty fans.</p>
-                              <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
-                            </p>
-                         </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
-                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                        </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 8 -->
-                    <div id="gift-idea-8" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">8. Custom Stainless Steel Water Bottle</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Durable, stylish bottle personalized with name or design.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Anyone, active or eco-conscious.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                            </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
-                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                        </div>
-                    </div>
-
-                    <!-- Example for Gift Idea 9 -->
-                    <div id="gift-idea-9" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">9. Retro Gaming Console (Modern Updates)</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Classic console look with updated features and game library.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Gamers, nostalgic individuals.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-nostalgia" class="link-styling" title="Jump to Nostalgia Trend">Nostalgia</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
-                             </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded-full">Nostalgia</span>
-                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                         </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 10 -->
-                     <div id="gift-idea-10" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">10. High-Quality Noise-Canceling Headphones</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Premium headphones ideal for focus, travel, or relaxation.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Commuters, students, music lovers.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
-                            </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                            <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
-                        </div>
-                     </div>
-
-                    <!-- Example for Gift Idea 11 -->
-                     <div id="gift-idea-11" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">11. Weighted Eye Mask with Aromatherapy</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Comfortable mask with gentle weight and soothing scent for better sleep.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Those struggling with sleep, seeking relaxation.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
-                             </p>
-                         </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
-                        </div>
-                    </div>
-
-                    <!-- Example for Gift Idea 12 -->
-                     <div id="gift-idea-12" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">12. Personalized Family Portrait Illustration</h4>
-                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Custom-drawn illustration based on a family photo.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Family members, sentimental gift lovers.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
-                            </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                         </div>
-                     </div>
-
-                    <!-- Example for Gift Idea 13 -->
-                     <div id="gift-idea-13" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">13. Smart Speaker with Voice Assistant</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Voice-controlled speaker for music, reminders, smart home control.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Tech enthusiasts, anyone seeking convenience.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                            </p>
-                         </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                        </div>
-                    </div>
-
-                    <!-- Example for Gift Idea 14 -->
-                    <div id="gift-idea-14" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">14. Gourmet Food Basket (Local Artisanal)</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Selection of high-quality, locally sourced items (cheeses, jams).</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Foodies, supporters of local products.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                             </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                         </div>
-                     </div>
-
-                    <!-- Example for Gift Idea 15 -->
-                    <div id="gift-idea-15" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">15. Instant Print Camera & Accessories Kit</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Fun, easy-to-use camera with film and creative accessories.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Teens, young adults, memory keepers.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-nostalgia" class="link-styling" title="Jump to Nostalgia Trend">Nostalgia</a>, <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>
-                             </p>
-                        </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded-full">Nostalgia</span>
-                             <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                         </div>
-                    </div>
-
-                    <!-- Example for Gift Idea 16 -->
-                     <div id="gift-idea-16" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                             <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">16. Cozy Knit Throw (Recycled Materials)</h4>
-                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Soft, warm blanket crafted from recycled fibers.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Anyone who enjoys comfort, eco-conscious.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                             </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
-                             <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                        </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 17 -->
-                    <div id="gift-idea-17" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">17. Fitness Tracker with Sleep Monitoring</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Wearable tracking activity, heart rate, and sleep patterns.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Fitness enthusiasts, health-conscious.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-technology" class="link-styling" title="Jump to Technology Trend">Tech</a>, <a href="#trend-wellness" class="link-styling" title="Jump to Wellness Trend">Wellness</a>
-                             </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-0.5 rounded-full">Tech</span>
-                             <span class="text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-0.5 rounded-full">Wellness</span>
-                         </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 18 -->
-                     <div id="gift-idea-18" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">18. DIY Craft Kit (Sustainable Materials)</h4>
-                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Kit with all materials/instructions for an eco-friendly craft project.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Creative individuals, sustainable hobbyists.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-sustainability" class="link-styling" title="Jump to Sustainability Trend">Sustainability</a>, <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>
-                             </p>
-                         </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full">Sustainability</span>
-                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
-                         </div>
-                    </div>
-
-                    <!-- Example for Gift Idea 19 -->
-                    <div id="gift-idea-19" class="card p-5 rounded-lg flex flex-col">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">19. Subscription to Personalized Learning Platform</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Access to online courses/workshops tailored to interests/goals.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Lifelong learners, professional developers.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trends:</strong> <a href="#trend-experiences" class="link-styling" title="Jump to Experiences Trend">Experiences</a>, <a href="#trend-personalization" class="link-styling" title="Jump to Personalization Trend">Personalization</a>
-                             </p>
-                         </div>
-                         <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                             <span class="text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">Experiences</span>
-                            <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">Personalization</span>
-                        </div>
-                    </div>
-
-                     <!-- Example for Gift Idea 20 -->
-                    <div id="gift-idea-20" class="card p-5 rounded-lg flex flex-col">
-                         <div>
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">20. High-End Portable Coffee Maker</h4>
-                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Compact, easy-to-use maker for quality coffee on the go.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3"><strong>Audience:</strong> Coffee lovers, travelers, outdoor enthusiasts.</p>
-                             <p class="text-xs text-gray-500 dark:text-gray-500 mb-3">
-                                <strong>Trend:</strong> <a href="#trend-practicality" class="link-styling" title="Jump to Practicality Trend">Practicality</a>
-                             </p>
-                         </div>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-gray-200 dark:border-gray-700">
-                            <span class="text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-0.5 rounded-full">Practicality</span>
-                         </div>
-                     </div>
-
-                </div> <!-- End Grid -->
-            </section>
-
-            <!-- Corporate Gifting Section -->
-            <section id="corporate-gifting" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.4s;">
-                 <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Corporate Gifting Trends in 2025</h2>
-                 <p>Corporate gifting is also evolving beyond generic branded items towards more meaningful gestures. Similar to personal gifting, personalization (custom boxes) and experiences (unique events) are key [<a href="#ref-3" class="link-external" title="Source 3">3</a>]. Sustainability and eco-conscious choices (packaging, materials) are increasingly important. For remote teams, gifts supporting productivity and connection (welcome kits, tech) are relevant [<a href="#ref-5" class="link-external" title="Source 5">5</a>]. Tech-forward, genuinely useful items are highly valued. There's also a growing focus on diversity and inclusion, supporting minority-owned businesses and celebrating diverse cultures [<a href="#ref-3" class="link-external" title="Source 3">3</a>, <a href="#ref-5" class="link-external" title="Source 5">5</a>]. Practicality remains crucial, favouring items recipients will actually use. Choice, offered via gifting platforms or swag stores, is also a growing trend [<a href="#ref-3" class="link-external" title="Source 3">3</a>, <a href="#ref-9" class="link-external" title="Source 9">9</a>]. These shifts reflect an understanding that thoughtful gifts enhance morale, client relationships, and brand image.</p>
-            </section>
-
-             <!-- Conclusion Section -->
-            <section id="conclusion" class="prose dark:prose-invert max-w-none lg:prose-lg" style="animation-delay: 0.5s;">
-                <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">The Future of Gifting: Conscious & Connected</h2>
-                 <p>In conclusion, 2025 gift trends point towards a more conscious, creative, and deeply connected approach [<a href="#ref-1" class="link-external" title="Source 1">1</a>]. Whether using AI for personalization, choosing sustainable products, or gifting memorable experiences, the focus is on intentionality and genuine meaning. Understanding these trends and individual preferences ensures gifts are impactful and special. The most meaningful gifts demonstrate care, create resonant moments, and foster stronger connections, moving beyond obligation to authentic value alignment [<a href="#ref-1" class="link-external" title="Source 1">1</a>].</p>
-             </section>
-
-             <!-- Works Cited Section -->
-             <section id="works-cited" style="animation-delay: 0.6s;">
-                 <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Works Cited</h2>
-                <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 list-none pl-0">
-                     <li id="ref-1"><strong>1.</strong> LEFT-HANDESIGN®. (n.d.). <a href="https://left-handesign.com/blogs/news/2025-gifting-trends-comprehensive-guide" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 Gifting Trends: Your Complete Guide">2025 Gifting Trends: Your Complete Guide to Modern Gift Ideas</a>. Accessed April 26, 2025.</li>
-                     <li id="ref-2"><strong>2.</strong> ASD Market Week. (n.d.). <a href="https://asdonline.com/blog/about-asd/whats-trending-in-gifts-in-2025-that-youll-find-at-asd/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 Gift Trends">2025 Gift and Gift Giving Trends</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-3"><strong>3.</strong> Signature Group Events. (n.d.). <a href="https://signaturegroupevents.com/2025-corporate-gifting-trends/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Corporate Gifting Trends">2025 Corporate Gifting Trends</a>. Accessed April 26, 2025.</li>
-                     <li id="ref-4"><strong>4.</strong> La Camisa. (n.d.). <a href="https://lacamisa.my/ultimate-gift-guide-for-every-occasion/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Ultimate Gift Guide 2025">The Ultimate Gift Guide: Best Gifts in 2025 for Every Occasion</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-5"><strong>5.</strong> Clove & Twine. (n.d.). <a href="https://www.cloveandtwine.com/blogs/blog/top-corporate-gifting-trends-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Corporate Gifting Trends 2025">The Top 8 Corporate Gifting Trends You Need to Know in 2025</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-6"><strong>6.</strong> Good Housekeeping. (n.d.). <a href="https://www.goodhousekeeping.com/holidays/gift-ideas/g63362525/most-popular-gifts-2025/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Most Popular Gifts 2025">These Are the Most Popular Gifts of 2025 (So Far)</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-7"><strong>7.</strong> WishMerge. (n.d.). <a href="https://wishmerge.com/blog/top-110-christmas-gift-ideas-every-age-group-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top 110 Christmas Gifts 2025">Top 110 Christmas Gift Ideas for Every Age Group for 2025</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-8"><strong>8.</strong> Teak & Twine. (n.d.). <a href="https://www.teakandtwine.com/blog/gifting-trends" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Popular Gifting Trends 2025">Popular Gifting Trends For 2025</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-9"><strong>9.</strong> Corporate Specialties. (n.d.). <a href="https://www.corporatespecialties.com/blog/top-company-swag" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Ultimate 2025 Company Swag Guide">The Ultimate 2025 Company Swag Guide: 51 Trending Products For Any Occasion</a>. Accessed April 26, 2025.</li>
-                     <li id="ref-10"><strong>10.</strong> Best Buy. (n.d.). <a href="https://www.bestbuy.com/site/gift-ideas/top-tech-gifts/pcmcat1496256957402.c?id=pcmcat1496256957402" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Tech Gifts 2025">Top Tech Gifts 2025</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-11"><strong>11.</strong> YouTube. (n.d.). <a href="https://www.youtube.com/watch?v=RlyyEyVGFeY" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 24 New Gadgets (2025)">24 New Gadgets And Inventions (2025) You Can Buy Now</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-12"><strong>12.</strong> Elfster. (n.d.). <a href="https://www.elfster.com/shop/gift-guides/359/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Best Tech Gadgets 2025">Best Tech Gadgets In 2025 - Affordable Electronic Gifts</a>. Accessed April 26, 2025.</li>
-                    {/* NOTE: Link 13 removed as requested in previous step */}
-                     <li id="ref-14"><strong>14.</strong> Elfster. (n.d.). <a href="https://www.elfster.com/shop/gift-guides/217/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Top Trending Gifts 2025">Top Trending Gift Ideas for 2025 - Best Gifts This Year</a>. Accessed April 26, 2025.</li>
-                     <li id="ref-15"><strong>15.</strong> YouTube. (n.d.). <a href="https://www.youtube.com/watch?v=JnIsGYUcEjl" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Trending Wellness Gifts 2025">Ultimate Guide to Trending Wellness Gifts in 2025 | Top 12 Must-Have Products for Women</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-16"><strong>16.</strong> Best Buy. (n.d.). <a href="https://www.bestbuy.com/site/electronics/gift-ideas/abcat0010000.c?id=abcat0010000" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Gift Ideas 2025">Gift Ideas 2025: Best Gifts to Give This Year</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-17"><strong>17.</strong> Reddit r/AskMen. (n.d.). <a href="https://www.reddit.com/r/AskMen/comments/1hszbmn/what_are_some_unique_cool_techgadgets_in_2025/" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Reddit AskMen Tech Gadgets 2025">What are some unique, cool tech/gadgets in 2025?</a> Accessed April 26, 2025.</li>
-                    <li id="ref-18"><strong>18.</strong> UGREEN EU. (n.d.). <a href="https://eu.ugreen.com/blogs/holiday/new-year-tech-gift-ideas-for-every-budget" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: 2025 New Year Tech Gifts">2025 New Year Tech Gifts: Stunning Ideas for Every Budget €50 to €500</a>. Accessed April 26, 2025.</li>
-                    <li id="ref-19"><strong>19.</strong> Merchloop. (n.d.). <a href="https://merchloop.com/blogs/news/company-gift-ideas-that-actually-work-in-2025" target="_blank" rel="noopener noreferrer" class="link-external" title="Visit Source: Company Gifts That Work 2025">Company Gift Ideas That Actually Work in 2025</a>. Accessed April 26, 2025.</li>
-                </ul>
-             </section>
-
-        </main>
-
-        <!-- Footer Section -->
-        <footer class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-500 dark:text-gray-400 text-sm fade-in" style="animation-delay: 0.8s;">
-             <div class="mb-4">
-                 <p>Created by: <a href="https://wowshoplist.com/" target="_blank" rel="noopener noreferrer" class="font-medium link-external">wow shop list</a></p>
-            </div>
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
-                     <i class="fab fa-github fa-lg"></i>
-                 </a>
-                 <a href="https://twitter.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="Twitter X" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
-                    <i class="fab fa-twitter fa-lg"></i> <!-- Or fa-x-twitter -->
-                 </a>
-                 <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
-                    <i class="fab fa-linkedin-in fa-lg"></i>
+    <header class="sticky top-0 z-50 bg-primary-light/80 dark:bg-primary-dark/80 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 group">
+                    <svg class="h-8 w-8 text-accent-light dark:text-accent-dark group-hover:opacity-80 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3s-1.343-3-3-3S9 6.343 9 8s1.343 3 3 3zm0 0v7m0-7H8m4 0h4M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="font-bold text-xl text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">XJ-HOME</span>
                 </a>
-                 <!-- Add other social media links as needed -->
-            </div>
-            <p>© <span id="current-year"></span> wow shop list. All rights reserved.</p>
-        </footer>
 
-    </div> <!-- End container -->
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="#introduction" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Intro</a>
+                    <a href="#principles" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Principles</a>
+                    <a href="#specs" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Specs</a>
+                    <a href="#types" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Types</a>
+                    <a href="#roadmap" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Roadmap</a>
+                    <a href="#conclusion" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark mr-2">
+                        <i class="fas fa-sun text-lg" id="theme-toggle-sun"></i>
+                        <i class="fas fa-moon text-lg" id="theme-toggle-moon"></i>
+                    </button>
+                    <button id="mobile-menu-button" aria-label="Open menu" class="md:hidden interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden py-2">
+                <a href="#introduction" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Introduction</a>
+                <a href="#principles" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Core Principles</a>
+                <a href="#specs" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Decoding Specs</a>
+                <a href="#types" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Speaker Types</a>
+                <a href="#roadmap" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Your Roadmap</a>
+                <a href="#conclusion" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="introduction" class="text-center py-12 md:py-20 fade-in-section">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500">
+                Finding Your Sonic Truth
+            </h1>
+            <p class="text-lg md:text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                A definitive guide to choosing the perfect speakers for your record player. Unlock the full magic of vinyl by understanding the synergy of sound.
+            </p>
+            <a href="#principles" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Discover More <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </section>
+
+        <section id="principles" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">Deconstructing "Best" in Audio</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">The notion of "best" is subjective. It's about finding what's right for *you*, your system, and your space.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">Sound Reproduction</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Ideally, speakers convert electrical signals to sound waves with high fidelity, without adding or subtracting. But "accuracy" itself is debatable.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-user-cog text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">Subjectivity Matters</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">We listen with our ears and brains, shaped by experiences and biases. What's "detailed" to one might be "harsh" to another.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-balance-scale text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">The Reality of Compromise</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Every speaker design balances size, cost, and sonic traits. The "perfect" speaker for everyone doesn't exist, especially on a budget.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">The Chain of Command: System Synergy</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">Speakers are only part of the equation. Your audio system is an interconnected chain; the final sound is only as good as its weakest link.</p>
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-link text-accent-light dark:text-accent-dark mr-2"></i>Amplifier Matching</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Power output, impedance compatibility, and the amp's sonic signature greatly impact speaker sound. An underpowered amp can make speakers sound lifeless.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-record-vinyl text-accent-light dark:text-accent-dark mr-2"></i>Phono Preamplifier</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Crucial for vinyl, it handles RIAA equalization and signal amplification. Its quality significantly affects clarity and fidelity.</p>
+                    </div>
+                </div>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mt-8 italic"><strong>Key Takeaway:</strong> Ensure your turntable, cartridge, and phono preamp are of commensurate quality to your speakers. A balanced system is often best.</p>
+            </div>
+        </section>
+
+        <section id="specs" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">Decoding Speaker Specifications</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Understanding specs helps, but numbers don't tell the whole story. Context is key, especially for vinyl.</p>
+            <div class="space-y-8">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-wave-square text-accent-light dark:text-accent-dark mr-2"></i>Frequency Response (e.g., 50Hz - 20kHz ±3dB)</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1"><strong>What it is:</strong> The range of frequencies a speaker can reproduce and how evenly. Wider and flatter is generally better.</p>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm"><strong>Vinyl Reality:</strong> Smoothness of response is often more important than sheer extension to avoid accentuating vinyl's potential rumble or harsh highs.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-bolt text-accent-light dark:text-accent-dark mr-2"></i>Sensitivity (e.g., 88dB @ 1W/1m)</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1"><strong>What it is:</strong> How loud a speaker plays with 1 watt of power at 1 meter. Higher is more efficient.</p>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm"><strong>Vinyl Reality:</strong> Crucial for amplifier pairing. Higher sensitivity (90dB+) is better for low-powered amps. Sensitivity ≠ sound quality.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-plug text-accent-light dark:text-accent-dark mr-2"></i>Impedance (e.g., 8 Ohms nominal)</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1"><strong>What it is:</strong> Electrical resistance presented to the amplifier. Varies with frequency.</p>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm"><strong>Vinyl Reality:</strong> Low minimum impedance can strain some amps. Ensure your amp can handle the speaker's load (typically 8-ohm is safe).</p>
+                </div>
+                 <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-box-open text-accent-light dark:text-accent-dark mr-2"></i>Driver Types & Enclosure</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1"><strong>Drivers:</strong> Woofers (bass), midranges, tweeters (treble). Materials influence character.</p>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm"><strong>Enclosures:</strong> Sealed (tight bass, less efficient) vs. Ported (deeper bass, more efficient). Choice depends on room, preference, and desired bass character. Good transient response is beneficial for vinyl.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Passive vs. Powered Speakers</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">A fundamental choice in your turntable setup. Neither is inherently "better"; it depends on your needs and priorities.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3"><i class="fas fa-puzzle-piece text-accent-light dark:text-accent-dark mr-2"></i>Passive Speakers</h3>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-3">Require an external amplifier. Path: Turntable → Phono Preamp → Amplifier → Passive Speakers.</p>
+                        <strong class="block mb-1 text-text-primary-light dark:text-text-primary-dark">Pros:</strong>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-3">
+                            <li>Flexibility to choose/upgrade amp</li>
+                            <li>Potentially higher sound quality ceiling</li>
+                            <li>Modular system building</li>
+                        </ul>
+                        <strong class="block mb-1 text-text-primary-light dark:text-text-primary-dark">Cons:</strong>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1">
+                            <li>More components and complexity</li>
+                            <li>Potentially higher overall cost</li>
+                        </ul>
+                         <p class="mt-4 text-sm text-text-primary-light dark:text-text-primary-dark"><strong>Choose if:</strong> You enjoy tinkering, own a good amp, plan long-term upgrades, or aim for top-tier fidelity.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3"><i class="fas fa-power-off text-accent-light dark:text-accent-dark mr-2"></i>Powered (Active) Speakers</h3>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-3">Amplifiers are built-in. Many include phono preamps for direct turntable connection.</p>
+                        <strong class="block mb-1 text-text-primary-light dark:text-text-primary-dark">Pros:</strong>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-3">
+                            <li>Simplicity and convenience</li>
+                            <li>Optimized amp/driver matching</li>
+                            <li>Space-saving and often cost-effective</li>
+                        </ul>
+                        <strong class="block mb-1 text-text-primary-light dark:text-text-primary-dark">Cons:</strong>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1">
+                            <li>Less flexibility for upgrades</li>
+                            <li>Potentially lower ultimate quality ceiling</li>
+                            <li>Repair can be more complex</li>
+                        </ul>
+                        <p class="mt-4 text-sm text-text-primary-light dark:text-text-primary-dark"><strong>Choose if:</strong> You prioritize simplicity, have limited space, want a plug-and-play solution, or are on a tighter budget.</p>
+                    </div>
+                </div>
+                 <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mt-8 italic"><strong>Remember:</strong> Modern powered speakers can offer outstanding performance and convenience.</p>
+            </div>
+        </section>
+        
+        <section class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">The "Vinyl Sound" Myth</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Does vinyl's "warmth" mean you need "vintage-sounding" speakers? Not necessarily. Neutrality often reveals the recording's true character.</p>
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-history text-accent-light dark:text-accent-dark mr-2"></i>Nostalgia & Perception</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">The "vinyl sound" is partly from old mastering, equipment coloration, and nostalgia. "Warmth" can come from harmonic distortion or frequency nuances.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-assistive-listening-systems text-accent-light dark:text-accent-dark mr-2"></i>Speaker's Role</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Neutral speakers reproduce what's on the record. "Voiced" speakers add their own color. Aiming for neutrality is often better, letting the vinyl's character shine.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">A Practical Roadmap to Your "Best" Speakers</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">How to actually choose? It's a personal journey. Here are key steps and considerations.</p>
+                
+                <div class="mb-10 space-y-6">
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-headphones-alt text-accent-light dark:text-accent-dark mr-2"></i>Audition, Audition, Audition</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">The single most important step. Listen with your music, on a similar system, ideally in your room (in-home trials are invaluable).</p>
+                    </div>
+                     <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-home text-accent-light dark:text-accent-dark mr-2"></i>Acknowledge Your Room</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Room acoustics are a huge factor. Hard surfaces cause reflections; soft furnishings absorb sound. Consider basic treatments.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-wallet text-accent-light dark:text-accent-dark mr-2"></i>Budget Allocation</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">View holistically. A rough guide: similar budget portions for turntable/cartridge, amplification, and speakers.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-center my-8">Consider User Profiles:</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-user-graduate text-accent-light dark:text-accent-dark mr-2"></i>The Beginner / Apartment Dweller</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Powered speakers with built-in phono preamp often make sense. Simplicity, good sound for price, compact. (e.g., Kanto YU series, Audioengine A5+)</p>
+                        <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Beginner+Setup+Example" alt="Beginner Speaker Setup Example" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-user-astronaut text-accent-light dark:text-accent-dark mr-2"></i>The Budding Audiophile (Passive)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Entry-level passive bookshelf speakers with a budget integrated amp (with phono stage). (e.g., Wharfedale Diamond, ELAC Debut, Q Acoustics 3000i series)</p>
+                         <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Audiophile+Passive+Setup" alt="Budding Audiophile Passive Setup Example" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-user-tie text-accent-light dark:text-accent-dark mr-2"></i>The Dedicated Listener (Mid-Tier+)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Higher-quality passive speakers (bookshelf/floorstanding), dedicated amp, external phono stage. Room acoustics are critical. (e.g., KEF, Bowers & Wilkins, Focal)</p>
+                         <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Dedicated+Listener+Setup" alt="Dedicated Listener Setup Example" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-user-clock text-accent-light dark:text-accent-dark mr-2"></i>The Vintage Enthusiast</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">May seek restored vintage speakers or modern ones with "classic" voicing. Amp compatibility is key. (e.g., Advent, AR, KLH - vintage; some modern Wharfedale/JBL)</p>
+                         <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Vintage+Setup+Example" alt="Vintage Enthusiast Setup Example" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="py-12 md:py-20 text-center fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">The Enduring Quest for Sonic Truth</h2>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                Choosing speakers isn't about finding a universally acclaimed product. It's about understanding technology, acoustics, and your perception to define what sonic truth and listening pleasure mean to you.
+            </p>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                Trust your ears, do your research, and enjoy the discovery. The right speakers will bring your records to life.
+            </p>
+            <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Explore XJ-HOME <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+        </section>
+
+        <section class="py-12 md:py-16 border-t border-border-light dark:border-border-dark fade-in-section">
+            <h2 class="text-2xl font-bold text-center mb-8">Further Exploration</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://www.whathifi.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">What Hi-Fi? <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Reviews, news, and advice on hi-fi and home entertainment.</p>
+                </a>
+                <a href="https://www.soundandvision.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Sound & Vision <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Expert reviews and guides for audio and video gear.</p>
+                </a>
+                <a href="https://www.audioholics.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Audioholics <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">In-depth technical articles, reviews, and home theater resources.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-border-light dark:border-border-dark bg-secondary-light dark:bg-secondary-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-text-secondary-light dark:text-text-secondary-dark">
+            <p class="text-sm">&copy; <span id="currentYear"></span> XJ-HOME. All rights reserved. Crafted with <i class="fas fa-heart text-red-500"></i> for music lovers.</p>
+            <p class="text-xs mt-2">This page is a conceptual visualization based on provided content. For official information, please visit <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline">xenonjade.com</a>.</p>
+        </div>
+    </footer>
 
     <script>
-        // Dark/Light Mode Toggle Script
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const currentYearSpan = document.getElementById('current-year');
+        // JavaScript for Theme Toggle, Mobile Menu, Scroll Animations, and Current Year
 
-        // Function to set theme
-        function setTheme(isDark) {
+        // Theme Toggle
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
+
+        // Function to apply theme
+        function applyTheme(isDark) {
             if (isDark) {
                 document.documentElement.classList.add('dark');
-                lightIcon.style.display = 'none';
-                darkIcon.style.display = 'block';
-                localStorage.setItem('theme', 'dark');
+                sunIcon.style.display = 'inline-block';
+                moonIcon.style.display = 'none';
             } else {
                 document.documentElement.classList.remove('dark');
-                 lightIcon.style.display = 'block';
-                 darkIcon.style.display = 'none';
-                 localStorage.setItem('theme', 'light');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'inline-block';
             }
         }
 
-        // Check initial theme preference
-        const userPref = localStorage.getItem('theme');
-         const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Check local storage or system preference
+        let isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+                         (localStorage.getItem('darkMode') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        applyTheme(isDarkMode);
 
-         if (userPref === 'dark' || (!userPref && systemPref)) {
-             setTheme(true);
-         } else {
-            setTheme(false);
-         }
+        themeToggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('darkMode', isDarkMode);
+            applyTheme(isDarkMode);
+        });
 
-        // Toggle theme on button click
-        themeToggleBtn.addEventListener('click', () => {
-            const isDarkMode = document.documentElement.classList.contains('dark');
-            setTheme(!isDarkMode);
-         });
+        // Listen for system theme changes if no preference is stored
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('darkMode') === null) {
+                isDarkMode = e.matches;
+                applyTheme(isDarkMode);
+            }
+        });
 
-         // Set current year in footer
-        currentYearSpan.textContent = new Date().getFullYear();
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+
+        // Scroll Animations for sections
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            root: null, // relative to document viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of item is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // observer.unobserve(entry.target); // Optional: stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     </script>
-
 </body>
 </html>
