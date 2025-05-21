@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XJ-HOME | The Point of No Return: Record Player Needle Replacement Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track-bg, #f1f1f1); /* Light mode default */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb-bg, #888); /* Light mode default */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover-bg, #555); /* Light mode default */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Dark mode specific scrollbar colors */
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748; /* Dark gray */
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #718096; /* Lighter gray */
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; /* Even lighter gray */
+        }
+
+        /* Base transition for theme changes */
+        body, header, footer, section, div, nav, button, a, p, h1, h2, h3, h4, h5, h6 {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        /* Card hover effect */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px) scale(1.02); /* Subtle lift and scale */
+        }
+        
+        /* Button hover effect */
+        .interactive-button {
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-button:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+         .interactive-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--focus-ring-color, rgba(96, 165, 250, 0.5)); /* Default focus ring for light mode */
+        }
+        .dark .interactive-button:focus {
+             box-shadow: 0 0 0 3px var(--focus-ring-color-dark, rgba(59, 130, 246, 0.7)); /* Focus ring for dark mode */
+        }
+
+        /* Section fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom focus ring variables for theme consistency */
+        :root {
+            --focus-ring-color: rgba(96, 165, 250, 0.5); /* Tailwind blue-400 with opacity */
+            --focus-ring-color-dark: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with opacity for dark */
+        }
+    </style>
+    <script>
+        // Tailwind config for dark mode and custom theme
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        // Light Theme (inspired by Linear)
+                        'primary-light': '#ffffff',      // Background
+                        'secondary-light': '#f7f7f7',    // Slightly off-white for cards/sections
+                        'accent-light': '#007aff',       // Primary interactive color (e.g., Apple Blue)
+                        'text-primary-light': '#1c1c1e', // Main text
+                        'text-secondary-light': '#6b7280',// Muted text
+                        'border-light': '#e5e7eb',       // Borders
+
+                        // Dark Theme (inspired by Linear)
+                        'primary-dark': '#0d1117',       // Very dark gray, almost black
+                        'secondary-dark': '#1f2328',     // Dark gray for cards/sections
+                        'accent-dark': '#0a84ff',        // Primary interactive color (brighter blue for dark)
+                        'text-primary-dark': '#e5e7eb',  // Main text (light gray)
+                        'text-secondary-dark': '#9ca3af',// Muted text (gray)
+                        'border-dark': '#374151',        // Borders
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-light dark:bg-primary-dark text-text-primary-light dark:text-text-primary-dark antialiased">
+
+    <header class="sticky top-0 z-50 bg-primary-light/80 dark:bg-primary-dark/80 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 group">
+                    <svg class="h-8 w-8 text-accent-light dark:text-accent-dark group-hover:opacity-80 transition-opacity" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 10H11V14H13V10ZM13 7H11V9H13V7Z"/>
+                    </svg>
+                    <span class="font-bold text-xl text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">XJ-HOME</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="#introduction" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Intro</a>
+                    <a href="#wear-principles" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Wear Principles</a>
+                    <a href="#lifespan-variables" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Variables</a>
+                    <a href="#symptoms" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Symptoms</a>
+                    <a href="#strategy" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Strategy</a>
+                    <a href="#conclusion" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark mr-2">
+                        <i class="fas fa-sun text-lg" id="theme-toggle-sun"></i>
+                        <i class="fas fa-moon text-lg" id="theme-toggle-moon"></i>
+                    </button>
+                    <button id="mobile-menu-button" aria-label="Open menu" class="md:hidden interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden py-2">
+                <a href="#introduction" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Introduction</a>
+                <a href="#wear-principles" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Wear Principles</a>
+                <a href="#lifespan-variables" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Lifespan Variables</a>
+                <a href="#symptoms" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Symptoms of Wear</a>
+                <a href="#strategy" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Replacement Strategy</a>
+                <a href="#conclusion" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="introduction" class="text-center py-12 md:py-20 fade-in-section">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600 dark:from-teal-400 dark:to-cyan-500">
+                The Point of No Return
+            </h1>
+            <p class="text-lg md:text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                How often does your record player's needle *really* need replacing? Protecting your sound and vinyl collection starts here.
+            </p>
+            <a href="#wear-principles" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Learn More <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </section>
+
+        <section id="wear-principles" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">First Principles: The Inevitable Erosion</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">A stylus works by direct physical contact. Understanding this is key to its lifespan.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-atom text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">The Physics of Friction</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">The diamond tip erodes gradually due to friction against record grooves over hundreds of playback hours.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gem text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">Material Science</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Diamond is extremely hard but not immune to wear from continuous friction, especially against PVC records with impurities.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bullseye text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">The Goal of Precision</h3>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">A new stylus has a specific profile (conical, elliptical, etc.) for accurate groove tracing. Wear changes this profile, degrading performance.</p>
+                </div>
+            </div>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mt-8 italic"><strong>Standard Guideline:</strong> Manufacturers often suggest 500-1,000 playback hours, but this is an average and real-world variables are critical.</p>
+        </section>
+
+        <section id="lifespan-variables" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Deconstructing Lifespan: Critical Variables</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">Actual stylus life is a complex interplay of factors. Ignoring these leads to premature wear and record damage.</p>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-cut text-accent-light dark:text-accent-dark mr-2"></i>Stylus Profile (The Diamond's Cut)</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Dominant factor. Conical (200-500 hrs), Elliptical (300-800 hrs), Advanced profiles like Line Contact, Shibata, MicroLine (800-2000+ hrs) offer longer life and better tracking due to larger contact area reducing pressure.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-weight-hanging text-accent-light dark:text-accent-dark mr-2"></i>Tracking Force (VTF)</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Too high accelerates wear on stylus and record. Too low causes mistracking, damaging both. Use a stylus force gauge for accuracy.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-broom text-accent-light dark:text-accent-dark mr-2"></i>Record Condition & Cleanliness</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Dust, grime, and debris act as abrasives. Playing dirty records drastically accelerates stylus wear and damages vinyl. Regular record and stylus cleaning are essential.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-tools text-accent-light dark:text-accent-dark mr-2"></i>Turntable Setup & Alignment</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Proper cartridge alignment (overhang, zenith, azimuth) and anti-skate ensure even pressure and wear. Misalignment increases distortion and record wear.</p>
+                    </div>
+                     <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-exclamation-triangle text-accent-light dark:text-accent-dark mr-2"></i>Handling & Accidents</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Dropping the tonearm or mishandling can instantly damage a stylus, regardless of its age.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="symptoms" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">Recognizing the Symptoms: When Your Stylus Cries for Help</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Your ears are your primary diagnostic tool. Audible degradation often means wear is significant.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-volume-mute text-accent-light dark:text-accent-dark mr-2"></i>Dull/Muddy Sound</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Loss of high frequencies (cymbals, shimmer), lack of detail and clarity.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-signature text-accent-light dark:text-accent-dark mr-2"></i>Increased Sibilance</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Harsh exaggeration of "s," "sh," "t" sounds in vocals.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-sliders-h text-accent-light dark:text-accent-dark mr-2"></i>Distortion</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Noticeable on loud passages, complex sections, or inner grooves.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark md:col-span-1 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-headphones text-accent-light dark:text-accent-dark mr-2"></i>Channel Imbalance</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">One channel quieter, more distorted, or less distinct.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark md:col-span-1 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-microphone-slash text-accent-light dark:text-accent-dark mr-2"></i>Increased Surface Noise</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Worn stylus amplifies clicks, pops, and can carve new ones.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-random text-accent-light dark:text-accent-dark mr-2"></i>Mistracking/Skipping</h3>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Stylus jumps out of groove on records that previously played fine.</p>
+                </div>
+            </div>
+            <p class="text-center text-text-primary-light dark:text-text-primary-dark mt-8 italic"><strong>The Unseen Damage:</strong> A worn stylus acts like an abrasive tool, permanently damaging your records. The cost of a stylus is far less than replacing cherished vinyl.</p>
+        </section>
+
+        <section id="strategy" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">A MECE Approach to Your Replacement Strategy</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">Consider these mutually exclusive, collectively exhaustive approaches for stylus replacement.</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-stopwatch-20 text-accent-light dark:text-accent-dark mr-2"></i>Proactive (Hour-Based)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Track listening hours and replace based on your stylus profile's known lifespan. Safest for records.</p>
+                        <img src="https://xenonjade.com/cdn/shop/files/4_21cfab6e-d0d4-4ca0-a88a-6ea1dc2ec5c4.jpg?v=1747632810&width=500" alt="Tracking Playback Hours" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-assistive-listening-systems text-accent-light dark:text-accent-dark mr-2"></i>Reactive (Auditory Cues)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Replace when you hear sonic degradation. Common, but carries the highest risk of record damage as wear has already begun.</p>
+                         <img src="https://xenonjade.com/cdn/shop/files/10_37a6396d-7579-4d3a-8340-21074ec56b2d.jpg?v=1747632810&width=500" alt="Listening for Stylus Wear" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-search-plus text-accent-light dark:text-accent-dark mr-2"></i>Inspection-Based (Microscopic)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Regularly inspect stylus under magnification. Most precise but requires equipment and expertise.</p>
+                         <img src="https://xenonjade.com/cdn/shop/files/6_4a98de03-5cb8-4e1b-8989-d58942e3bc79.jpg?v=1747366198&width=600" alt="Microscopic Stylus Inspection" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-lg mb-2"><i class="fas fa-undo-alt text-accent-light dark:text-accent-dark mr-2"></i>Precautionary (Used Gear)</h4>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">If acquiring used turntable/cartridge, replace stylus immediately unless its history is irrefutably known. Don't risk it.</p>
+                         <img src="https://xenonjade.com/cdn/shop/files/2_2d777de6-05a4-43d2-bbd9-745afe334dc7.jpg?v=1747366198&width=500" alt="Replacing Stylus on Used Equipment" class="mt-4 rounded-lg aspect-video object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="py-12 md:py-20 text-center fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prioritizing Preservation and Pleasure</h2>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                Stylus replacement isn't just about a number. It's about understanding wear mechanics, valuing your record collection, and your tolerance for sonic compromise.
+            </p>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                Err on the side of caution. A slightly premature stylus replacement is a small price for preserving vinyl integrity and ensuring compelling listening sessions. Your records and ears will thank you.
+            </p>
+            <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Visit XJ-HOME <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+        </section>
+
+        <section class="py-12 md:py-16 border-t border-border-light dark:border-border-dark fade-in-section">
+            <h2 class="text-2xl font-bold text-center mb-8">Further Exploration</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://www.analogplanet.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Analog Planet <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">News, reviews, and resources for analog audio enthusiasts.</p>
+                </a>
+                <a href="https://www.thevinylfactory.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">The Vinyl Factory <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Vinyl news, features, and record label information.</p>
+                </a>
+                <a href="https://www.turntablelab.com/blogs/guides" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Turntable Lab Guides <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Helpful guides on turntables, cartridges, and audio setup.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-border-light dark:border-border-dark bg-secondary-light dark:bg-secondary-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-text-secondary-light dark:text-text-secondary-dark">
+            <p class="text-sm">&copy; <span id="currentYear"></span> XJ-HOME. All rights reserved. Crafted with <i class="fas fa-heart text-red-500"></i> for analog audio lovers.</p>
+            <p class="text-xs mt-2">This page is a conceptual visualization. For official XJ-HOME information, please visit <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline">xenonjade.com</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Theme Toggle, Mobile Menu, Scroll Animations, and Current Year
+
+        // Theme Toggle
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
+
+        // Function to apply theme
+        function applyTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                sunIcon.style.display = 'inline-block'; // Show sun in dark mode (to switch to light)
+                moonIcon.style.display = 'none';    // Hide moon
+            } else {
+                document.documentElement.classList.remove('dark');
+                sunIcon.style.display = 'none';     // Hide sun
+                moonIcon.style.display = 'inline-block'; // Show moon in light mode (to switch to dark)
+            }
+        }
+
+        // Check local storage or system preference
+        let isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+                         (localStorage.getItem('darkMode') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        applyTheme(isDarkMode);
+
+        themeToggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('darkMode', isDarkMode);
+            applyTheme(isDarkMode);
+        });
+
+        // Listen for system theme changes if no preference is stored
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('darkMode') === null) { // Only if no explicit user choice
+                isDarkMode = e.matches;
+                applyTheme(isDarkMode);
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isMenuOpen = mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll Animations for sections
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        };
+
+        const intersectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // observer.unobserve(entry.target); // Optional: stop observing once animated to save resources
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            intersectionObserver.observe(section);
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>
