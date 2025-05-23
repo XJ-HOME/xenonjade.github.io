@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XJ-HOME | 10 Must-Have Record Player Accessories: An Audiophile's Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track-bg, #f1f1f1); /* Light mode default */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb-bg, #888); /* Light mode default */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover-bg, #555); /* Light mode default */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Dark mode specific scrollbar colors */
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748; /* Dark gray */
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #718096; /* Lighter gray */
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; /* Even lighter gray */
+        }
+
+        /* Base transition for theme changes */
+        body, header, footer, section, div, nav, button, a, p, h1, h2, h3, h4, h5, h6 {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        /* Card hover effect */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px) scale(1.02); /* Subtle lift and scale */
+        }
+        
+        /* Button hover effect */
+        .interactive-button {
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-button:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+         .interactive-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--focus-ring-color, rgba(96, 165, 250, 0.5)); /* Default focus ring for light mode */
+        }
+        .dark .interactive-button:focus {
+             box-shadow: 0 0 0 3px var(--focus-ring-color-dark, rgba(59, 130, 246, 0.7)); /* Focus ring for dark mode */
+        }
+
+        /* Section fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom focus ring variables for theme consistency */
+        :root {
+            --focus-ring-color: rgba(96, 165, 250, 0.5); /* Tailwind blue-400 with opacity */
+            --focus-ring-color-dark: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with opacity for dark */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid var(--border-light, #e5e7eb);
+            padding: 0.75rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        .dark th, .dark td {
+            border-color: var(--border-dark, #374151);
+        }
+        th {
+            background-color: var(--secondary-light, #f7f7f7);
+        }
+        .dark th {
+            background-color: var(--secondary-dark, #1f2328);
+        }
+    </style>
+    <script>
+        // Tailwind config for dark mode and custom theme
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        // Light Theme (inspired by Linear)
+                        'primary-light': '#ffffff',      // Background
+                        'secondary-light': '#f7f7f7',    // Slightly off-white for cards/sections
+                        'accent-light': '#007aff',       // Primary interactive color (e.g., Apple Blue)
+                        'text-primary-light': '#1c1c1e', // Main text
+                        'text-secondary-light': '#6b7280',// Muted text
+                        'border-light': '#e5e7eb',       // Borders
+
+                        // Dark Theme (inspired by Linear)
+                        'primary-dark': '#0d1117',       // Very dark gray, almost black
+                        'secondary-dark': '#1f2328',     // Dark gray for cards/sections
+                        'accent-dark': '#0a84ff',        // Primary interactive color (brighter blue for dark)
+                        'text-primary-dark': '#e5e7eb',  // Main text (light gray)
+                        'text-secondary-dark': '#9ca3af',// Muted text (gray)
+                        'border-dark': '#374151',        // Borders
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-light dark:bg-primary-dark text-text-primary-light dark:text-text-primary-dark antialiased">
+
+    <header class="sticky top-0 z-50 bg-primary-light/80 dark:bg-primary-dark/80 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 group">
+                    <svg class="h-8 w-8 text-accent-light dark:text-accent-dark group-hover:opacity-80 transition-opacity" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 10H11V14H13V10ZM13 7H11V9H13V7Z"/>
+                    </svg>
+                    <span class="font-bold text-xl text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">XJ-HOME</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+                    <a href="#introduction" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Intro</a>
+                    <a href="#record-care" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Record Care</a>
+                    <a href="#mechanical-interface" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Mechanical</a>
+                    <a href="#electrical-integrity" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Electrical</a>
+                    <a href="#precision-setup" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Setup</a>
+                    <a href="#storage" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Storage</a>
+                    <a href="#conclusion" class="text-xs lg:text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark mr-2">
+                        <i class="fas fa-sun text-lg" id="theme-toggle-sun"></i>
+                        <i class="fas fa-moon text-lg" id="theme-toggle-moon"></i>
+                    </button>
+                    <button id="mobile-menu-button" aria-label="Open menu" class="md:hidden interactive-button p-2 rounded-md text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden py-2">
+                <a href="#introduction" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Introduction</a>
+                <a href="#record-care" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Record & Stylus Care</a>
+                <a href="#mechanical-interface" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Mechanical Interface</a>
+                <a href="#electrical-integrity" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Electrical Integrity</a>
+                <a href="#precision-setup" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Precision Setup</a>
+                <a href="#storage" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Record Storage</a>
+                <a href="#conclusion" class="block px-3 py-2 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors">Conclusion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="introduction" class="text-center py-12 md:py-20 fade-in-section">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+                10 Must-Have Record Player Accessories
+            </h1>
+            <p class="text-lg md:text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                An audiophile's deep dive into the tools that unlock the full sonic potential of your vinyl playback system, ensuring accuracy, longevity, and ultimate listening enjoyment.
+            </p>
+            <a href="#record-care" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Explore Accessories <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </section>
+
+        <section id="record-care" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">The Trinity of Record & Stylus Care</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Preservation and pristine playback start here. Immaculate record grooves and stylus tip are foundational.</p>
+            <div class="space-y-12">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shower text-3xl text-accent-light dark:text-accent-dark mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold">1. Advanced Record Cleaning System</h3>
+                            <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Beyond basic brushes for removing deep-seated grime and contaminants.</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3">Dust, grime, and residues act as physical impediments, causing noise and permanent groove damage. Effective cleaning is restorative.</p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-4">
+                        <li><strong>Dry Brushing:</strong> For light surface dust & static (insufficient alone).</li>
+                        <li><strong>Manual Wet Cleaning (e.g., Spin Clean):</strong> Better for embedded dirt, but bath can get contaminated.</li>
+                        <li><strong>Vacuum RCMs (e.g., VPI, Okki Nokki):</strong> More effective fluid/contaminant removal, fast drying. Higher cost, can be noisy.</li>
+                        <li><strong>Ultrasonic Cleaners (e.g., Degritter):</strong> Pinnacle for many; uses cavitation for microscopic cleaning. Most expensive, can be slower.</li>
+                    </ul>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm italic"><strong>Key:</strong> Cleaning fluid chemistry (purified water, IPA, surfactant) is critical. The "cleanliness threshold" for audible improvement depends on record state and system resolution.</p>
+                </div>
+
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-archive text-3xl text-accent-light dark:text-accent-dark mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold">2. Anti-Static Inner & Outer Sleeves</h3>
+                            <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Protect vinyl from scratches, static, and jackets from wear.</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3"><strong>Inner Sleeves (Record's first defense):</strong></p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-3">
+                        <li>Avoid plain paper (can shed, acidic, cause scuffs).</li>
+                        <li>Polylined paper is an improvement.</li>
+                        <li><strong>HDPE (High-Density Polyethylene):</strong> Archival standard; smooth, non-abrasive, anti-static. (e.g., MoFi, Sleeve City Diskeeper).</li>
+                        <li>"Rice Paper" Style: Multi-ply (HDPE + paper insert) for softness, anti-static, rigidity.</li>
+                    </ul>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3"><strong>Outer Sleeves (Protect artwork & jacket):</strong></p>
+                     <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-3">
+                        <li>Polyethylene (PE): Softer, good archival, can cloud.</li>
+                        <li><strong>Polypropylene (PP):</strong> Superior clarity, rigid. Modern ones resist splitting. (e.g., Sleeve City Ultimate Outer).</li>
+                        <li>Mylar (PET): Exceptional clarity, archivally sound, can be brittle, expensive.</li>
+                        <li><strong>AVOID PVC:</strong> Off-gasses chemicals, causes "hazing" on vinyl, damages artwork.</li>
+                        <li>Thickness (2-5 mil): Thicker (3mil+) offers more protection.</li>
+                    </ul>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm italic"><strong>Key:</strong> Use a "sleeve system." Acid-free, anti-static inners and durable, clear outers are crucial long-term investments.</p>
+                </div>
+
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                     <div class="flex items-center mb-4">
+                        <i class="fas fa-microscope text-3xl text-accent-light dark:text-accent-dark mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold">3. Precision Stylus Cleaner</h3>
+                            <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Maintains optimal performance by keeping the stylus tip immaculate.</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3">Debris on stylus causes distortion, loss of detail, mistracking, and damages stylus/records.</p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-4">
+                        <li><strong>Dry Brushes (Carbon Fiber/Nylon):</strong> For routine light cleaning (back-to-front motion). Ineffective for caked-on grime.</li>
+                        <li><strong>Gel-Based Cleaners (e.g., Onzow Zerodust):</strong> Tacky gel pulls off grime. Gentle vertical dip. Some residue concerns (debated).</li>
+                        <li><strong>Liquid Stylus Cleaners (with brush):</strong> Can dissolve stubborn deposits. Risk if fluid is aggressive or over-applied (can damage adhesive/suspension). Use specialized fluids only.</li>
+                        <li><strong>Electronic/Ultrasonic Stylus Cleaners:</strong> High-frequency vibrations for deep clean. Expensive; some concern about long-term stress if poorly designed.</li>
+                        <li><strong>DIY (Magic Eraser - white, untreated):</strong> Micro-abrasive. Inexpensive, can be effective but HIGH RISK of stylus damage if not done carefully.</li>
+                    </ul>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm italic"><strong>Key:</strong> Clean stylus regularly. Dry brush often, deeper clean as needed. Balance cleaning thoroughness with risk to delicate stylus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mechanical-interface" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Optimizing the Mechanical Interface</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">Ensuring stability, minimal resonance, and precise energy transfer between record, platter, and stylus.</p>
+                <div class="space-y-10">
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-compact-disc text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                            <h3 class="text-xl font-semibold">4. Quality Turntable Mat</h3>
+                        </div>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Provides stable, non-resonant support, damps vibrations, controls static, and manages record/platter coupling. Material is key:</p>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                            <li><strong>Felt:</strong> Inexpensive, lightweight. Prone to dust/static, minimal damping.</li>
+                            <li><strong>Cork:</strong> Good damping, static resistant. Sound: "warm," "natural." Can dull highs or flake.</li>
+                            <li><strong>Rubber:</strong> Excellent grip, good damping. Sound: "deep," "warm." Can over-damp or attract dust.</li>
+                            <li><strong>Leather:</strong> Good damping, anti-static. Sound: "smooth," "detailed." More expensive.</li>
+                            <li><strong>Acrylic:</strong> Firm, stable, non-resonant. Sound: "precise," "articulate." Can be static-prone or "bright."</li>
+                        </ul>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>VTA Impact:</strong> Mat thickness affects Vertical Tracking Angle. Adjust VTA if possible, or choose mat with similar thickness to original.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <div class="flex items-center mb-3">
+                             <i class="fas fa-weight-hanging text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                            <h3 class="text-xl font-semibold">5. Record Weight or Clamp</h3>
+                        </div>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Enhances record/platter interface, flattens minor warps, reduces vinyl resonance, minimizes slippage for clearer sound.</p>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                            <li><strong>Record Weights (Pucks):</strong> Rely on mass. Can tighten bass, improve focus. Risk: can accelerate bearing wear on some turntables.</li>
+                            <li><strong>Record Clamps:</strong> Grip spindle, apply pressure. More effective for dished warps, generally less risk to bearings.</li>
+                        </ul>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Consideration:</strong> Audible improvement can be subtle. Turntable design (mass, bearing robustness) dictates suitability. Some manufacturers advise against them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="electrical-integrity" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">Ensuring Electrical Integrity</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Preserving the delicate audio signal from stylus to ears with maximum fidelity and minimal noise.</p>
+            <div class="space-y-10">
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-sliders-h text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">6. External Phono Preamplifier</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Critical for low-noise amplification of weak cartridge signals and precise RIAA equalization. External units often outperform built-in stages due to:</p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                        <li>Higher-grade components and optimized circuit design.</li>
+                        <li>Better power supply isolation (minimizing hum/interference).</li>
+                        <li>Effective shielding and grounding.</li>
+                    </ul>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2"><strong>Cartridge Matching is Key:</strong></p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                        <li><strong>Moving Magnet (MM):</strong> Higher output (2-8mV), needs ~35-45dB gain, 47kOhm load. Capacitive loading is important.</li>
+                        <li><strong>Moving Coil (MC):</strong> Lower output (0.1-0.5mV for LOMC), needs ~55-70+dB gain. Resistive loading (10-1000 Ohms, varies) is critical. Less sensitive to capacitance.</li>
+                    </ul>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Features to look for:</strong> Adjustable gain, resistive loading (for MC), capacitive loading (for MM). An external preamp can be a significant sonic upgrade.</p>
+                </div>
+                <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                     <div class="flex items-center mb-3">
+                        <i class="fas fa-broom text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                        <h3 class="text-xl font-semibold">7. Carbon Fiber Anti-Static Record Brush</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Indispensable for pre-playback surface dust removal and static neutralization. Addresses clicks, pops, and surface noise.</p>
+                    <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                        <li><strong>Mechanism:</strong> Ultra-fine conductive carbon fibers sweep dust and dissipate static (if brush is grounded via user).</li>
+                        <li><strong>Proper Use:</strong> Gentle pressure, record spinning, sweep towards outer edge, clean brush regularly.</li>
+                        <li><strong>Quality Matters:</strong> Premium brushes (e.g., AudioQuest) ensure a complete grounding path. Cheaper ones may only be dust brushes.</li>
+                    </ul>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Limitations:</strong> For loose surface dust only, not a substitute for wet cleaning. Part of the listening ritual for many.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="precision-setup" class="py-12 md:py-16 bg-secondary-light dark:bg-secondary-dark rounded-xl fade-in-section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">The Art of Precision Setup</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10">Meticulous adjustment of interdependent parameters for maximum information retrieval with minimum distortion and wear.</p>
+                 <div class="space-y-10">
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-balance-scale-right text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                            <h3 class="text-xl font-semibold">8. Digital Stylus Force Gauge</h3>
+                        </div>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Ensures correct Vertical Tracking Force (VTF) - the downward pressure of the stylus. Critical for proper groove contact, sound quality, and minimizing wear.</p>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                            <li><strong>VTF Too Light:</strong> Mistracking, skipping, thin sound, damages record/stylus from bouncing.</li>
+                            <li><strong>VTF Too Heavy:</strong> Premature wear, compressed/sluggish sound, loss of detail.</li>
+                            <li>Counterweight markings are often inaccurate. Digital gauges offer higher resolution.</li>
+                        </ul>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Usage Tips:</strong> Calibrate gauge, measure at record height, use non-magnetic surface. Aim for mid-to-upper end of cartridge's recommended VTF range.</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-primary-light dark:bg-primary-dark shadow-md">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-drafting-compass text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                            <h3 class="text-xl font-semibold">9. Cartridge Alignment Protractor</h3>
+                        </div>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Minimizes Lateral Tracking Angle Error (LTAE) for pivoted tonearms, reducing distortion and uneven wear. Aims for stylus to be tangential to groove at "null points."</p>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                            <li><strong>Common Geometries:</strong> Baerwald (low average RMS distortion), Lofgren B (minimizes mid-record distortion), Stevenson (minimizes inner-groove distortion).</li>
+                            <li><strong>Protractor Types:</strong> Two-point generic, Arc protractors (custom for tonearm), Manufacturer-specific, Mirrored (reduces parallax error).</li>
+                        </ul>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Key:</strong> Align the stylus cantilever, not just cartridge body. Set VTF first. Turntable must be level. Setup is a holistic process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="storage" class="py-12 md:py-16 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4">The Unsung Hero: Proper Record Storage</h2>
+            <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-10 max-w-2xl mx-auto">Foundational to long-term health, preserving physical integrity of records and artwork.</p>
+            <div class="content-card bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-database text-2xl text-accent-light dark:text-accent-dark mr-3"></i>
+                    <h3 class="text-xl font-semibold">10. Dedicated Record Storage Furniture/Shelving</h3>
+                </div>
+                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">Prevents physical damage (warping, ring wear, seam splits) and mitigates environmental impact.</p>
+                <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 mb-2">
+                    <li><strong>Store Vertically:</strong> Non-negotiable. Horizontal stacking causes warping.</li>
+                    <li><strong>Adequate Support, No Overcrowding:</strong> Avoid excessive leaning and tight packing.</li>
+                    <li><strong>Environmental Controls:</strong>
+                        <ul class="ml-4">
+                            <li>Temperature: Stable, cool (65-70°F / 18-21°C). Away from heat sources/sunlight.</li>
+                            <li>Humidity: Moderate, stable (40-50% RH). Avoid basements/attics unless climate-controlled.</li>
+                            <li>Light: Minimize UV exposure.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Storage Types:</strong> Basic crates, Modular shelving (e.g., IKEA Kallax), Dedicated record furniture, Archival boxes (for valuable records).</li>
+                </ul>
+                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark italic"><strong>Key:</strong> Proper storage is "preventative medicine." Avoids irreversible damage. Reflects collector's seriousness and long-term perspective.</p>
+            </div>
+        </section>
+
+        <section id="conclusion" class="py-12 md:py-20 text-center fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Crafting Your Ultimate Analog Experience</h2>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                These 10 accessories are grounded in principles of preserving the record, ensuring mechanical precision, and maintaining signal integrity. They represent a holistic approach to the best vinyl performance.
+            </p>
+            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-8">
+                Recognize the synergistic interplay: the benefit of one accessory is amplified by others. The "weakest link" principle applies. View these as empowering tools for continuous learning and refinement in your vinyl journey.
+            </p>
+            <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="interactive-button inline-block bg-accent-light dark:bg-accent-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg">
+                Discover XJ-HOME Solutions <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+        </section>
+
+        <section class="py-12 md:py-16 border-t border-border-light dark:border-border-dark fade-in-section">
+            <h2 class="text-2xl font-bold text-center mb-8">Further Exploration in Analog Audio</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://www.stereophile.com/category/analog-corner" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Stereophile - Analog Corner <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">In-depth articles and reviews on analog audio equipment and trends.</p>
+                </a>
+                <a href="https://www.analogplanet.com/" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">Analog Planet <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">News, reviews, setup guides, and resources for vinyl enthusiasts.</p>
+                </a>
+                <a href="https://www.theabsolutesound.com/archives/category/analog" target="_blank" rel="noopener noreferrer" class="content-card block bg-secondary-light dark:bg-secondary-dark p-6 rounded-xl shadow-lg hover:shadow-xl border border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark">The Absolute Sound - Analog <i class="fas fa-external-link-alt text-xs ml-1"></i></h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">High-end audio reviews and features with a strong focus on analog sources.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-border-light dark:border-border-dark bg-secondary-light dark:bg-secondary-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-text-secondary-light dark:text-text-secondary-dark">
+            <p class="text-sm">&copy; <span id="currentYear"></span> XJ-HOME. All rights reserved. Passionately crafted for the discerning audiophile.</p>
+            <p class="text-xs mt-2">This page is a conceptual visualization. For official XJ-HOME information and products, please visit <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline">xenonjade.com</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Theme Toggle, Mobile Menu, Scroll Animations, and Current Year
+
+        // Theme Toggle
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
+
+        // Function to apply theme
+        function applyTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                sunIcon.style.display = 'inline-block'; 
+                moonIcon.style.display = 'none';    
+            } else {
+                document.documentElement.classList.remove('dark');
+                sunIcon.style.display = 'none';     
+                moonIcon.style.display = 'inline-block'; 
+            }
+        }
+
+        // Check local storage or system preference
+        let isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+                         (localStorage.getItem('darkMode') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        applyTheme(isDarkMode);
+
+        themeToggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('darkMode', isDarkMode);
+            applyTheme(isDarkMode);
+        });
+
+        // Listen for system theme changes if no preference is stored
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('darkMode') === null) { 
+                isDarkMode = e.matches;
+                applyTheme(isDarkMode);
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll Animations for sections
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const intersectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // observer.unobserve(entry.target); // Optional: stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            intersectionObserver.observe(section);
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>
