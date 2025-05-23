@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XJ-HOME | Best Bluetooth Record Players of 2025: Audiophile's Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track-bg, #edf2f7); /* Light mode default - Tailwind gray-200 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb-bg, #a0aec0); /* Light mode default - Tailwind gray-500 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover-bg, #718096); /* Light mode default - Tailwind gray-600 */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Dark mode specific scrollbar colors */
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748; /* Tailwind gray-800 */
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #718096; /* Tailwind gray-600 */
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; /* Tailwind gray-500 */
+        }
+
+        /* Base transition for theme changes and elements */
+        body, header, footer, section, div, nav, button, a, p, h1, h2, h3, h4, h5, h6, table, th, td {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Enhanced Card Styling */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border-width: 1px; /* Consistent border */
+        }
+        .content-card:hover {
+            transform: translateY(-6px) scale(1.03); /* Slightly more pronounced lift */
+            box-shadow: 0 10px 20px -5px var(--card-shadow-color, rgba(0, 0, 0, 0.1)), 0 6px 12px -6px var(--card-shadow-color-light, rgba(0, 0, 0, 0.08));
+            border-color: var(--accent-light, #007aff); /* Accent border on hover */
+        }
+        .dark .content-card:hover {
+            border-color: var(--accent-dark, #0a84ff);
+        }
+
+
+        /* Enhanced Button Styling */
+        .interactive-button {
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease, color 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .interactive-button:hover {
+            transform: scale(1.05) translateY(-1px); /* Lift and scale */
+            box-shadow: 0 6px 12px -3px var(--button-shadow-color, rgba(0,122,255,0.3));
+        }
+        .dark .interactive-button:hover {
+             box-shadow: 0 6px 12px -3px var(--button-shadow-color-dark, rgba(10,132,255,0.4));
+        }
+        .interactive-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--focus-ring-color, rgba(96, 165, 250, 0.5));
+        }
+        .dark .interactive-button:focus {
+             box-shadow: 0 0 0 3px var(--focus-ring-color-dark, rgba(59, 130, 246, 0.7));
+        }
+        
+        /* Section fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(25px); /* Slightly increased initial offset */
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom CSS Variables */
+        :root {
+            --focus-ring-color: rgba(0, 122, 255, 0.4);
+            --focus-ring-color-dark: rgba(10, 132, 255, 0.5);
+            --card-shadow-color: rgba(0, 0, 0, 0.08);
+            --card-shadow-color-light: rgba(0, 0, 0, 0.06);
+            --button-shadow-color: rgba(0,122,255,0.25);
+            --button-shadow-color-dark: rgba(10,132,255,0.35);
+            --row-even-light: #f9fafb; /* Tailwind gray-50 */
+            --row-even-dark: #1a1f26;  /* Slightly different dark for table rows */
+            --scrollbar-track-bg: #edf2f7;
+            --scrollbar-thumb-bg: #a0aec0;
+            --scrollbar-thumb-hover-bg: #718096;
+        }
+        .dark:root { /* For dark mode specific variables if needed, though Tailwind handles most */
+            --card-shadow-color: rgba(255, 255, 255, 0.05);
+            --card-shadow-color-light: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Table Styling Enhancements */
+        table {
+            width: 100%;
+            border-collapse: separate; /* Allows for border-radius on cells if desired */
+            border-spacing: 0; /* Remove default spacing */
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px -2px rgba(0,0,0,0.08);
+            border-radius: 0.75rem; /* Rounded corners for the table */
+            overflow: hidden; /* Ensures border-radius clips content */
+        }
+        th, td {
+            border: none; /* Remove individual cell borders */
+            border-bottom: 1px solid var(--border-light, #e5e7eb); /* Horizontal lines */
+            padding: 1rem 1.25rem; /* Increased padding */
+            text-align: left;
+            font-size: 0.9rem; /* Slightly larger base font for table */
+            line-height: 1.4rem;
+        }
+        .dark th, .dark td {
+            border-bottom-color: var(--border-dark, #374151);
+        }
+        th {
+            background-color: var(--secondary-light, #f7f7f7);
+            font-weight: 600; /* Semibold for headers */
+            color: var(--text-primary-light, #1c1c1e);
+            text-transform: uppercase; /* Uppercase headers for distinction */
+            letter-spacing: 0.05em; /* Slight letter spacing for headers */
+            font-size: 0.8rem;
+        }
+        .dark th {
+            background-color: var(--secondary-dark, #1f2328);
+            color: var(--text-primary-dark, #e5e7eb);
+        }
+        tbody tr:last-child td {
+            border-bottom: none; /* Remove bottom border for the last row */
+        }
+        tbody tr:nth-child(even) {
+            background-color: var(--row-even-light, #f9fafb);
+        }
+        .dark tbody tr:nth-child(even) {
+            background-color: var(--row-even-dark, #161a20); /* Darker even row for more contrast */
+        }
+        tbody tr:hover {
+            background-color: var(--accent-light, #007aff) !important; /* Use important to override even/odd */
+            color: #ffffff !important; /* White text on hover */
+        }
+        .dark tbody tr:hover {
+            background-color: var(--accent-dark, #0a84ff) !important;
+            color: #ffffff !important;
+        }
+        tbody tr:hover td, .dark tbody tr:hover td { /* Ensure text color changes for all cells in hovered row */
+            color: #ffffff !important;
+        }
+        tbody tr:hover td .fas { /* Change icon color on row hover */
+             color: #ffffff !important;
+        }
+
+        /* Header and Section Title Enhancements */
+        h1 {
+            letter-spacing: -0.025em; /* Tighter letter spacing for large headings */
+        }
+        h2 {
+            letter-spacing: -0.015em;
+            border-bottom: 2px solid var(--accent-light, #007aff);
+            padding-bottom: 0.5rem;
+            display: inline-block; /* To make border only as wide as text */
+        }
+        .dark h2 {
+            border-bottom-color: var(--accent-dark, #0a84ff);
+        }
+
+        /* Icon presentation in cards */
+        .content-card .flex > .fas, .content-card .flex > .fab {
+            background-color: var(--accent-light, #007aff);
+            color: white;
+            padding: 0.6rem;
+            border-radius: 0.375rem; /* rounded-md */
+            min-width: 40px; /* Ensure consistent icon background size */
+            min-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem; /* Adjust spacing */
+        }
+        .dark .content-card .flex > .fas, .dark .content-card .flex > .fab {
+            background-color: var(--accent-dark, #0a84ff);
+        }
+
+        /* Subtle gradient for section backgrounds */
+        .section-gradient-light {
+            background-image: linear-gradient(to bottom, var(--primary-light, #ffffff) 0%, var(--secondary-light, #f7f7f7) 100%);
+        }
+        .dark .section-gradient-dark {
+             background-image: linear-gradient(to bottom, var(--primary-dark, #0d1117) 0%, var(--secondary-dark, #1f2328) 100%);
+        }
+
+
+    </style>
+    <script>
+        // Tailwind config for dark mode and custom theme
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        // Light Theme (inspired by Linear)
+                        'primary-light': '#ffffff',
+                        'secondary-light': '#f8f9fa', // Slightly adjusted for subtle gradient
+                        'accent-light': '#007aff',
+                        'text-primary-light': '#212529', // Darker for better contrast
+                        'text-secondary-light': '#6c757d',
+                        'border-light': '#dee2e6',
+                        'row-even-light': '#f1f3f5', // Slightly different even row
+
+                        // Dark Theme (inspired by Linear)
+                        'primary-dark': '#121212', // Standard dark
+                        'secondary-dark': '#1e1e1e', // Slightly adjusted for subtle gradient
+                        'accent-dark': '#0a84ff',
+                        'text-primary-dark': '#e9ecef',
+                        'text-secondary-dark': '#adb5bd',
+                        'border-dark': '#495057',
+                        'row-even-dark': '#2c2c2c', // Slightly different even row
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-light dark:bg-primary-dark text-text-primary-light dark:text-text-primary-dark antialiased">
+
+    <header class="sticky top-0 z-50 bg-primary-light/90 dark:bg-primary-dark/90 backdrop-blur-lg shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 group">
+                    <svg class="h-8 w-8 text-accent-light dark:text-accent-dark group-hover:opacity-75 transition-opacity duration-200" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 10H11V14H13V10ZM13 7H11V9H13V7Z"/>
+                    </svg>
+                    <span class="font-bold text-xl text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors duration-200">XJ-HOME</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-3 lg:space-x-5">
+                    <a href="#introduction" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 px-2 py-1 rounded-md hover:bg-secondary-light dark:hover:bg-secondary-dark">Intro</a>
+                    <a href="#decoding-tech" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 px-2 py-1 rounded-md hover:bg-secondary-light dark:hover:bg-secondary-dark">Tech</a>
+                    <a href="#buying-guide" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 px-2 py-1 rounded-md hover:bg-secondary-light dark:hover:bg-secondary-dark">Buying Guide</a>
+                    <a href="#top-picks" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 px-2 py-1 rounded-md hover:bg-secondary-light dark:hover:bg-secondary-dark">Top Picks</a>
+                    <a href="#conclusion" class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 px-2 py-1 rounded-md hover:bg-secondary-light dark:hover:bg-secondary-dark">Conclusion</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="interactive-button p-2 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark mr-2">
+                        <i class="fas fa-sun text-lg" id="theme-toggle-sun"></i>
+                        <i class="fas fa-moon text-lg" id="theme-toggle-moon"></i>
+                    </button>
+                    <button id="mobile-menu-button" aria-label="Open menu" class="md:hidden interactive-button p-2 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-light dark:focus:ring-accent-dark">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden py-2 border-t border-border-light dark:border-border-dark">
+                <a href="#introduction" class="block px-3 py-3 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">Introduction</a>
+                <a href="#decoding-tech" class="block px-3 py-3 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">Decoding the Tech</a>
+                <a href="#buying-guide" class="block px-3 py-3 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">Buying Guide</a>
+                <a href="#top-picks" class="block px-3 py-3 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">Top Picks 2025</a>
+                <a href="#conclusion" class="block px-3 py-3 rounded-md text-base font-medium text-text-secondary-light dark:text-text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">Conclusion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="introduction" class="text-center py-16 md:py-24 fade-in-section">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-700 dark:from-sky-400 dark:via-blue-500 dark:to-indigo-600">
+                Best Bluetooth Record Players of 2025
+            </h1>
+            <p class="text-xl md:text-2xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-10 leading-relaxed">
+                The audiophile's guide to navigating wireless vinyl, where timeless analog charm meets modern convenience.
+            </p>
+            <a href="#decoding-tech" class="interactive-button inline-block bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-600 dark:to-indigo-700 hover:from-blue-600 hover:to-indigo-700 dark:hover:from-blue-700 dark:hover:to-indigo-800 text-white font-semibold py-4 px-10 rounded-lg shadow-xl text-lg">
+                Discover the Tech <i class="fas fa-arrow-down ml-2 animate-bounce"></i>
+            </a>
+        </section>
+
+        <section id="decoding-tech" class="py-12 md:py-16 fade-in-section section-gradient-light dark:section-gradient-dark rounded-xl my-12">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-6 text-text-primary-light dark:text-text-primary-dark">Decoding the Tech</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-12 max-w-2xl mx-auto text-lg">Understanding the journey from groove to airwaves, Bluetooth functionality, sound quality, codecs, and the phono preamp's role.</p>
+                <div class="space-y-12">
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-8 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <div class="flex items-center mb-5">
+                            <i class="fas fa-wave-square text-3xl mr-3"></i> {/* Icon is styled by CSS */}
+                            <div>
+                                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">How Bluetooth Record Players Work</h3>
+                                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">The journey from stylus to wireless sound.</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mb-4 leading-relaxed">Stylus reads groove → cartridge converts to electrical signal → phono preamp (amplifies & RIAA equalizes) → Analog-to-Digital Converter (ADC) → Bluetooth transmitter (encodes/compresses via codec) → wireless transmission → Bluetooth receiver (decodes) → Digital-to-Analog Converter (DAC) → amplification to listener.</p>
+                        <p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium"><strong>Types of Bluetooth Functionality:</strong></p>
+                        <ul class="list-disc list-inside text-base text-text-secondary-light dark:text-text-secondary-dark space-y-2 mt-2 pl-2">
+                            <li><strong>Output:</strong> Transmits vinyl audio to speakers/headphones (most common).</li>
+                            <li><strong>Input:</strong> Functions as a powered speaker, receiving audio from phone/tablet.</li>
+                            <li><strong>2-Way:</strong> Combines both input and output capabilities for maximum versatility.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-8 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <div class="flex items-center mb-5">
+                            <i class="fas fa-headphones-alt text-3xl mr-3"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">The Sound Quality Question</h3>
+                                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Analog purity vs. wireless transmission.</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mb-4 leading-relaxed"><strong>Core Compromise:</strong> Digitization (ADC) and compression by Bluetooth codecs alter the original analog signal, potentially losing detail, dynamic range, and "analog warmth." Extent varies by component quality and codec.</p>
+                        <ul class="list-disc list-inside text-base text-text-secondary-light dark:text-text-secondary-dark space-y-2 mt-2 pl-2">
+                            <li><strong>Potential "Double Compression":</strong> If vinyl is streamed to a speaker also using Bluetooth internally.</li>
+                            <li><strong>Latency Issues:</strong> Slight delay possible, though modern codecs minimize this. More critical for video sync than casual music.</li>
+                        </ul>
+                         <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mt-4 italic leading-relaxed"><strong>Context Matters:</strong> For casual listening, convenience may outweigh subtle fidelity loss. For critical listening, wired usually offers a more authentic representation.</p>
+                    </div>
+                    
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-8 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <div class="flex items-center mb-5">
+                            <i class="fab fa-bluetooth-b text-3xl mr-3"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Bluetooth Audio Codecs Demystified</h3>
+                                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">SBC, AAC, aptX, aptX HD, LDAC - why your choice matters.</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mb-4 leading-relaxed">Codecs compress/decompress audio for wireless transmission. Both turntable and receiver must support the same advanced codec to benefit.</p>
+                        <div class="overflow-x-auto rounded-lg">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr>
+                                        <th>Codec</th>
+                                        <th>Typical Bitrate (kbps)</th>
+                                        <th>Max Sample Rate/Bit Depth</th>
+                                        <th>Subjective Sound Quality</th>
+                                        <th>Common Latency</th>
+                                        <th>Primary Ecosystem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>SBC</td><td>Up to 328-345</td><td>Up to 48kHz/16-bit</td><td>Basic, noticeable compression</td><td>High</td><td>Universal</td></tr>
+                                    <tr><td>AAC</td><td>Up to 320</td><td>44.1kHz/up to 24-bit</td><td>Better than SBC, good for lossy</td><td>High</td><td>Apple, some Android</td></tr>
+                                    <tr><td>aptX</td><td>Up to 384</td><td>48kHz/16-bit</td><td>"CD-like", better detail</td><td>Moderate-Low</td><td>Android, various</td></tr>
+                                    <tr><td>aptX HD</td><td>Up to 576</td><td>48kHz/up to 24-bit</td><td>Near Hi-Res, more detail</td><td>Moderate</td><td>Android, dedicated audio</td></tr>
+                                    <tr><td>aptX Adaptive</td><td>Variable (279-860)</td><td>48kHz/up to 24-bit</td><td>Dynamically adjusts, Hi-Res capable</td><td>Low</td><td>Android, newer devices</td></tr>
+                                    <tr><td>LDAC</td><td>Up to 990</td><td>Up to 96kHz/up to 24-bit</td><td>Potentially near Hi-Res, best potential</td><td>High</td><td>Sony, some Android</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-8 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <div class="flex items-center mb-5">
+                            <i class="fas fa-sliders-h text-3xl mr-3"></i> {/* Changed icon for variety */}
+                            <div>
+                                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Role of the Phono Preamplifier</h3>
+                                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Built-in vs. External.</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mb-4 leading-relaxed">Amplifies low-level cartridge signal and applies RIAA equalization. Critical for sound quality.</p>
+                        <ul class="list-disc list-inside text-base text-text-secondary-light dark:text-text-secondary-dark space-y-2 mt-2 pl-2">
+                            <li><strong>Built-in:</strong> Offers simplicity. Quality varies; can be a sonic compromise in budget/mid-range models.</li>
+                            <li><strong>Switchable:</strong> Highly desirable. Allows use of internal preamp or bypass for a higher-quality external unit (upgrade path).</li>
+                            <li><strong>MM vs. MC Compatibility:</strong> Most Bluetooth turntables are MM. Preamp must match cartridge type (MM or MC).</li>
+                        </ul>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mt-4 italic leading-relaxed"><strong>Key:</strong> Noise, distortion, or inaccurate RIAA from phono stage will be amplified and digitized, limiting overall fidelity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buying-guide" class="py-12 md:py-16 section-gradient-light dark:section-gradient-dark rounded-xl my-12 fade-in-section">
+             <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-6 text-text-primary-light dark:text-text-primary-dark">Essential Buying Guide</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-12 max-w-2xl mx-auto text-lg">Choosing Your 2025 Bluetooth Turntable: Balancing sound fidelity and wireless freedom. Consider your use case, core components, connectivity, and build quality.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-lg shadow-lg border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-xl mb-3 flex items-center"><i class="fas fa-balance-scale text-2xl text-accent-light dark:text-accent-dark mr-3"></i>Prioritizing: Sound vs. Freedom</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Define primary use: critical listening or casual enjoyment? Bluetooth shines for convenience but wired offers superior fidelity for critical listening.</p>
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-lg shadow-lg border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-xl mb-3 flex items-center"><i class="fas fa-cogs text-2xl text-accent-light dark:text-accent-dark mr-3"></i>Core Turntable Components</h4>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 pl-1 leading-relaxed">
+                            <li><strong>Platter:</strong> Material (aluminum, glass, acrylic, POM), mass, and damping affect speed stability and resonance.</li>
+                            <li><strong>Tonearm:</strong> Material (aluminum, carbon fiber), shape (straight, S-shaped), and adjustments (counterweight for VTF, anti-skate) are crucial for accurate tracking. Removable headshell aids upgrades.</li>
+                            <li><strong>Cartridge:</strong> Type (MM common, MC on premium) and stylus shape (conical, elliptical, advanced) profoundly impact sound. Upgradeable stylus is a plus.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-lg shadow-lg border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-xl mb-3 flex items-center"><i class="fas fa-network-wired text-2xl text-accent-light dark:text-accent-dark mr-3"></i>Connectivity & Features</h4>
+                         <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 pl-1 leading-relaxed">
+                            <li><strong>Bluetooth Version & Codecs:</strong> Bluetooth 5.0+ and advanced codecs (aptX, aptX HD/Adaptive, LDAC) for better sound.</li>
+                            <li><strong>USB Recording:</strong> For digitizing vinyl.</li>
+                            <li><strong>Operation:</strong> Fully automatic (beginner-friendly), semi-automatic, or fully manual (more control).</li>
+                            <li><strong>Other Outputs:</strong> RCA (phono/line switchable), headphone jack.</li>
+                        </ul>
+                    </div>
+                     <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-lg shadow-lg border-border-light dark:border-border-dark">
+                        <h4 class="font-semibold text-xl mb-3 flex items-center"><i class="fas fa-shield-alt text-2xl text-accent-light dark:text-accent-dark mr-3"></i>Build Quality, Materials & Design</h4>
+                        <ul class="list-disc list-inside text-sm text-text-secondary-light dark:text-text-secondary-dark space-y-1 pl-1 leading-relaxed">
+                            <li><strong>Plinth:</strong> Material (MDF, solid wood) and construction influence vibration damping. Anti-vibration feet are important.</li>
+                            <li><strong>Aesthetics:</strong> Design matters as turntables are often display pieces.</li>
+                            <li><strong>Caution:</strong> Avoid "suitcase" players due to low-quality components and potential record damage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="top-picks" class="py-12 md:py-16 fade-in-section section-gradient-light dark:section-gradient-dark rounded-xl my-12">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-6 text-text-primary-light dark:text-text-primary-dark">Top Picks: Best Bluetooth Record Players of 2025</h2>
+                <p class="text-center text-text-secondary-light dark:text-text-secondary-dark mb-12 max-w-2xl mx-auto text-lg">A curated list catering to various budgets and priorities, based on specs, reviews, and user feedback.</p>
+                
+                <div class="overflow-x-auto bg-primary-light dark:bg-primary-dark p-0 md:p-4 rounded-xl shadow-2xl border border-border-light dark:border-border-dark">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Est. Price (USD)</th>
+                                <th>Drive</th>
+                                <th>Operation</th>
+                                <th>Preamp</th>
+                                <th>Key BT Codecs</th>
+                                <th>USB Rec.</th>
+                                <th>Tonearm</th>
+                                <th>Cartridge</th>
+                                <th>Weight (approx.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Model">Sony PS-LX310BT</td>
+                                <td data-label="Est. Price (USD)">$250-$300</td>
+                                <td data-label="Drive">Belt</td>
+                                <td data-label="Operation">Automatic</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">SBC, aptX</td>
+                                <td data-label="USB Rec.">Yes</td>
+                                <td data-label="Tonearm">Aluminum</td>
+                                <td data-label="Cartridge">MM type</td>
+                                <td data-label="Weight (approx.)">3.5 kg (7.7 lbs)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Model">Audio-Technica AT-LP70XBT</td>
+                                <td data-label="Est. Price (USD)">$300-$350</td>
+                                <td data-label="Drive">Belt</td>
+                                <td data-label="Operation">Automatic</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">aptX Adaptive, aptX, SBC</td>
+                                <td data-label="USB Rec.">No</td>
+                                <td data-label="Tonearm">Aluminum (J-shape)</td>
+                                <td data-label="Cartridge">AT-VM95C (MM)</td>
+                                <td data-label="Weight (approx.)">2.9 kg (6.4 lbs)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Model">Audio-Technica AT-LP120XBT-USB</td>
+                                <td data-label="Est. Price (USD)">$450-$500</td>
+                                <td data-label="Drive">Direct</td>
+                                <td data-label="Operation">Manual</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">aptX Adaptive, aptX, SBC</td>
+                                <td data-label="USB Rec.">Yes</td>
+                                <td data-label="Tonearm">Aluminum (S-shape)</td>
+                                <td data-label="Cartridge">AT-VM95E (MM)</td>
+                                <td data-label="Weight (approx.)">8.0 kg (17.6 lbs)</td>
+                            </tr>
+                             <tr>
+                                <td data-label="Model">Pro-Ject T1 Evo BT</td>
+                                <td data-label="Est. Price (USD)">$600-$650</td>
+                                <td data-label="Drive">Belt</td>
+                                <td data-label="Operation">Manual</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">aptX HD</td>
+                                <td data-label="USB Rec.">No</td>
+                                <td data-label="Tonearm">Aluminum</td>
+                                <td data-label="Cartridge">Ortofon OM10 (MM)</td>
+                                <td data-label="Weight (approx.)">3.8 kg (8.4 lbs)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Model">JBL Spinner BT</td>
+                                <td data-label="Est. Price (USD)">$350-$400</td>
+                                <td data-label="Drive">Belt</td>
+                                <td data-label="Operation">Semi-Automatic</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">aptX HD, SBC</td>
+                                <td data-label="USB Rec.">No</td>
+                                <td data-label="Tonearm">Aluminum</td>
+                                <td data-label="Cartridge">AT3600L (MM)</td>
+                                <td data-label="Weight (approx.)">5.3 kg (11.7 lbs)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Model">House of Marley Stir It Up Lux</td>
+                                <td data-label="Est. Price (USD)">$350-$400</td>
+                                <td data-label="Drive">Belt</td>
+                                <td data-label="Operation">Manual (Auto Start/Stop)</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">Bluetooth 5.3 (Codecs N/S)</td>
+                                <td data-label="USB Rec.">No</td>
+                                <td data-label="Tonearm">Aluminum</td>
+                                <td data-label="Cartridge">AT-95E (MM)</td>
+                                <td data-label="Weight (approx.)">4.53 kg (10 lbs)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Model">Cambridge Audio Alva TT V2</td>
+                                <td data-label="Est. Price (USD)">$1400-$1500</td>
+                                <td data-label="Drive">Direct</td>
+                                <td data-label="Operation">Manual</td>
+                                <td data-label="Preamp">Yes, Switchable</td>
+                                <td data-label="Key BT Codecs">aptX HD, aptX, SBC</td>
+                                <td data-label="USB Rec.">No</td>
+                                <td data-label="Tonearm">Aluminum (New Design)</td>
+                                <td data-label="Cartridge">High-Output MC</td>
+                                <td data-label="Weight (approx.)">10.9 kg (24 lbs)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center text-xs text-text-secondary-light dark:text-text-secondary-dark mt-6 italic">Note: Prices are estimates and subject to change. "N/S" indicates "Not Specified" for codecs.</p>
+
+                <div class="space-y-10 mt-12">
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <h4 class="text-xl font-semibold mb-3 flex items-center"><i class="fas fa-record-vinyl text-2xl text-accent-light dark:text-accent-dark mr-3"></i>1. Sony PS-LX310BT</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2"><strong>Best Budget & Beginner-Friendly Automatic.</strong> Go-to for newcomers prioritizing convenience and affordability. Fully automatic operation.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Sound (Wired):</strong> Engaging, clear vocals, tight bass for its price. Can improve with external phono stage.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Sound (Bluetooth):</strong> aptX offers clear, natural sound. Stable connection.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Ease of Use:</strong> Exceptionally quick setup. Fully automatic operation is a boon for beginners.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2"><strong>Pros:</strong> Easy setup/use, automatic, good sound for price, aptX, switchable preamp, USB recording.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark"><strong>Cons:</strong> Sound not as refined as pricier manual decks, lightweight plastic build, limited cartridge upgradeability.</p>
+                    </div>
+
+                    <div class="content-card bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-xl border-border-light dark:border-border-dark">
+                        <h4 class="text-xl font-semibold mb-3 flex items-center"><i class="fas fa-record-vinyl text-2xl text-accent-light dark:text-accent-dark mr-3"></i>2. Audio-Technica AT-LP70XBT</h4>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2"><strong>Best Budget Automatic with Upgradeable Stylus.</strong> Step-up automatic model with advanced codecs and upgradeable AT-VM95C stylus.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Sound (Wired):</strong> Robust, dependable playback. Smooth with AT-VMN95C. Low-end full but can lack focus. Highs can be bright on busy tracks.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Sound (Bluetooth):</strong> aptX Adaptive ensures higher quality. Wired sound shortcomings can be more apparent wirelessly.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1"><strong>Ease of Use:</strong> Plug-and-play, ideal for beginners. No complex calibration needed out of box.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2"><strong>Pros:</strong> Automatic, good sound for price, upgradeable stylus, switchable preamp, aptX Adaptive.</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark"><strong>Cons:</strong> Lightweight plastic chassis, fixed counterweight limits customization, potential reliability issues reported by some users (skipping).</p>
+                    </div>
+                     </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="py-16 md:py-24 text-center fade-in-section section-gradient-light dark:section-gradient-dark rounded-xl my-12">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-8 text-text-primary-light dark:text-text-primary-dark">Navigating Your Wireless Vinyl Journey</h2>
+                <p class="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-10 leading-relaxed">
+                    The best Bluetooth record player balances vinyl's timeless appeal with modern wireless audio. Consider your priorities: convenience versus absolute fidelity. The market offers options for every listener, from budget-friendly to audiophile-grade.
+                </p>
+                <p class="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Understanding Bluetooth codecs, phono preamps, and core turntable mechanics will empower you to make an informed choice that enhances your listening pleasure for years to come.
+                </p>
+                <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="interactive-button inline-block bg-gradient-to-r from-green-500 to-teal-600 dark:from-green-600 dark:to-teal-700 hover:from-green-600 hover:to-teal-700 dark:hover:from-green-700 dark:hover:to-teal-800 text-white font-semibold py-4 px-10 rounded-lg shadow-xl text-lg">
+                    Explore XJ-HOME Audio Solutions <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16 border-t border-border-light dark:border-border-dark fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-10 text-text-primary-light dark:text-text-primary-dark">Further Exploration in Wireless Audio & Vinyl</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="https://www.whathifi.com/best-buys/turntables" target="_blank" rel="noopener noreferrer" class="content-card block bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark flex items-center"><i class="fas fa-link text-xl mr-2"></i>What Hi-Fi? Turntables</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Reviews and buying guides for a wide range of turntables.</p>
+                </a>
+                <a href="https://www.techradar.com/news/audio/portable-audio/best-bluetooth-speakers-1289069" target="_blank" rel="noopener noreferrer" class="content-card block bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark flex items-center"><i class="fas fa-link text-xl mr-2"></i>TechRadar - Bluetooth Speakers</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Guides and reviews for Bluetooth speakers to pair with your turntable.</p>
+                </a>
+                <a href="https://www.cnet.com/tech/home-entertainment/best-record-player-and-turntable/" target="_blank" rel="noopener noreferrer" class="content-card block bg-primary-light dark:bg-primary-dark p-6 rounded-xl shadow-lg border-border-light dark:border-border-dark">
+                    <h4 class="font-semibold text-lg mb-2 text-accent-light dark:text-accent-dark flex items-center"><i class="fas fa-link text-xl mr-2"></i>CNET - Best Record Players</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Recommendations for turntables across different price points and features.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-border-light dark:border-border-dark bg-secondary-light dark:bg-secondary-dark py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary-light dark:text-text-secondary-dark">
+            <p class="text-base mb-2">&copy; <span id="currentYear"></span> XJ-HOME. All rights reserved.</p>
+            <p class="text-sm mb-4">Bridging analog warmth with wireless convenience.</p>
+            <p class="text-xs">This page is a conceptual visualization. For official XJ-HOME information and products, please visit <a href="https://xenonjade.com" target="_blank" rel="noopener noreferrer" class="text-accent-light dark:text-accent-dark hover:underline font-semibold">xenonjade.com</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Theme Toggle, Mobile Menu, Scroll Animations, and Current Year
+
+        // Theme Toggle
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
+
+        // Function to apply theme
+        function applyTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                sunIcon.style.display = 'inline-block'; 
+                moonIcon.style.display = 'none';    
+            } else {
+                document.documentElement.classList.remove('dark');
+                sunIcon.style.display = 'none';     
+                moonIcon.style.display = 'inline-block'; 
+            }
+        }
+
+        // Check local storage or system preference
+        let isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+                         (localStorage.getItem('darkMode') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        applyTheme(isDarkMode);
+
+        themeToggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('darkMode', isDarkMode);
+            applyTheme(isDarkMode);
+        });
+
+        // Listen for system theme changes if no preference is stored
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('darkMode') === null) { 
+                isDarkMode = e.matches;
+                applyTheme(isDarkMode);
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-times');
+                mobileMenuButton.setAttribute('aria-label', 'Close menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-times');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll Animations for sections
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px',
+            threshold: 0.05 // Trigger when 5% of the section is visible for earlier animation
+        };
+
+        const intersectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // observer.unobserve(entry.target); // Optional: stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            intersectionObserver.observe(section);
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>
