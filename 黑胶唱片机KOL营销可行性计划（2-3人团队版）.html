@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑胶唱片机KOL营销实操计划</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px; /* Adjusted for better display */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 450px; /* Max height */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        /* Sidebar specific styles */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar-link.active {
+            background-color: #0D9488; /* teal-600 */
+            color: white;
+        }
+         /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <aside id="sidebar" class="bg-teal-700 text-white w-full md:w-64 p-4 space-y-2 fixed md:sticky top-0 h-screen md:h-auto transform -translate-x-full md:translate-x-0 z-30 overflow-y-auto">
+            <h1 class="text-2xl font-bold mb-6 text-center">营销计划导航</h1>
+            <nav>
+                <a href="#goals" class="sidebar-link block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-600 hover:text-white">🚀 咱们的目标</a>
+                <a href="#strategy" class="sidebar-link block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-600 hover:text-white">🎯 核心打法</a>
+                <div>
+                    <a href="#team" class="sidebar-link block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-600 hover:text-white">👥 团队分工</a>
+                    <div class="ml-4 mt-1 space-y-1">
+                        <a href="#team-scout" class="sidebar-link block py-1.5 px-3 rounded text-sm hover:bg-teal-600 hover:text-white">🕵️ 侦察兵</a>
+                        <a href="#team-diplomat" class="sidebar-link block py-1.5 px-3 rounded text-sm hover:bg-teal-600 hover:text-white">🤝 外交官</a>
+                        <a href="#team-analyst" class="sidebar-link block py-1.5 px-3 rounded text-sm hover:bg-teal-600 hover:text-white">📊 情报员</a>
+                        <a href="#team-chart" class="sidebar-link block py-1.5 px-3 rounded text-sm hover:bg-teal-600 hover:text-white">⏱️ 任务时间图</a>
+                    </div>
+                </div>
+                <a href="#metrics" class="sidebar-link block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-600 hover:text-white">📈 衡量成功</a>
+                <a href="#notes" class="sidebar-link block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-600 hover:text-white">⚠️ 注意事项</a>
+            </nav>
+        </aside>
+
+        <button id="menuButton" class="md:hidden fixed top-4 left-4 z-40 p-2 bg-teal-700 text-white rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <main class="flex-1 p-6 md:p-10 overflow-y-auto">
+            <header class="mb-8 text-center">
+                <h1 id="mainTitle" class="text-3xl md:text-4xl font-bold text-teal-800">黑胶唱片机KOL营销实操计划</h1>
+                <p class="text-stone-600 mt-2">一个互动式的计划指南，助您高效执行KOL营销策略。</p>
+            </header>
+
+            <section id="goals" class="content-section space-y-4 bg-white p-6 rounded-lg shadow-lg mb-8">
+                </section>
+
+            <section id="strategy" class="content-section space-y-4 bg-white p-6 rounded-lg shadow-lg mb-8">
+                </section>
+
+            <section id="team" class="content-section space-y-6 bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-2xl font-semibold text-teal-700 border-b-2 border-teal-200 pb-2">👥 三、3人团队分工与行动步骤</h2>
+                <p class="text-stone-600">成功的KOL营销依赖于明确的分工和高效的协作。本部分详细阐述了3人团队中每个角色的具体职责、核心任务、操作方法及预期产出，确保计划的顺利执行。</p>
+                
+                <div id="team-scout" class="team-role-section pt-4"></div>
+                <div id="team-diplomat" class="team-role-section pt-4"></div>
+                <div id="team-analyst" class="team-role-section pt-4"></div>
+                
+                <div id="team-chart" class="pt-4">
+                    <h3 class="text-xl font-semibold text-teal-700 mb-3">⏱️ 初期任务时间概览</h3>
+                    <p class="text-stone-600 mb-4">下图展示了各角色初期关键任务的预估时间（单位：周），以便于资源协调和进度预期。请注意，"1-2周"这样的范围会取平均值（例如1.5周）进行图表展示。</p>
+                    <div class="chart-container bg-stone-50 p-4 rounded-md shadow">
+                        <canvas id="taskTimelineChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="metrics" class="content-section space-y-4 bg-white p-6 rounded-lg shadow-lg mb-8">
+                </section>
+
+            <section id="notes" class="content-section space-y-4 bg-white p-6 rounded-lg shadow-lg mb-8">
+                </section>
+        </main>
+    </div>
+
+    <script>
+        const planData = {
+            title: "黑胶唱片机KOL营销实操计划（3人团队版）",
+            sections: {
+                goals: {
+                    id: "goals",
+                    title: "🚀 一、咱们的目标 (Our Goal)",
+                    intro: "本部分将明确此KOL营销计划的核心追求，旨在统一团队方向，确保所有行动都围绕这些关键成果展开。",
+                    points: [
+                        "让更多人知道咱的牌子和唱片机。",
+                        "把网红带来的流量变成实打实的订单。 (主要引流到亚马逊或官网)",
+                        "听听网红和他们粉丝的真实反馈，帮我们把产品做得更好。"
+                    ]
+                },
+                strategy: {
+                    id: "strategy",
+                    title: "🎯 二、核心打法 (Core Strategy)",
+                    intro: "大道至简，我们的核心策略聚焦于最有效、经过市场验证的途径，以期快速启动并获得成效。",
+                    mainStrategy: "就一招：YouTube网红免费送样品，让他们体验评测，帮我们宣传。",
+                    emphasis: "重点：精准出击！专门找那些已经评测过黑胶唱片机（尤其是QlearSoul这类竞品）的YouTube网红。他们已经验证过这条路，粉丝也精准，咱们直接“借东风”。"
+                },
+                team: {
+                    id: "team",
+                    // title: "👥 三、3人团队分工与行动步骤 (3-Person Team: Roles & Actions)", // Title is in HTML structure
+                    // intro: "成功的KOL营销依赖于明确的分工和高效的协作。本部分详细阐述了3人团队中每个角色的具体职责、核心任务、操作方法及预期产出，确保计划的顺利执行。", // Intro is in HTML structure
+                    roles: [
+                        {
+                            id: "team-scout",
+                            name: "角色A：侦察兵 (KOL Scout & Market Researcher)",
+                            icon: "🕵️",
+                            intro: "侦察兵是团队的眼睛和耳朵，负责搜寻和筛选最合适的KOL资源，并进行市场调研，为精准营销奠定基础。",
+                            tasks: [
+                                { title: "任务1：摸底竞品网红 (1-2周)", details: { "怎么做": "把QlearSoul等主要竞争对手合作过的YouTube网红扒个底朝天。看他们的视频，分析数据（播放量、互动率、粉丝评论方向），记录下那些效果看起来不错的。", "工具": "YouTube搜索、社交媒体分析工具（如果有预算）、手动记录。", "产出": "「竞品合作KOL分析报告」及「潜力KOL初步名单A」。" }, duration: [1, 2] },
+                                { title: "任务2：YouTube大海捞针 (持续进行)", details: { "怎么做": "用关键词如 \"vinyl record player review\", \"[竞品品牌名] review\", \"turntable unboxing\", \"best budget record player\", \"audio tech review\" 在YouTube上广泛搜索，发现更多潜在KOL。", "产出": "持续更新的「潜力KOL名单B」。" }, duration: null },
+                                { title: "任务3：KOL精准筛选与建档 (持续进行)", details: { "怎么做": "综合名单A和B，根据咱们的筛选标准（频道内容相关性、粉丝画像匹配度、互动数据真实性、内容质量和风格）进一步筛选，建立详细的KOL档案。", "筛选标准参考": "内容是否和音乐、黑胶、音响、生活方式相关？粉丝是不是咱们想找的那群人？视频平均播放量和互动怎么样？（参考竞品，几百几千播放但互动真实的也值得考虑）KOL说话实在不实在，视频拍得用不用心？", "产出": "「目标KOL数据库」（包含频道链接、粉丝数、预估播放、联系方式、备注等）。" }, duration: null }
+                            ]
+                        },
+                        {
+                            id: "team-diplomat",
+                            name: "角色B：外交官 (KOL Outreach & Relationship Manager)",
+                            icon: "🤝",
+                            intro: "外交官负责与KOL建立并维护良好的合作关系，是品牌对外沟通的桥梁，确保合作顺利推进。",
+                            tasks: [
+                                { title: "任务1：准备“敲门砖” (1周内完成，后续可优化)", details: { "怎么做": "准备一份简洁明了的「产品介绍资料」（突出产品核心卖点、高清图片，中英文版）。撰写几套「KOL联系邮件/私信模板」（针对不同类型的KOL，语气真诚、突出双赢）。", "产出": "「产品资料包」、「KOL沟通模板库」。" }, duration: [1,1] },
+                                { title: "任务2：精准“勾搭”KOL (持续进行)", details: { "怎么做": "从「目标KOL数据库」中挑选合适人选，发送个性化的合作邀约。重点提及看过他们的某某视频，觉得很棒，我们的产品可能也会让他们感兴趣。", "沟通核心": "免费送测，希望得到他们真实的开箱/评测视频。", "产出": "「已联系KOL清单」及沟通进展记录。" }, duration: null },
+                                { title: "任务3：敲定合作与寄送样品 (持续进行)", details: { "怎么做": "对于有合作意向的KOL，快速敲定合作细节（大概的发布时间、视频里希望提到哪些点（非强制）、收货地址等）。确认后，火速安排寄送样品，并提供物流单号。", "产出": "「已确认合作KOL清单」、「样品寄送跟踪表」。" }, duration: null },
+                                { title: "任务4：合作期“保鲜” (持续进行)", details: { "怎么做": "KOL收到样品后，友好问候一下。发布内容前，可以简单沟通。发布后，及时感谢。保持良好关系，为后续合作打基础。", "产出": "良好的KOL合作关系。" }, duration: null }
+                            ]
+                        },
+                        {
+                            id: "team-analyst",
+                            name: "角色C：情报员 (Content Monitor & Performance Analyst)",
+                            icon: "📊",
+                            intro: "情报员负责监控营销活动的效果，收集和分析数据，为策略调整和优化提供依据，确保每一分投入都产生价值。",
+                            tasks: [
+                                { title: "任务1：紧盯KOL动态 (持续进行)", details: { "怎么做": "跟踪已合作KOL的内容发布情况，确保他们按大致约定时间发布。", "产出": "「KOL内容发布日历/看板」。" }, duration: null },
+                                { title: "任务2：自家宣传与互动 (内容发布后)", details: { "怎么做": "KOL发布视频后，第一时间在品牌官方渠道（如果有官网博客、其他社媒账号）进行转发、点赞、评论互动。可以将优质的KOL评测片段或引言用到官网产品页，增加可信度。", "产出": "品牌方对KOL内容的二次传播和互动记录。" }, duration: null },
+                                { title: "任务3：数据“收割”与追踪 (持续进行)", details: { "怎么做": "记录KOL视频的关键数据：观看量、点赞数、评论数、分享数。重点关注评论区粉丝对产品的反馈和提问。通过UTM参数（如果设置了）追踪从KOL视频描述中链接到官网/亚马逊的流量和转化。监控品牌关键词在社媒和搜索引擎上的热度变化。关注销量变化，看是否与KOL推广时间点有正相关。", "产出": "「KOL营销效果数据表」。" }, duration: null },
+                                { title: "任务4：定期“复盘”与优化 (每周/每双周)", details: { "怎么做": "根据收集到的数据，定期（比如每周或每两周）开个短会，分析哪些KOL效果好，哪些内容受欢迎，哪些地方可以改进。", "产出": "「KOL营销效果简报」及「优化建议」。" }, duration: [0.25, 0.25] } // Assuming a short meeting
+                            ]
+                        }
+                    ]
+                },
+                metrics: {
+                    id: "metrics",
+                    title: "📈 四、衡量成功的标准 (Metrics for Success)",
+                    intro: "为了客观评估KOL营销活动的效果，我们需要关注一系列关键指标，从短期流量到长期品牌影响。",
+                    points: [
+                        "短期看流量：KOL视频的观看量、网站/店铺的访问量有没有涨？",
+                        "中期看互动和口碑：社交媒体上讨论我们品牌的人多不多？评价怎么样？",
+                        "长期看销量和品牌认知：订单有没有增加？越来越多人通过搜索找到我们？",
+                        "粉丝反馈：从KOL评论区收集到的用户对产品的直接反馈。"
+                    ]
+                },
+                notes: {
+                    id: "notes",
+                    title: "⚠️ 五、注意事项 (Important Notes/Risks)",
+                    intro: "在执行KOL营销计划时，有一些关键点需要牢记，同时也要预见并准备应对潜在的风险。",
+                    points: [
+                        "产品是1，营销是0：产品本身要过硬，不然再好的营销也白搭。",
+                        "别只看粉丝数：有些KOL粉丝多但互动差，或者粉丝画像不符，效果可能还不如粉丝少但精准的。",
+                        "真实最重要：鼓励KOL说真话，即使有小缺点，真实评测比纯吹捧更可信。",
+                        "别催太紧：给KOL足够的创作时间和空间。",
+                        "做好记录：每次沟通、每个数据都记录好，方便复盘和优化。",
+                        "风险准备：可能遇到KOL不履约、内容质量不高、甚至差评的情况，提前想好怎么应对。"
+                    ]
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sectionsContainer = document.querySelector('main');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const menuButton = document.getElementById('menuButton');
+            const sidebar = document.getElementById('sidebar');
+            const mainTitle = document.getElementById('mainTitle');
+
+            mainTitle.textContent = planData.title;
+
+            function updateContent(hash) {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                sidebarLinks.forEach(link => link.classList.remove('active'));
+
+                let targetSectionId = hash ? hash.substring(1) : 'goals'; // Default to 'goals'
+                
+                // Handle sub-sections of team
+                if (targetSectionId.startsWith('team-')) {
+                    const teamSection = document.getElementById('team');
+                    if (teamSection) teamSection.classList.add('active');
+                     // Scroll to the specific role within the team section
+                    const roleElement = document.getElementById(targetSectionId);
+                    if (roleElement) {
+                        roleElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                } else {
+                    const currentSection = document.getElementById(targetSectionId);
+                    if (currentSection) {
+                        currentSection.classList.add('active');
+                    } else {
+                         // Fallback if hash is invalid, show first section
+                        document.getElementById('goals').classList.add('active');
+                        targetSectionId = 'goals';
+                    }
+                }
+                
+                const activeLink = document.querySelector(`.sidebar-link[href="#${targetSectionId.split('-')[0]}"]`);
+                 if (activeLink) activeLink.classList.add('active');
+                 if (targetSectionId.startsWith('team-')) {
+                    const subActiveLink = document.querySelector(`.sidebar-link[href="#${targetSectionId}"]`);
+                    if(subActiveLink) subActiveLink.classList.add('active');
+                 }
+
+
+                // Close sidebar on mobile after click
+                if (window.innerWidth < 768) {
+                    sidebar.classList.add('-translate-x-full');
+                }
+            }
+            
+            // Populate sections
+            function populateSection(sectionId, data) {
+                const sectionElement = document.getElementById(sectionId);
+                if (!sectionElement) return;
+
+                let contentHtml = `<h2 class="text-2xl font-semibold text-teal-700 border-b-2 border-teal-200 pb-2">${data.title}</h2>`;
+                contentHtml += `<p class="text-stone-600 mt-1 mb-4">${data.intro}</p>`;
+
+                if (data.points) {
+                    contentHtml += '<ul class="list-disc list-inside space-y-2 text-stone-700">';
+                    data.points.forEach(point => {
+                        contentHtml += `<li>${point}</li>`;
+                    });
+                    contentHtml += '</ul>';
+                }
+
+                if (data.mainStrategy) {
+                    contentHtml += `<p class="text-stone-700 font-medium">${data.mainStrategy}</p>`;
+                    contentHtml += `<p class="text-sm text-amber-700 bg-amber-100 p-3 rounded-md mt-2">${data.emphasis}</p>`;
+                }
+                sectionElement.innerHTML = contentHtml;
+            }
+
+            populateSection('goals', planData.sections.goals);
+            populateSection('strategy', planData.sections.strategy);
+            populateSection('metrics', planData.sections.metrics);
+            populateSection('notes', planData.sections.notes);
+
+            // Populate team roles
+            planData.sections.team.roles.forEach(role => {
+                const roleContainer = document.getElementById(role.id);
+                if(roleContainer){
+                    let roleHtml = `<div class="bg-stone-50 p-4 rounded-lg shadow-md mb-6">`;
+                    roleHtml += `<h3 class="text-xl font-semibold text-teal-600 mb-2">${role.icon} ${role.name}</h3>`;
+                    roleHtml += `<p class="text-sm text-stone-600 italic mb-4">${role.intro}</p>`;
+                    role.tasks.forEach(task => {
+                        roleHtml += `<div class="mb-3 p-3 border border-stone-200 rounded-md bg-white">`;
+                        roleHtml += `<h4 class="font-medium text-stone-700">${task.title}</h4>`;
+                        roleHtml += `<ul class="list-disc list-inside text-sm text-stone-600 mt-1 space-y-1">`;
+                        Object.entries(task.details).forEach(([key, value]) => {
+                             roleHtml += `<li><strong>${key}：</strong> ${value}</li>`;
+                        });
+                        roleHtml += `</ul></div>`;
+                    });
+                    roleHtml += `</div>`;
+                    roleContainer.innerHTML = roleHtml;
+                }
+            });
+
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    window.location.hash = hash;
+                });
+            });
+
+            menuButton.addEventListener('click', function () {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+            
+            window.addEventListener('hashchange', () => updateContent(window.location.hash));
+            // Initial load
+            updateContent(window.location.hash || '#goals');
+
+
+            // Chart.js
+            const taskLabels = [];
+            const taskDurations = [];
+            const backgroundColors = [
+                'rgba(20, 184, 166, 0.6)', // teal-500
+                'rgba(245, 158, 11, 0.6)', // amber-500
+                'rgba(59, 130, 246, 0.6)', // blue-500
+            ];
+             let colorIndex = 0;
+
+            planData.sections.team.roles.forEach(role => {
+                role.tasks.forEach(task => {
+                    if (task.duration) {
+                        taskLabels.push(`${role.icon} ${task.title.split('(')[0].trim()}`);
+                        let avgDuration = task.duration[0];
+                        if (task.duration.length > 1) {
+                            avgDuration = (task.duration[0] + task.duration[1]) / 2;
+                        }
+                        taskDurations.push(avgDuration);
+                    }
+                });
+            });
+            
+            const ctx = document.getElementById('taskTimelineChart').getContext('2d');
+            if (window.taskChartInstance) {
+                window.taskChartInstance.destroy();
+            }
+            window.taskChartInstance = new Chart(ctx, {
+                type: 'bar', // Changed to bar for better label display with multiple tasks
+                data: {
+                    labels: taskLabels,
+                    datasets: [{
+                        label: '预估时间 (周)',
+                        data: taskDurations,
+                        backgroundColor: taskLabels.map((_,i) => backgroundColors[i % backgroundColors.length]),
+                        borderColor: taskLabels.map((_,i) => backgroundColors[i % backgroundColors.length].replace('0.6', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', // Makes it a horizontal bar chart
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '周数 (Weeks)'
+                            }
+                        },
+                        y: {
+                           ticks: {
+                                autoSkip: false, // Ensure all labels are shown
+                                callback: function(value, index, values) {
+                                    const label = this.getLabelForValue(value);
+                                    return label.length > 20 ? label.substring(0, 20) + '...' : label; // Truncate long labels
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false // Hiding legend as it's a single dataset
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        label += context.parsed.x + ' 周';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
