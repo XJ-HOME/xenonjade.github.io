@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+    Infographic Narrative Plan:
+    1.  引言 (Introduction): Briefly introduce QlearSoul and the infographic's purpose.
+    2.  品牌速览 (Brand Snapshot): Key stats like "销往50+地区", "100+ KOL喜爱".
+    3.  核心产品 (Core Products): Overview of ONE-Q and SoulBox S1.
+    4.  目标用户画像 (Target Audience Profile): Donut chart for "体验升级者", "价值敏感型", etc.
+    5.  流量来源解析 (Traffic Source Analysis): Bar chart for Direct, Referral (KOL, Media, Amazon), Social, Organic.
+    6.  多渠道销售网络 (Sales Channel Network): Horizontal bar chart for Official, Amazon, Walmart, eBay.
+    7.  客户之声 (Customer Voice): Highlight positive review scores.
+    8.  营销亮点 (Marketing Highlights): KOLs, Amazon Vine, Customer Service.
+    9.  SWOT 分析 (SWOT Analysis): Four-quadrant HTML/CSS layout.
+    10. 关键战略方向 (Key Strategic Directions): Brief points on optimizing traffic, sales, resilience.
+    11. 结语 (Conclusion): Brief wrap-up.
+    -->
+    <!--
+    Visualization Choices & Justification (Confirming NO SVG, NO MERMAID JS):
+    - Brand Stats (e.g., "销往50+地区"): Goal: Inform. Chosen: Single Big Number (HTML/CSS). Justification: Clear, impactful for single data points. Library: HTML/CSS. No SVG/Mermaid.
+    - Core Products Overview: Goal: Inform. Chosen: Styled HTML Cards/Lists. Justification: Good for structured feature display. Library: HTML/CSS. No SVG/Mermaid.
+    - Target Audience Profile: Goal: Compare (composition). Chosen: Donut Chart. Justification: Shows proportions of a whole effectively. Library: Chart.js (Canvas). No SVG/Mermaid.
+    - Traffic Source Analysis: Goal: Compare (categories). Chosen: Bar Chart. Justification: Compares values across categories well. Library: Chart.js (Canvas). No SVG/Mermaid.
+    - Sales Channel Network: Goal: Compare (categories). Chosen: Horizontal Bar Chart. Justification: Visualizes presence/reach across channels. Library: Chart.js (Canvas). No SVG/Mermaid.
+    - Customer Voice (Ratings): Goal: Inform. Chosen: Styled HTML Text (Unicode stars). Justification: Simple, direct representation of ratings. Library: HTML/CSS. No SVG/Mermaid.
+    - Marketing Highlights: Goal: Organize/Inform. Chosen: HTML/CSS Icon + Text Blocks. Justification: Visually groups key strategies. Library: HTML/CSS + Unicode. No SVG/Mermaid.
+    - SWOT Analysis: Goal: Organize. Chosen: Four-quadrant HTML/CSS layout. Justification: Standard and clear for SWOT. Library: HTML/CSS (Tailwind Grid). No SVG/Mermaid.
+    - Key Strategic Directions: Goal: Inform/Organize. Chosen: Styled HTML List/Cards. Justification: Concise summary of recommendations. Library: HTML/CSS. No SVG/Mermaid.
+    - Icons: Unicode characters (e.g., 🎵, 📈, 🛡️) styled with Tailwind CSS. No SVG/Mermaid.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QlearSoul 市场洞察信息图</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #F3F4F6; /* Tailwind gray-100 */
+            color: #073B4C; /* Deep Koamaru - Primary Text */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-title {
+            font-size: 2rem; /* Equivalent to text-3xl or text-4xl */
+            font-weight: 700; /* bold */
+            color: #118AB2; /* Brilliant Blue */
+            margin-bottom: 1.5rem; /* mb-6 */
+            text-align: center;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .stat-number {
+            font-size: 3rem; /* text-5xl */
+            font-weight: 800; /* extrabold */
+            color: #06D6A0; /* Sea Green */
+        }
+        .stat-label {
+            font-size: 1rem; /* text-base */
+            color: #118AB2; /* Brilliant Blue */
+            margin-top: 0.25rem; /* mt-1 */
+        }
+        .swot-quadrant {
+            padding: 1rem; /* p-4 */
+            border-radius: 0.375rem; /* rounded-md */
+        }
+        .swot-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* semibold */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        /* Energetic & Playful Palette:
+           Red: #FF6B6B
+           Yellow: #FFD166
+           Green: #06D6A0
+           Blue: #118AB2
+           Dark Blue: #073B4C (Primary Text, some backgrounds)
+        */
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-[#073B4C] text-white py-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold">QlearSoul 市场洞察信息图</h1>
+            <p class="mt-2 text-lg text-gray-300">深入了解 QlearSoul 的品牌定位、市场表现与增长机遇</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="mb-12">
+            <div class="card text-center">
+                <h2 class="section-title">🎵 关于 QlearSoul</h2>
+                <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+                    QlearSoul 致力于通过高品质的黑胶唱片播放器及其配件，为音乐爱好者“恢复声音的本质，让消费者与音乐产生共鸣”。本信息图旨在分析其全网流量构成、产品销售表现、目标受众特征及营销策略，揭示其市场优势与未来发展潜力。
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title">🚀 品牌影响力速览</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">产品销往地区</div>
+                </div>
+                <div class="card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">KOL 喜爱与推荐</div>
+                </div>
+                <div class="card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">亚马逊Vine评论员信赖</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title">🎶 核心产品聚焦</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#118AB2]">🔥 ONE-Q 黑胶播放器</h3>
+                    <p class="mb-2"><strong class="text-[#073B4C]">定位:</strong> 最酷且价格实惠的唱片/黑胶播放器。</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>内置四个全频扬声器，立体声体验</li>
+                        <li>蓝牙5.4输入，无线连接</li>
+                        <li>Audio-Technica AT-3600L 动磁唱头</li>
+                        <li>支持33⅓/45 RPM, 兼容7/10/12英寸唱片</li>
+                        <li>8.6英寸轻质唱臂，可调节配重</li>
+                        <li>官网价格: $199.98 – $266.00</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#118AB2]">🆕 SoulBox S1 黑胶播放器</h3>
+                    <p class="mb-2"><strong class="text-[#073B4C]">定位:</strong> 最有价值的唱机，带独立立体声扬声器。</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>配备一对独立立体声书架音箱</li>
+                        <li>10英寸S型唱臂，可调配重与抗滑</li>
+                        <li>Audio-Technica AT-3600L 动磁唱头</li>
+                        <li>1.2kg重型压铸铁盘，增强稳定性</li>
+                        <li>蓝牙5.0输入，内置唱放</li>
+                        <li>官网价格: $220.00 – $321.00</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-gray-600">QlearSoul 的产品注重复古美学与现代功能的结合，旨在为用户提供卓越的音乐“仪式感”和便捷的使用体验。</p>
+        </section>
+
+        <section class="mb-12">
+            <div class="card">
+                <h2 class="section-title">🎯 目标用户画像</h2>
+                <p class="text-center mb-6 text-lg">QlearSoul 主要吸引对音乐充满热情、追求生活品质与性价比的消费者。</p>
+                <div class="chart-container mx-auto max-w-lg h-80 md:h-96">
+                    <canvas id="targetAudienceChart"></canvas>
+                </div>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <p><strong class="text-[#118AB2]">体验升级者:</strong> 寻求从基础设备升级，渴望更好音质与“仪式感”的用户。</p>
+                    <p><strong class="text-[#06D6A0]">价值敏感型:</strong> 注重性价比，在预算内追求良好音质、功能与设计的用户。</p>
+                    <p><strong class="text-[#FFD166]">生活方式追求者:</strong> 看重产品美学价值与带来的生活格调提升的用户。</p>
+                    <p><strong class="text-[#FF6B6B]">核心音乐发烧友 (入门级):</strong> 对黑胶有浓厚兴趣，刚开始探索或重新回归的爱好者。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="card">
+                <h2 class="section-title">📊 流量来源解析</h2>
+                <p class="text-center mb-6 text-lg">QlearSoul 的流量获取高度依赖影响者营销和第三方平台背书，同时其他渠道亦有贡献。</p>
+                <div class="chart-container mx-auto max-w-3xl h-96 md:h-[500px]">
+                    <canvas id="trafficSourceChart"></canvas>
+                </div>
+                <p class="mt-6 text-center text-gray-700">影响者 (KOL) 的推荐和亚马逊平台的信誉是当前获取流量和建立品牌信任的关键驱动力。未来需加强SEO和自有社群建设以优化流量结构。</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title">🛒 销售渠道与客户之声</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-[#118AB2]">销售网络</h3>
+                    <p class="text-center mb-4">QlearSoul 采用多渠道策略，覆盖线上主流平台。</p>
+                    <div class="chart-container mx-auto max-w-full h-72">
+                        <canvas id="salesChannelChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-center text-sm text-gray-600">官方网站、亚马逊、沃尔玛和eBay是其主要销售阵地。</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-[#118AB2]">客户评价亮点</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-medium text-[#073B4C]">ONE-Q 播放器</h4>
+                            <p class="text-yellow-500 text-2xl">★★★★☆ <span class="text-sm text-gray-600">(平均约 4.6/5 星 - Amazon)</span></p>
+                            <p class="text-sm text-gray-700">用户普遍称赞其性价比、易用性、复古设计和蓝牙功能。</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-medium text-[#073B4C]">SoulBox S1 播放器</h4>
+                            <p class="text-yellow-500 text-2xl">★★★★★ <span class="text-sm text-gray-600">(平均约 4.7-4.8/5 星 - Amazon)</span></p>
+                            <p class="text-sm text-gray-700">用户赞赏其温暖清晰的音质、S型唱臂表现和整体做工价值感。</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-center text-gray-700">积极的第三方评价和用户口碑是重要的销量催化剂，尤其在亚马逊平台表现突出。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title">💡 营销策略亮点</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card text-center">
+                    <div class="text-5xl mb-3">📢</div>
+                    <h3 class="text-xl font-semibold text-[#118AB2] mb-2">影响者营销 (KOLs)</h3>
+                    <p class="text-sm text-gray-700">与YouTube, TikTok等平台KOL合作，通过评测视频有效触达目标受众，快速提升品牌知名度和信任度。</p>
+                </div>
+                <div class="card text-center">
+                     <div class="text-5xl mb-3">📦</div> <h3 class="text-xl font-semibold text-[#06D6A0] mb-2">亚马逊生态利用</h3>
+                    <p class="text-sm text-gray-700">积极参与Amazon Vine计划，获取高质量早期评论，优化产品列表，提升平台转化率。</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-3">🛡️</div>
+                    <h3 class="text-xl font-semibold text-[#FFD166] mb-2">卓越客户服务</h3>
+                    <p class="text-sm text-gray-700">提供长达36个月保修、60天退货政策及24/7客户支持，增强消费者购买信心，降低风险感知。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="card">
+                <h2 class="section-title">🔄 SWOT 分析</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="swot-quadrant bg-[#D1FAE5]"> <h3 class="swot-title text-[#065F46]">优势 (Strengths)</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>清晰的价值定位 (性价比, 设计, 易用性)</li>
+                            <li>强大的客户服务承诺 (长保修, 便捷退货)</li>
+                            <li>动人的品牌故事与情感连接</li>
+                            <li>积极的第三方平台用户评价</li>
+                        </ul>
+                    </div>
+                    <div class="swot-quadrant bg-[#FEE2E2]"> <h3 class="swot-title text-[#991B1B]">劣势 (Weaknesses)</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>对外部验证 (KOL, 亚马逊评论) 依赖度较高</li>
+                            <li>部分自有社交媒体渠道活跃度不足</li>
+                            <li>各销售渠道价格体系一致性与透明度待提升</li>
+                            <li>自然搜索流量获取能力有待加强</li>
+                        </ul>
+                    </div>
+                    <div class="swot-quadrant bg-[#DBEAFE]"> <h3 class="swot-title text-[#1E40AF]">机会 (Opportunities)</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>深化内容营销，打造行业权威形象</li>
+                            <li>激活社交媒体社群，鼓励UGC</li>
+                            <li>强化官网DTC渠道，提升利润与用户数据掌握</li>
+                            <li>拓展多元化营销渠道 (播客, 专业论坛)</li>
+                        </ul>
+                    </div>
+                    <div class="swot-quadrant bg-[#FEF3C7]"> <h3 class="swot-title text-[#92400E]">威胁 (Threats)</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>市场竞争激烈，新品牌不断涌现</li>
+                            <li>影响者合作成本与稳定性波动</li>
+                            <li>全球化运营的复杂性 (物流, 税费, 本地化)</li>
+                            <li>消费者偏好快速变化</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title">🧭 关键战略方向</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card text-center">
+                    <div class="text-5xl mb-3">📈</div>
+                    <h3 class="text-xl font-semibold text-[#118AB2] mb-2">优化流量结构</h3>
+                    <p class="text-sm text-gray-700">加强SEO投入，深化内容营销，激活社交媒体社群，减少对外部推荐的过度依赖。</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-3">💰</div>
+                    <h3 class="text-xl font-semibold text-[#06D6A0] mb-2">提升销售转化</h3>
+                    <p class="text-sm text-gray-700">统一价格策略，强化官网DTC优势，持续收集并利用用户反馈迭代产品。</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-3">💪</div>
+                    <h3 class="text-xl font-semibold text-[#FFD166] mb-2">增强品牌韧性</h3>
+                    <p class="text-sm text-gray-700">拓展多元化营销渠道，构建品牌大使计划，坚持数据驱动决策，精细化全球运营。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-[#073B4C] text-white py-8 mt-12">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl font-semibold mb-4">展望未来</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">
+                    QlearSoul 已凭借其精准的市场定位和对用户体验的重视奠定了良好基础。通过持续优化流量结构、提升销售转化能力和增强品牌韧性，QlearSoul 有望在竞争激烈的市场中实现可持续增长，将更多美妙的音乐体验带给全球用户。
+                </p>
+                <p class="mt-6 text-sm text-gray-400">&copy; 2025 QlearSoul 市场洞察分析. 本信息图基于公开信息和提供的研究报告编制。</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        function wrapLabels(label, maxWidth) {
+            if (typeof label !== 'string') return label;
+            const words = label.split(/\\s+|(?=[A-Z][a-z])/g); // Split by space or before a capital letter in camelCase
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if (currentLine.length === 0) {
+                     currentLine = word;
+                } else if ((currentLine + ' ' + word).length <= maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines.length > 0 ? lines : [label];
+        }
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#073B4C', // Deep Koamaru for legend text
+                        font: {
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(7, 59, 76, 0.9)', // Dark Blue with opacity
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#FFFFFF',
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            if (!item) return '';
+                            let label = item.chart.data.labels[item.dataIndex];
+                             if (item.chart.config.type === 'bar' || item.chart.config.type === 'horizontalBar') { // For bar charts, title is usually the axis label
+                                label = item.label;
+                            }
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: '#073B4C', // Deep Koamaru for X-axis ticks
+                        font: {
+                            size: 10
+                        },
+                        callback: function(value, index, values) {
+                            const label = this.getLabelForValue(value);
+                            return wrapLabels(label, 10); // Wrap X-axis labels
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: '#073B4C', // Deep Koamaru for Y-axis ticks
+                        font: {
+                            size: 10
+                        },
+                        callback: function(value, index, values) {
+                             // For Y-axis on horizontal bar, this is the category label
+                            if (this.chart.config.type === 'horizontalBar') {
+                                const label = this.getLabelForValue(value);
+                                return wrapLabels(label, 16);
+                            }
+                            return value; // For regular Y-axis, just return the value
+                        }
+                    },
+                    grid: {
+                        color: '#E5E7EB' // Tailwind gray-200 for grid lines
+                    }
+                }
+            }
+        };
+        
+        const commonPieDonutOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#073B4C',
+                        font: { size: 12 },
+                         boxWidth: 15,
+                         padding: 15,
+                         generateLabels: function(chart) {
+                            const data = chart.data;
+                            if (data.labels.length && data.datasets.length) {
+                                return data.labels.map(function(label, i) {
+                                    const meta = chart.getDatasetMeta(0);
+                                    const style = meta.controller.getStyle(i);
+                                    const unwrappedLabel = Array.isArray(label) ? label.join(' ') : label;
+                                    const text = wrapLabels(unwrappedLabel, 20); // Wrap legend labels
+
+                                    return {
+                                        text: text,
+                                        fillStyle: style.backgroundColor,
+                                        strokeStyle: style.borderColor,
+                                        lineWidth: style.borderWidth,
+                                        hidden: !chart.getDataVisibility(i),
+                                        index: i
+                                    };
+                                });
+                            }
+                            return [];
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(7, 59, 76, 0.9)',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#FFFFFF',
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            if (!item) return '';
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        },
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed !== null) {
+                                label += context.parsed + '%';
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+
+        // Target Audience Chart (Donut)
+        const targetAudienceCtx = document.getElementById('targetAudienceChart').getContext('2d');
+        new Chart(targetAudienceCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    wrapLabels('体验升级者 (Experience Upgraders)', 16),
+                    wrapLabels('价值敏感型 (Value-Conscious)', 16),
+                    wrapLabels('生活方式追求者 (Lifestyle Seekers)', 16),
+                    wrapLabels('核心音乐发烧友 (Musicaholics Core)', 16)
+                ],
+                datasets: [{
+                    label: '目标用户占比',
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#118AB2', '#06D6A0', '#FFD166', '#FF6B6B'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: commonPieDonutOptions
+        });
+
+        // Traffic Source Chart (Bar)
+        const trafficSourceCtx = document.getElementById('trafficSourceChart').getContext('2d');
+        new Chart(trafficSourceCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    '直接流量', '推荐-影响者', '推荐-媒体', '推荐-亚马逊', '推荐-联盟', '社交媒体', '自然搜索'
+                ].map(label => wrapLabels(label, 16)),
+                datasets: [{
+                    label: '流量贡献度评估 (相对值)',
+                    data: [3, 5, 3, 3, 2, 4, 2], // High=5, Medium-High=4, Medium=3, Medium-Low=2
+                    backgroundColor: ['#118AB2', '#06D6A0', '#FFD166', '#FF6B6B', '#20A4F3', '#F4A261', '#A9D2FE'],
+                    borderColor: '#073B4C',
+                    borderWidth: 1
+                }]
+            },
+            options: { ...commonChartOptions, indexAxis: 'x' }
+        });
+
+        // Sales Channel Chart (Horizontal Bar)
+        const salesChannelCtx = document.getElementById('salesChannelChart').getContext('2d');
+        new Chart(salesChannelCtx, {
+            type: 'bar', // Chart.js v3+ uses 'bar' for horizontalBar, controlled by indexAxis
+            data: {
+                labels: [
+                    '官方网站 (QlearSoul.com)', '亚马逊 (Amazon)', '沃尔玛 (Walmart)', 'eBay'
+                ].map(label => wrapLabels(label, 16)),
+                datasets: [{
+                    label: '市场覆盖度评估 (相对值)',
+                    data: [9, 10, 7, 6],
+                    backgroundColor: ['#118AB2', '#06D6A0', '#FFD166', '#FF6B6B'],
+                    borderColor: '#073B4C',
+                    borderWidth: 1
+                }]
+            },
+            options: { ...commonChartOptions, indexAxis: 'y' } // Key for horizontal bar
+        });
+
+    </script>
+</body>
+</html>
