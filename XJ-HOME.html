@@ -1,196 +1,187 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XJ-HOME</title>
+    <title>XJ-HOME | Curated Tech & Audio Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles to complement Tailwind */
         body {
-            font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #F0FDF4; /* Light Greenish White Background */
         }
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            border-bottom: #0779e4 3px solid;
-        }
-
-        header .container {
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .logo a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        header nav ul {
-            padding: 0;
-            list-style: none;
-            margin: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-         header nav ul li a:hover {
-            color: #0779e4;
-        }
-
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-            max-width: 900px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .page-title {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .article-entry {
-            background: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .article-entry h2 {
-            margin-top: 0;
-        }
-
-        .article-entry h2 a {
-            text-decoration: none;
-            color: #0779e4;
-        }
-        .article-entry h2 a:hover {
-            text-decoration: underline;
-        }
-
-        .article-entry .description {
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .article-entry .read-more {
-            display: inline-block;
-            background: #0779e4;
-            color: #fff;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .article-entry .read-more:hover {
-            background: #0056b3;
-        }
-
-        .internal-link {
-            color: #1a0dab; /* Google-like link color */
-            text-decoration: none;
-        }
-        .internal-link:hover {
-            text-decoration: underline;
-        }
-
+        /* Styles for external links - Adjusted for new theme */
         .external-link {
-            color: #006621; /* A different color for external links */
+            color: #059669; /* Emerald 600 */
             text-decoration: none;
+            position: relative;
         }
         .external-link:hover {
             text-decoration: underline;
+            color: #047857; /* Emerald 700 */
         }
         .external-link::after {
-            content: " ↗"; /* Indicates an external link */
+            content: " \2197"; /* Unicode for North East Arrow */
             font-size: 0.8em;
+            display: inline-block;
+            margin-left: 2px;
+            transition: transform 0.2s ease-out;
+        }
+        .external-link:hover::after {
+            transform: translateX(2px) translateY(-2px);
         }
 
+        /* Custom gradient for buttons - New Theme */
+        .button-gradient {
+            background: linear-gradient(to right, #10B981, #059669); /* Emerald 500 to Emerald 600 */
+        }
+        .button-gradient:hover {
+            background: linear-gradient(to right, #059669, #047857); /* Emerald 600 to Emerald 700 on hover */
+        }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: #fff;
-            margin-top: auto; /* Pushes footer to bottom */
+        /* Add a subtle animation to article cards on hover */
+        .article-card {
+            background-color: #FFFFFF; /* White card background */
+            border: 1px solid #D1FAE5; /* Light Emerald border for cards */
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.2); /* Softer green shadow */
+        }
+
+        /* Main title styling since header is removed */
+        .main-page-title {
+            color: #065F46; /* Dark Emerald for main title */
+            padding-top: 2rem; /* Add some padding at the top */
+        }
+
+         /* Footer styling */
+        .footer-theme {
+            background-color: #064E3B; /* Darker Emerald for footer */
+            color: #A7F3D0; /* Light green text for footer */
         }
     </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                'emerald-custom': {
+                    50: '#ECFDF5',
+                    100: '#D1FAE5',
+                    200: '#A7F3D0',
+                    300: '#6EE7B7',
+                    400: '#34D399',
+                    500: '#10B981',
+                    600: '#059669',
+                    700: '#047857',
+                    800: '#065F46',
+                    900: '#064E3B',
+                }
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
+<body class="text-gray-700 flex flex-col min-h-screen">
 
-
-    
-
-<!-- 1     -->
-    <div class="main-content">
-        <div class="article-entry">
-            <h2><a href="https://learn.xenonjade.com">1：Finding Your Sonic Truth: The Definitive Guide to Speakers for Your Record Player</a></h2>
-            <p class="description">
-                A definitive guide to choosing the perfect speakers for your record player. Unlock the full magic of vinyl by understanding the synergy of sound.
-            </p>
-            <a href="https://learn.xenonjade.com" class="read-more">Read more</a>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="text-center mb-10 md:mb-16">
+            <a href="#" class="text-4xl md:text-5xl font-bold text-emerald-custom-700 hover:text-emerald-custom-800 transition-colors duration-300">XJ-HOME</a>
+            <p class="text-emerald-custom-600 text-sm mt-1">Curated Tech & Audio Insights</p>
         </div>
-<!-- 2     -->        
-        <div class="article-entry">
-            <h2><a href="https://learn.xenonjade.com/20250521">2：The Point of No Return: How Often Does Your Record Player's Needle Really Need Replacing?</a></h2>
-            <p class="description">
-                Standard Guideline: Manufacturers often suggest 500-1,000 playback hours, but this is an average and real-world variables are critical.
-            </p> 
-            <a href="https://learn.xenonjade.com/20250521" class="read-more">Read more</a>
-        </div>
-<!-- 3     -->        
-        <div class="article-entry">
-            <h2><a href="https://learn.xenonjade.com/20250523">3：10 Must-Have Record Player Accessories:An Audiophile's Deep Dive</a></h2>
-            <p class="description">
-                An audiophile's deep dive into the tools that unlock the full sonic potential of your vinyl playback system, ensuring accuracy, longevity, and ultimate listening enjoyment.The Trinity of Record & Stylus Care
-                Preservation and pristine playback start here. Immaculate record grooves and stylus tip are foundational.
-            </p> 
-            <a href="https://learn.xenonjade.com/20250523" class="read-more">Read more</a>
-        </div>
-<!-- 4     -->          
-        <div class="article-entry">
-            <h2><a href="https://learn.xenonjade.com/20250522">4：Best Bluetooth Record Players of 2025: The Audiophile's Guide to Wireless Vinyl</a></h2>
-            <p class="description">
-                The Resurgence of Vinyl Meets Wireless Convenience: Navigating the Best Bluetooth Record Players of 2025.The audiophile's guide to navigating wireless vinyl, where timeless analog charm meets modern convenience.
-            </p> 
-            <a href="https://learn.xenonjade.com/20250522" class="read-more">Read more</a>
-
-
         
+        <h1 class="main-page-title text-3xl sm:text-4xl font-bold text-center mb-8 md:mb-12">Latest Insights & Guides</h1>
 
-       
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="article-card rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
+                        <a href="https://learn.xenonjade.com" class="hover:text-emerald-custom-700 transition-colors duration-300 external-link" target="_blank" rel="noopener noreferrer">
+                            1: Finding Your Sonic Truth: The Definitive Guide to Speakers for Your Record Player 
+                        </a>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">
+                        A definitive guide to choosing the perfect speakers for your record player. Unlock the full magic of vinyl by understanding the synergy of sound.
+                    </p>
+                    <a href="https://learn.xenonjade.com" class="external-link inline-block button-gradient text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out text-sm" target="_blank" rel="noopener noreferrer">
+                        Read more
+                    </a>
+                </div>
+            </div>
 
-    </div>
+            <div class="article-card rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
+                        <a href="https://learn.xenonjade.com/20250521" class="hover:text-emerald-custom-700 transition-colors duration-300 external-link" target="_blank" rel="noopener noreferrer">
+                            2: The Point of No Return: How Often Does Your Record Player's Needle Really Need Replacing?
+                        </a>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">
+                        Standard Guideline: Manufacturers often suggest 500-1,000 playback hours, but this is an average and real-world variables are critical.
+                    </p>
+                    <a href="https://learn.xenonjade.com/20250521" class="external-link inline-block button-gradient text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out text-sm" target="_blank" rel="noopener noreferrer">
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div class="article-card rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
+                        <a href="https://learn.xenonjade.com/20250523" class="hover:text-emerald-custom-700 transition-colors duration-300 external-link" target="_blank" rel="noopener noreferrer">
+                            3: 10 Must-Have Record Player Accessories: An Audiophile's Deep Dive
+                        </a>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">
+                        An audiophile's deep dive into the tools that unlock the full sonic potential of your vinyl playback system, ensuring accuracy, longevity, and ultimate listening enjoyment. The Trinity of Record & Stylus Care: Preservation and pristine playback start here.
+                    </p>
+                    <a href="https://learn.xenonjade.com/20250523" class="external-link inline-block button-gradient text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out text-sm" target="_blank" rel="noopener noreferrer">
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div class="article-card rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
+                        <a href="https://learn.xenonjade.com/20250522" class="hover:text-emerald-custom-700 transition-colors duration-300 external-link" target="_blank" rel="noopener noreferrer">
+                            4: Best Bluetooth Record Players of 2025: The Audiophile's Guide to Wireless Vinyl
+                        </a>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">
+                        The Resurgence of Vinyl Meets Wireless Convenience: Navigating the Best Bluetooth Record Players of 2025. The audiophile's guide to navigating wireless vinyl, where timeless analog charm meets modern convenience.
+                    </p>
+                    <a href="https://learn.xenonjade.com/20250522" class="external-link inline-block button-gradient text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out text-sm" target="_blank" rel="noopener noreferrer">
+                        Read more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-theme py-6 md:py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">&copy; <span id="currentYear"></span> XJ-HOME. All Rights Reserved.</p>
+            <p class="text-xs mt-1">Designed with Passion for Audio Lovers.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
