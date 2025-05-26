@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Player vs. CD: Durability Showdown | XJ-HOME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 定义 'Inter' 字体 (如果 Tailwind 默认未完全覆盖) */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* 锚链接平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* 内容淡入动画 */
+        .content-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* 动画延迟 */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* 自定义滚动条样式 (可选) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748; /* 暗黑模式下的轨道颜色 */
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #555; /* 暗黑模式下的滑块颜色 */
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+
+        /* 加载指示器样式 */
+        .loader {
+            border: 4px solid #f3f3f3; /* 浅灰色 */
+            border-top: 4px solid #3498db; /* 蓝色 */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin-right: 8px; /* 与按钮文本的间距 */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* AI 内容区域样式 */
+        .ai-content-area {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #f9fafb; /* 浅灰色背景 */
+            border: 1px solid #e5e7eb; /* 边框颜色 */
+        }
+        .dark .ai-content-area {
+            background-color: #1f2937; /* 暗黑模式下的背景色 */
+            border-color: #374151; /* 暗黑模式下的边框色 */
+        }
+    </style>
+    <script>
+        // Tailwind 暗黑模式配置
+        // 页面加载或切换主题时，最好内联在 `head` 中以避免 FOUC (无样式内容闪烁)
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+
+        // 切换主题函数
+        function toggleTheme() {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 ease-in-out">
+
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="https://xenonjade.com" target="_blank" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400 transition-transform duration-200 hover:scale-105">
+                    XJ-HOME
+                </a>
+
+                <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center">
+                    <a href="#intro" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">简介</a>
+                    <a href="#cds" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">CDs</a>
+                    <a href="#vinyl" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">黑胶</a>
+                    <a href="#human-factor" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">人为因素</a>
+                    <a href="#playback" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">播放可行性</a>
+                    <a href="#verdict" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">结论</a>
+                    <button onclick="toggleTheme()" id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 hover:scale-110" aria-label="Toggle theme">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:inline"></i>
+                    </button>
+                </nav>
+
+                <div class="md:hidden flex items-center">
+                     <button onclick="toggleTheme()" id="theme-toggle-mobile" class="p-2 mr-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 hover:scale-110" aria-label="Toggle theme">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:inline"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Open menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 inset-x-0 bg-white dark:bg-gray-800 shadow-lg p-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="#intro" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">简介</a>
+                <a href="#cds" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">CDs</a>
+                <a href="#vinyl" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">黑胶</a>
+                <a href="#human-factor" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">人为因素</a>
+                <a href="#playback" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">播放可行性</a>
+                <a href="#verdict" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 mobile-nav-link">结论</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="intro" class="pt-16 -mt-16 text-center mb-16 md:mb-24 content-fade-in">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-gray-900 dark:text-white">
+                黑胶唱片 vs. CD: <span class="text-indigo-600 dark:text-indigo-400">哪种更耐用?</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                一个古老的话题：黑胶的噼啪声与 CD 的静默精确。通常认为数字格式更持久，但耐久性的现实远比这复杂。让我们探究哪种音频格式真正经得起时间的考验。
+            </p>
+        </section>
+
+        <section id="cds" class="pt-16 -mt-16 mb-16 md:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white content-fade-in delay-100">
+                数字不朽的神话: <span class="text-indigo-600 dark:text-indigo-400">CD 及其隐藏的脆弱性</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-200">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 text-2xl">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">划痕与数据层</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        CD 很脆弱。数据层靠近标签面，标签面的深划痕通常是致命的。播放面的严重损坏也会导致无法读取——没有迷人的爆音，只有静默或卡顿。
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-300">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 text-2xl">
+                        <i class="fas fa-biohazard"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">光盘腐烂：无声杀手</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        随着时间推移，反射层氧化或粘合剂失效会导致 CD 层分离或降解。这种“光盘腐烂”是某些光盘固有的制造缺陷，会慢慢将珍贵的专辑变成无用的塑料片。
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-400">
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 text-2xl">
+                        <i class="fas fa-heart-crack"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">物理脆性</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        CD 盒容易破碎，光盘本身也会裂开。虽然黑胶唱片并非坚不可摧，但 CD 更容易因撞击而受到致命损坏。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vinyl" class="pt-16 -mt-16 mb-16 md:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white content-fade-in delay-100">
+                黑胶: <span class="text-teal-600 dark:text-teal-400">持久的魅力</span>
+            </h2>
+            <div class="grid md:grid-cols-1 gap-8 items-start">
+                <div class="space-y-8">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-200">
+                        <div class="flex items-center mb-4">
+                            <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-xl">
+                                <i class="fas fa-record-vinyl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">优雅降级</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                            黑胶的信息是物理蚀刻的。轻微损坏（如轻微划痕、灰尘）通常会导致可听见的瑕疵，如爆音或咔嗒声，但音乐通常仍能继续播放——这与 CD 的“要么完美要么失效”形成鲜明对比。
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-300">
+                         <div class="flex items-center mb-4">
+                            <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-xl">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">材料韧性</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                            PVC 是唱片的材料，相当坚韧。黑胶可以承受可能损坏 CD 的跌落和操作。然而，它易受高温（变形）、深划痕和劣质播放设备磨损的影响。
+                        </p>
+                    </div>
+                </div>
+            </div>
+             <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 mt-8 content-fade-in delay-400">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-xl">
+                        <i class="fas fa-hands-holding-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">保养即保存</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                    黑胶需要呵护：清洁、小心操作和妥善存放。这些仪式将听众与音乐联系起来，并显著延长唱片的寿命。优质的播放设备至关重要，这是我们在 <a href="https://xenonjade.com" target="_blank" class="text-teal-600 dark:text-teal-400 hover:underline font-semibold">XJ-HOME</a> 所倡导的理念。
+                </p>
+                <button id="generateVinylTipsBtn" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 dark:bg-teal-500 dark:hover:bg-teal-600 transition-transform duration-200 hover:scale-105">
+                    <span class="loader hidden mr-2"></span>
+                    <i class="fas fa-wand-magic-sparkles mr-2"></i> ✨ 生成黑胶保养技巧
+                </button>
+                <div id="vinylTipsResult" class="ai-content-area hidden text-sm"></div>
+            </div>
+        </section>
+
+        <section id="human-factor" class="pt-16 -mt-16 mb-16 md:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white content-fade-in delay-100">
+                人为因素: <span class="text-purple-600 dark:text-purple-400">爱惜与否</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 text-xl">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">黑胶的细致互动</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        黑胶的特性鼓励更刻意、更小心的互动。这种固有的“尊重”通常会转化为更好的长期保存。
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-300">
+                     <div class="flex items-center mb-4">
+                        <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 text-xl">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">CD 的随意处理</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        由于宣传其更坚固，CD 常常受到随意甚至疏忽的处理——扔在仪表盘上、无盒堆放。这种处理加速了它们的消亡。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="playback" class="pt-16 -mt-16 mb-16 md:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white content-fade-in delay-100">
+                超越物理: <span class="text-orange-600 dark:text-orange-400">格式与播放可行性</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 text-xl">
+                             <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">黑胶播放的持久性</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        黑胶播放技术基本上是机械的，一个多世纪以来保持一致。唱机仍在生产，“软件”（唱片凹槽）可直接访问。只要有电和基本的工程技术，就能播放黑胶。
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 content-fade-in delay-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 text-xl">
+                            <i class="fas fa-compact-disc"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">CD 播放的挑战</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        CD 播放器越来越少，尤其是高质量的。它们依赖激光、复杂电子设备和特定芯片组，这意味着 50 年后播放 CD 可能因组件可用性和可修复性而面临挑战。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="verdict" class="pt-16 -mt-16 mb-16 md:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white content-fade-in delay-100">
+                最终结论: <span class="text-green-600 dark:text-green-400">现实世界中的韧性</span>
+            </h2>
+            <div class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl content-fade-in delay-200">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="md:w-full">
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                            那么，哪种格式真正更耐用？虽然在原始、温控、未触碰的存储条件下，完美制造的 CD 理论上可能比唱片更持久，但现实世界讲述了不同的故事。
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                            在日常使用中——有人手接触、意外跌落和不完美的存储——<strong class="text-green-700 dark:text-green-300">黑胶通常表现出更实用、更有韧性的耐久性。</strong>它优雅降级的能力，即使有轻微缺陷仍能播放音乐，使其具有显著优势。
+                        </p>
+                        <blockquote class="border-l-4 border-green-500 dark:border-green-400 pl-6 py-3 my-6 bg-green-50 dark:bg-gray-800 rounded-r-lg">
+                            <p class="text-xl italic font-medium text-gray-800 dark:text-gray-100">
+                                “一张唱片讲述着它的故事，包括所有的磨损。而一张损坏的 CD 通常什么故事也讲不出来。”
+                            </p>
+                        </blockquote>
+                        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                            对黑胶的热情，正如 <a href="https://xenonjade.com" target="_blank" class="text-green-600 dark:text-green-400 hover:underline font-semibold">XJ-HOME</a> 周围的社群所见，不仅仅是怀旧。它关乎与音乐的有形连接，只要妥善保养，这种连接确实可以持续一生甚至更久。朴素的黑胶唱片通常被证明是更顽强的幸存者。
+                        </p>
+                        <button id="generateDurabilitySummaryBtn" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:bg-green-500 dark:hover:bg-green-600 transition-transform duration-200 hover:scale-105">
+                            <span class="loader hidden mr-2"></span>
+                            <i class="fas fa-brain mr-2"></i> ✨ AI 耐久性总结
+                        </button>
+                        <div id="durabilitySummaryResult" class="ai-content-area hidden text-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-600 dark:text-gray-400 text-sm">
+            <p>&copy; <span id="currentYear"></span> XJ-HOME. 版权所有。访问我们的网站 <a href="https://xenonjade.com" target="_blank" class="text-indigo-600 dark:text-indigo-400 hover:underline">xenonjade.com</a>.</p>
+            <p class="mt-2">为音乐爱好者精心打造 <i class="fas fa-heart text-red-500"></i>。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动菜单切换的 JavaScript
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // 设置页脚当前年份
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Intersection Observer 实现内容淡入动画
+        const animatedElements = document.querySelectorAll('.content-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // 根据当前主题更新主题切换图标
+        function updateThemeIcon() {
+            const isDark = document.documentElement.classList.contains('dark');
+            const sunIcons = document.querySelectorAll('.fa-sun');
+            const moonIcons = document.querySelectorAll('.fa-moon');
+
+            sunIcons.forEach(icon => icon.style.display = isDark ? 'none' : 'inline-block');
+            moonIcons.forEach(icon => icon.style.display = isDark ? 'inline-block' : 'none');
+        }
+        updateThemeIcon(); // 页面加载时调用
+        const originalToggleTheme = window.toggleTheme; // 保存原始的切换函数
+        window.toggleTheme = function() { // 重写切换函数
+            originalToggleTheme();
+            updateThemeIcon(); // 更新图标
+        }
+
+        // Gemini API 调用相关函数
+        const apiKey = ""; // API 密钥将由 Canvas 环境自动提供
+
+        /**
+         * 调用 Gemini API 生成内容
+         * @param {string} prompt - 发送给模型的提示
+         * @param {HTMLElement} resultElement - 用于显示结果的 HTML 元素
+         * @param {HTMLElement} buttonElement - 触发调用的按钮元素
+         */
+        async function callGeminiAPI(prompt, resultElement, buttonElement) {
+            const loader = buttonElement.querySelector('.loader');
+            const buttonText = buttonElement.querySelector('span:not(.loader)');
+            const originalButtonText = buttonText.innerHTML; // 保存按钮原始文本 (包括图标)
+
+            loader.classList.remove('hidden'); // 显示加载指示器
+            buttonText.innerHTML = '正在生成...'; // 更新按钮文本
+            buttonElement.disabled = true; // 禁用按钮
+
+            resultElement.classList.add('hidden'); // 隐藏旧结果
+            resultElement.innerHTML = ''; // 清空旧结果
+
+            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+            const payload = { contents: chatHistory };
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error('API Error Response:', errorData);
+                    throw new Error(`API 请求失败，状态码: ${response.status}. ${errorData?.error?.message || '未知错误'}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    // 将 Markdown 格式的文本转换为 HTML (基本转换：**加粗**, *斜体*, 列表)
+                    let htmlContent = text
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // 加粗
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')     // 斜体
+                        .replace(/^- (.*$)/gm, '<li>$1</li>')      // 无序列表项
+                        .replace(/^(\d+)\. (.*$)/gm, '<li>$2</li>'); // 有序列表项 (简化为无序)
+                    
+                    // 包裹列表
+                    if (htmlContent.includes('<li>')) {
+                        htmlContent = '<ul>' + htmlContent.match(/<li>.*?<\/li>/g).join('') + '</ul>';
+                    }
+                    htmlContent = htmlContent.replace(/\n/g, '<br>'); // 换行
+                    
+                    resultElement.innerHTML = htmlContent;
+                    resultElement.classList.remove('hidden'); // 显示结果
+                } else {
+                    console.error('API 响应格式不符合预期:', result);
+                    resultElement.innerHTML = '<p class="text-red-500">抱歉，未能获取有效内容。请稍后再试。</p>';
+                    resultElement.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('调用 Gemini API 时发生错误:', error);
+                resultElement.innerHTML = `<p class="text-red-500">发生错误：${error.message}</p>`;
+                resultElement.classList.remove('hidden');
+            } finally {
+                loader.classList.add('hidden'); // 隐藏加载指示器
+                buttonText.innerHTML = originalButtonText; // 恢复按钮原始文本
+                buttonElement.disabled = false; // 启用按钮
+            }
+        }
+
+        // “生成黑胶保养技巧”按钮事件监听
+        const generateVinylTipsBtn = document.getElementById('generateVinylTipsBtn');
+        const vinylTipsResult = document.getElementById('vinylTipsResult');
+        if (generateVinylTipsBtn && vinylTipsResult) {
+            generateVinylTipsBtn.addEventListener('click', () => {
+                const prompt = "Provide a comprehensive list of care tips for vinyl records to ensure their longevity and sound quality. Present them as a bulleted list using markdown. For example: - Tip 1 description.";
+                callGeminiAPI(prompt, vinylTipsResult, generateVinylTipsBtn);
+            });
+        }
+
+        // “AI 耐久性总结”按钮事件监听
+        const generateDurabilitySummaryBtn = document.getElementById('generateDurabilitySummaryBtn');
+        const durabilitySummaryResult = document.getElementById('durabilitySummaryResult');
+        if (generateDurabilitySummaryBtn && durabilitySummaryResult) {
+            generateDurabilitySummaryBtn.addEventListener('click', () => {
+                const prompt = "Based on the general understanding of CD and vinyl record durability, provide a concise summary of the key factors affecting the durability of both formats. Compare their strengths and weaknesses in terms of physical resilience and playback longevity. Output as a short paragraph or a few bullet points using markdown. For example: - Factor 1: explanation.";
+                callGeminiAPI(prompt, durabilitySummaryResult, generateDurabilitySummaryBtn);
+            });
+        }
+
+    </script>
+</body>
+</html>
