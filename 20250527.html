@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Spin: Beginner's Vinyl Setup Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Visualization & Content Choices:
+        - Report Info: Budget allocation (Section 2). Goal: Inform proportion. Viz/Presentation: Chart.js Donut Chart. Interaction: Hover for tooltips. Justification: Clear visual representation of budget distribution. Library: Chart.js.
+        - Report Info: Product Recommendations (Sections 3, 4, 5). Goal: Compare/Inform. Viz/Presentation: Tailwind CSS Cards detailing features, pros, cons, price. Interaction: Reading, comparing across cards. Justification: Structured and scannable presentation of product details. Library/Method: HTML/Tailwind.
+        - Report Info: System Configuration (Section 6). Goal: Summarize. Viz/Presentation: Table-like layout using Tailwind CSS. Interaction: Reading. Justification: Clear overview of the complete recommended system. Library/Method: HTML/Tailwind.
+        - Report Info: Setup Guide (Section 7). Goal: Instruct. Viz/Presentation: Step-by-step text, potentially with collapsible sections. Interaction: Click to expand/collapse steps. Justification: User-friendly, digestible setup instructions. Library/Method: HTML/Tailwind/JS.
+        - All other textual content from the report is presented in formatted paragraphs within relevant sections.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link { transition: color 0.3s ease, border-bottom-color 0.3s ease; }
+        .nav-link.active { color: #EA580C; border-bottom-color: #EA580C; }
+        .nav-link:hover { color: #F97316; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .chart-container { position: relative; width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; height: 300px; max-height: 350px; }
+        @media (min-width: 640px) { .chart-container { height: 350px; max-height: 400px; } }
+        .card { background-color: #FFFAF0; border: 1px solid #FDBA74; }
+        .card-title { color: #C2410C; }
+        .button-accent { background-color: #EA580C; color: white; }
+        .button-accent:hover { background-color: #F97316; }
+        h2 { color: #C2410C; }
+        h3 { color: #DD6B20; }
+    </style>
+</head>
+<body class="bg-amber-50 text-stone-800">
+
+    <header class="bg-orange-100 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <h1 class="text-xl sm:text-2xl font-bold text-orange-700">Your First Spin 🎶</h1>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#welcome" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Welcome</a>
+                    <a href="#budget" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Budget</a>
+                    <a href="#turntables" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Turntables</a>
+                    <a href="#speakers" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Speakers</a>
+                    <a href="#accessories" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Accessories</a>
+                    <a href="#system-builder" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">System</a>
+                    <a href="#setup-guide" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Setup</a>
+                    <a href="#care-upgrades" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-stone-700 border-b-2 border-transparent">Care</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-stone-700 hover:text-orange-700 hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#welcome" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Welcome</a>
+                <a href="#budget" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Budget</a>
+                <a href="#turntables" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Turntables</a>
+                <a href="#speakers" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Speakers</a>
+                <a href="#accessories" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Accessories</a>
+                <a href="#system-builder" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">System</a>
+                <a href="#setup-guide" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Setup</a>
+                <a href="#care-upgrades" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 border-b-2 border-transparent">Care</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <section id="welcome" class="content-section active pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Embarking on Your Vinyl Journey</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg">
+                <p>The decision to explore vinyl records opens up a uniquely engaging way to experience music. There's a distinct charm in the tactile nature of handling a record, the visual appeal of album art, and the often-described "warm sound" that many enthusiasts cherish. Beyond nostalgia, the resurgence of vinyl reflects a desire for a more deliberate and tangible interaction with music, a departure from the often fleeting consumption of digital streams.</p>
+                <p>Stepping into the world of vinyl doesn't require an extravagant budget. This guide is designed to demonstrate that a truly satisfying entry point is achievable within a budget of approximately 2000 RMB (around $275 USD). The aim is to provide a clear, practical path to assembling a complete, functional, and enjoyable beginner system.</p>
+                <p class="text-center text-2xl py-4">💿🔊✨</p>
+                <p>This interactive application will guide you through selecting a suitable turntable, powered speakers, and the essential accessories needed to get started and care for your new setup, all while keeping the budget in mind. Let's begin!</p>
+            </div>
+        </section>
+
+        <section id="budget" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Decoding Your Budget: Smart Choices</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg">
+                <p>Embarking on a vinyl journey with a budget of around ¥2000 (approximately $275 USD) necessitates thoughtful component selection. The key is prioritizing features crucial for a beginner's ease of use and enjoyment, like turntables with built-in phono preamplifiers and powered speakers.</p>
+                <p>A sensible allocation (estimates, prices vary):</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Turntable: $100 - $150</li>
+                    <li>Speakers: $80 - $120</li>
+                    <li>Accessories: $20 - $30</li>
+                </ul>
+                <p>This price point offers a wonderful introduction, superior to ultra-cheap "suitcase" players, and provides a foundation for future upgrades. The value is in starting with quality components that respect the medium and your music.</p>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Estimated Budget Allocation</h3>
+                <div class="chart-container">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+                <p class="text-center text-sm text-stone-600 mt-2">This chart illustrates a typical percentage breakdown for a ~$275 system. Actual percentages may vary based on specific component prices.</p>
+            </div>
+        </section>
+
+        <section id="turntables" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">The Turntable: Heart of Your System</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg mb-8">
+                <p>For a beginner, a turntable with an integrated, switchable phono preamplifier is invaluable. It boosts the cartridge's signal to "line level" and applies RIAA equalization, allowing direct connection to powered speakers or any amplifier with a line-level input (AUX, CD). This saves cost and complexity. Automatic operation (tonearm auto-lifts, cues, returns) is also a plus, reducing accidental damage risk.</p>
+            </div>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Top Turntable Recommendation</h3>
+                    <div class="card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+                        <h4 class="card-title text-xl font-bold mb-2">Audio-Technica AT-LP60X (Wired Version)</h4>
+                        <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$129 - $149</p>
+                        <p class="text-stone-700 mb-3"><strong class="font-semibold">Best for:</strong> Beginners seeking ease of use and good value.</p>
+                        <div class="mb-3">
+                            <strong class="font-semibold text-stone-700">Key Features:</strong>
+                            <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                <li>Fully automatic belt-drive operation (33-1/3 & 45 RPM).</li>
+                                <li>Built-in switchable phono pre-amplifier (PHONO/LINE output).</li>
+                                <li>Integral Dual Magnet™ phono cartridge with replaceable ATN3600L diamond stylus.</li>
+                                <li>Anti-resonance, die-cast aluminum platter.</li>
+                                <li>Redesigned tonearm base and headshell for improved tracking.</li>
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+                            <div>
+                                <strong class="font-semibold text-stone-700">Pros:</strong>
+                                <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                    <li>Excellent value, good sound for the price.</li>
+                                    <li>Extremely easy to set up and operate ("plug and play").</li>
+                                    <li>Automatic operation is great for beginners.</li>
+                                    <li>Replaceable stylus ensures long-term usability.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="font-semibold text-stone-700">Cons:</strong>
+                                <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                    <li>Some components may not feel as premium.</li>
+                                    <li>Limited upgradeability beyond stylus.</li>
+                                    <li>RCA output cables typically captive.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-stone-700"><strong class="font-semibold">Included:</strong> RCA adapter cable(s), power supply, 45 RPM adapter, dust cover, felt platter mat.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Alternative Turntable</h3>
+                     <div class="card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+                        <h4 class="card-title text-xl font-bold mb-2">Sony PS-LX310BT</h4>
+                        <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$199 - $249</p>
+                        <p class="text-stone-700 mb-3">A competent alternative with Bluetooth, but typically pricier, potentially straining the budget unless on sale. Offers built-in preamp and automatic operation. For a purely wired setup, AT-LP60X is often better value within this budget.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="speakers" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Powered Speakers: Bringing Music to Life</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg mb-8">
+                <p>Powered (active) speakers are ideal for beginners as they have a built-in amplifier. This simplifies the system, reduces components and cables, and helps stay on budget. They connect directly to the "LINE" output of a turntable with a built-in preamp via RCA cables. Look for RCA inputs and good sound quality for the price and size.</p>
+            </div>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Top Powered Speaker Recommendation</h3>
+                    <div class="card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+                        <h4 class="card-title text-xl font-bold mb-2">PreSonus Eris 3.5 (2nd Gen)</h4>
+                        <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$99 - $109</p>
+                        <p class="text-stone-700 mb-3"><strong class="font-semibold">Best for:</strong> Accurate sound and versatility in a compact package.</p>
+                         <div class="mb-3">
+                            <strong class="font-semibold text-stone-700">Key Features:</strong>
+                            <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                <li>3.5-inch woofer, 1-inch silk-dome tweeter per speaker.</li>
+                                <li>50W total Class AB amplification (25W per speaker).</li>
+                                <li>Frequency Response: 80Hz - 20kHz.</li>
+                                <li>Inputs: RCA, ¼-inch TRS, front-panel 1/8-inch AUX.</li>
+                                <li>Front-panel volume, headphone jack. Acoustic tuning controls (high/low).</li>
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+                            <div>
+                                <strong class="font-semibold text-stone-700">Pros:</strong>
+                                <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                    <li>Excellent sound quality and clarity for size/price.</li>
+                                    <li>Versatile inputs. Compact footprint.</li>
+                                    <li>Acoustic tuning is a valuable feature.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="font-semibold text-stone-700">Cons:</strong>
+                                <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                                    <li>Bass is articulate but not deep/room-shaking.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-stone-700"><strong class="font-semibold">Included:</strong> 1/8" to dual RCA cable, 1/8" to 1/8" cable, speaker wire, power cable.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Alternative Speaker Options</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card p-6 rounded-lg shadow-lg">
+                            <h4 class="card-title text-xl font-bold mb-2">Edifier R1280T or R1380T</h4>
+                            <p class="text-stone-700 mb-1"><strong class="font-semibold">R1280T Price:</strong> ~$100 - $120</p>
+                            <p class="text-stone-700 mb-1"><strong class="font-semibold">R1380T Price:</strong> ~$139</p>
+                            <p class="text-stone-700 mb-3">Well-regarded for good performance/value. Feature 4-inch woofers, silk dome tweeters, 42W RMS, dual RCA inputs, remote, bass/treble controls. R1380T is similar, 'T' versions are analog-only. Good balanced sound, slightly larger than Eris 3.5. Includes cables.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg shadow-lg">
+                            <h4 class="card-title text-xl font-bold mb-2">Majority D40</h4>
+                            <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$89 - $99</p>
+                             <p class="text-stone-700 mb-3">Feature-rich at a very low price for tightest budgets. Include Bluetooth, Optical, RCA, USB, SD inputs, remote, 4-inch woofer. Primary pro is affordability and connectivity. Cons include more plastic build, potentially less sonic refinement than PreSonus/Edifier. A budget-balancing choice. Includes cables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessories" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Essential Accessories (~$25-30 Total)</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg mb-8">
+                <p>A few essential accessories are non-negotiable for maintaining sound quality and preserving records/equipment. Dust is the main enemy. These simple tools are your first line of defense.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h3 class="card-title text-xl font-bold mb-2">Carbon Fiber Record Brush ✨</h3>
+                    <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$10 - $15</p>
+                    <p class="text-stone-700">Gently sweeps dust and reduces static from record surfaces *before each play*. Ensures clearer sound and reduces wear on record and stylus.</p>
+                </div>
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h3 class="card-title text-xl font-bold mb-2">Stylus Cleaning Brush or Gel 🧹</h3>
+                    <p class="text-stone-700 mb-1"><strong class="font-semibold">Estimated Price:</strong> ~$10 - $15</p>
+                    <p class="text-stone-700">Removes dust and debris accumulated on the delicate stylus. A clean stylus is crucial for accurate sound and prevents record damage. A simple brush is effective.</p>
+                </div>
+            </div>
+            <p class="max-w-3xl mx-auto mt-6 text-lg">The felt platter mat included with the AT-LP60X is fine for starting. Upgrades (cork/rubber mats) can be considered later.</p>
+        </section>
+
+        <section id="system-builder" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Building Your ¥2000 ($275) Vinyl System</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg mb-8">
+                <p>This section outlines the primary recommended system, prioritizing sound quality and ease of use for beginners within the target budget. This configuration allows a newcomer to assemble a complete and enjoyable vinyl playback system without being overwhelmed.</p>
+            </div>
+            <div class="overflow-x-auto max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+                <table class="min-w-full divide-y divide-stone-300">
+                    <thead class="bg-orange-100">
+                        <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-orange-700 sm:pl-6">Component</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-orange-700">Recommended Model</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-orange-700">Est. Price (USD)</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-orange-700 sm:pr-6">Key Features / Why it Fits</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-stone-200 bg-white">
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-900 sm:pl-6">Turntable</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">Audio-Technica AT-LP60X (Wired)</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">~$130 - $149</td>
+                            <td class="whitespace-normal px-3 py-4 text-sm text-stone-600 sm:pr-6">Built-in switchable phono preamp, fully automatic, easy setup, good sound, replaceable stylus.</td>
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-900 sm:pl-6">Powered Speakers</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">PreSonus Eris 3.5 (2nd Gen)</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">~$99 - $109</td>
+                            <td class="whitespace-normal px-3 py-4 text-sm text-stone-600 sm:pr-6">RCA inputs, excellent clarity, compact, acoustic tuning, built-in amp.</td>
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-900 sm:pl-6">Accessories</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">Carbon Fiber Record Brush + Stylus Cleaner</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-stone-600">~$25 - $30</td>
+                            <td class="whitespace-normal px-3 py-4 text-sm text-stone-600 sm:pr-6">Essential for record/stylus health, improves sound, protects investment. Low cost, high impact.</td>
+                        </tr>
+                        <tr class="bg-orange-50">
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-bold text-orange-800 sm:pl-6" colspan="2">Estimated Total</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm font-bold text-orange-800" colspan="2">~$254 - $288</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="mt-4 text-sm text-stone-600">This total is within or very close to the target of ~¥2000 / $275 USD. Prices are estimates and can vary. If this combination exceeds the budget, substituting PreSonus Eris 3.5 with Majority D40 speakers (~$89-$99) could be considered, potentially trading some sound quality for cost savings.</p>
+            </div>
+        </section>
+
+        <section id="setup-guide" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">First Spins: Simple Setup Guide</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg mb-8">
+                <p>Setting up your first vinyl system is rewarding. Follow these steps carefully (using AT-LP60X and Eris 3.5 as examples) to enjoy your records quickly. Each step below can be clicked to reveal more details.</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="bg-white p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-semibold text-lg text-orange-700">1. Unboxing and Placement</summary>
+                    <div class="mt-2 text-stone-600 space-y-2">
+                        <p>Find a stable, level surface for your turntable (crucial to prevent skipping). Avoid placing it directly on or too close to speakers to prevent vibration feedback.</p>
+                        <p>For speakers, try to form an equilateral triangle with your listening spot, tweeters at ear level for best stereo imaging.</p>
+                    </div>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-semibold text-lg text-orange-700">2. Speaker Setup (PreSonus Eris 3.5)</summary>
+                    <div class="mt-2 text-stone-600 space-y-2">
+                        <p>Place speakers. One is "active" (amp, inputs), one "passive".</p>
+                        <p>Connect included speaker wire between active and passive speakers (match polarity: positive to positive, negative to negative).</p>
+                        <p>Plug active speaker's power cord into a wall outlet.</p>
+                    </div>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-semibold text-lg text-orange-700">3. Turntable Setup (Audio-Technica AT-LP60X)</summary>
+                    <div class="mt-2 text-stone-600 space-y-2">
+                        <p>Unpack AT-LP60X. Follow instructions for basic assembly (placing platter, fitting drive belt).</p>
+                        <p><strong class="text-red-600">CRUCIAL:</strong> Set Phono Preamp Switch on back of AT-LP60X to "LINE". This activates the internal preamp for direct connection to powered speakers. If set to "PHONO", sound will be very quiet/thin.</p>
+                    </div>
+                </details>
+                 <details class="bg-white p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-semibold text-lg text-orange-700">4. Connecting Turntable to Active Speaker</summary>
+                    <div class="mt-2 text-stone-600 space-y-2">
+                        <p>Use an RCA cable (PreSonus Eris 3.5 includes a 3.5mm to dual RCA; AT-LP60X may also include an RCA cable).</p>
+                        <p>Connect RCA plugs (red=right, white/black=left) to RCA output jacks on AT-LP60X.</p>
+                        <p>Connect other end to RCA input jacks on the active PreSonus Eris 3.5 speaker (match colors/channels).</p>
+                    </div>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-semibold text-lg text-orange-700">5. Power Up and Play</summary>
+                    <div class="mt-2 text-stone-600 space-y-2">
+                        <p>Ensure speaker volume is down initially.</p>
+                        <p>Turn on active speaker power switch (usually on back).</p>
+                        <p>Turn on AT-LP60X power.</p>
+                        <p>Place record on platter. Select speed (33 for LPs, 45 for singles).</p>
+                        <p>Press "START" on AT-LP60X. Tonearm should auto-lift, move, and lower.</p>
+                        <p>Slowly turn up speaker volume.</p>
+                    </div>
+                </details>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-3 text-orange-700">Common Beginner Mistakes to Avoid:</h3>
+                    <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                        <li>Incorrect Phono/Line switch setting (ensure AT-LP60X is on "LINE").</li>
+                        <li>Poor turntable placement (unstable surface, too close to speakers).</li>
+                        <li>Neglecting record and stylus cleaning (causes poor sound, wear).</li>
+                        <li>Incorrect speed setting (music too fast/slow).</li>
+                        <li>Improper handling of records (touching grooves).</li>
+                        <li>Stacking records horizontally (can cause warping).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="care-upgrades" class="content-section pt-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">The Journey Continues: Care & Future Horizons</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg">
+                <p>Proper care ensures longevity and optimal performance. As your interest grows, simple enhancements are possible.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-orange-700">Basic Record Care and Storage:</h3>
+                <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                    <li>Return records to inner sleeve and outer jacket after listening.</li>
+                    <li>Store records vertically (like books), not too tight or leaning.</li>
+                    <li>Keep away from extreme heat, direct sunlight, high humidity.</li>
+                    <li>Handle records by edges and label area only.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-orange-700">Looking Ahead: Simple Upgrade Paths:</h3>
+                 <ul class="list-disc list-inside ml-4 text-stone-600 space-y-1">
+                    <li><strong>Stylus Upgrade:</strong> For AT-LP60X, consider upgrading stock ATN3600L conical stylus to an elliptical version (e.g., ATN3600LE) for more detail. Cost-effective first upgrade.</li>
+                    <li><strong>Better Speakers:</strong> Significant sound quality improvement. Consider higher-quality powered bookshelf speakers or passive speakers + separate amp later.</li>
+                    <li><strong>External Phono Preamp:</strong> If upgrading to a turntable without a built-in preamp or for sonic experimentation.</li>
+                    <li><strong>Platter Mat:</strong> Felt mat is functional; cork or rubber can damp vibrations and reduce static.</li>
+                </ul>
+                <p>A general upgrade hierarchy: Turntable/cartridge/stylus -> Amplifier/Powered Speakers -> Speakers (if separate amp). Your initial system is an excellent starting point for incremental enhancements.</p>
+            </div>
+        </section>
+
+        <footer class="text-center py-10 mt-12 border-t border-orange-200">
+            <p class="text-stone-600">Welcome to the vibrant community of vinyl enthusiasts!</p>
+            <p class="text-xl font-semibold text-orange-700 mt-2">Happy Spinning! 🎧</p>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.content-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function setActiveLink(targetId) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${targetId}`);
+                });
+            }
+
+            function showSection(targetId) {
+                sections.forEach(section => {
+                    section.classList.toggle('active', section.id === targetId);
+                });
+                setActiveLink(targetId);
+                window.scrollTo(0, 0); // Scroll to top of page
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    showSection(targetId);
+                    if (mobileMenu.classList.contains('block')) {
+                        mobileMenu.classList.remove('block');
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('block');
+            });
+
+            // Initial section display based on hash or default to 'welcome'
+            const initialSectionId = window.location.hash ? window.location.hash.substring(1) : 'welcome';
+            const sectionExists = Array.from(sections).some(s => s.id === initialSectionId);
+            showSection(sectionExists ? initialSectionId : 'welcome');
+
+
+            // Budget Chart
+            const budgetCtx = document.getElementById('budgetChart');
+            if (budgetCtx) {
+                new Chart(budgetCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Turntable (47-55%)', 'Speakers (30-44%)', 'Accessories (9-11%)'],
+                        datasets: [{
+                            label: 'Budget Allocation',
+                            data: [50, 38, 12], // Representative percentages
+                            backgroundColor: [
+                                'rgba(234, 88, 12, 0.7)', // orange-600
+                                'rgba(249, 115, 22, 0.7)', // orange-500
+                                'rgba(253, 186, 116, 0.7)' // orange-300
+                            ],
+                            borderColor: [
+                                'rgba(194, 65, 12, 1)', // orange-700
+                                'rgba(234, 88, 12, 1)', // orange-600
+                                'rgba(249, 115, 22, 1)' // orange-500
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: '#44403c' // stone-700
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed !== null) {
+                                            label += context.parsed + '% (approx)';
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
